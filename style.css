@@ -489,7 +489,7 @@ textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
-	width: 98%;
+	width: 100%;
 }
 
 fieldset {
@@ -610,22 +610,21 @@ a.more-link::after {
 	list-style: none;
 }
 .nav-collapse li a,
-a.nav-toggle {
+button#nav-toggle {
 	text-decoration: none;
 }
 
 #menu-primary li:hover > a,
 #menu-primary li.focus > a,
-a.nav-toggle:hover,
-a.nav-toggle:focus,
-a.nav-toggle.focus {
-	background-color: #1668b5;
-	color: #fff;
-}
-
+button#nav-toggle:hover,
+button#nav-toggle:focus,
+button#nav-toggle.focus,
+#menu-primary li.current-menu-item,
+#menu-primary li.current-menu-item > a,
 #menu-primary ul ul a:hover,
 #menu-primary ul ul li.focus > a {
-	background-color: #1668b5;
+	background-color: #303030;
+	color: #fff;
 }
 
 @media screen and (max-width: 799px) {
@@ -639,9 +638,15 @@ a.nav-toggle.focus {
 		width: 100%;
 		display: block;
 	}
-
+	
+	button#nav-toggle {
+		border: none;
+		position: relative;
+		z-index: 100;
+	}
+	
 	.nav-collapse li a,
-	a.nav-toggle {
+	button#nav-toggle {
 		background: #054e92;
 		background: rgba(11,84,152,0.92);
 		border-bottom: 1px solid #fff;
@@ -649,10 +654,6 @@ a.nav-toggle.focus {
 		display: block;
 		padding: .5em 1em .5em 4%;
 		width: 100%;
-	}
-	a.nav-toggle {
-		position: relative;
-		z-index: 100;
 	}
 
 	#menu-primary ul ul li a {
@@ -682,7 +683,7 @@ a.nav-toggle.focus {
 		pointer-events: none !important;
 	}
 
-	.nav-toggle {
+	#nav-toggle {
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
@@ -691,7 +692,7 @@ a.nav-toggle.focus {
 		-o-user-select: none;
 		user-select: none;
 	}
-	a.nav-toggle:before {
+	button#nav-toggle:before {
 		-webkit-font-smoothing: antialiased;
 		content: "\f419";
 		display: inline-block;
@@ -712,7 +713,7 @@ a.nav-toggle.focus {
 	.js .nav-collapse.closed {
 		max-height: none;
 	}
-	.nav-toggle {
+	#nav-toggle {
 		display: none;
 	}
 	
@@ -735,9 +736,6 @@ a.nav-toggle.focus {
 		line-height: 48px;
 		position: relative;
 	}
-	#menu-primary li.current-menu-item {
-		background: #1668b5;
-	}	
 
 	#menu-primary a {
 		color: #fff;
@@ -848,6 +846,9 @@ a.nav-toggle.focus {
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
 }
 
 .screen-reader-text:hover,
@@ -976,7 +977,11 @@ a.nav-toggle.focus {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 
-.sticky {
+.sticky,
+.sticky.hentry {
+	background: #e6eff7;
+	border-bottom: 2px solid #054e92;
+	padding: 3%;
 }
 .hentry {
 	padding: 0 0 1.5em;
