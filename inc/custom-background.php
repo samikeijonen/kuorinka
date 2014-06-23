@@ -13,7 +13,7 @@ function kuorinka_custom_background_setup() {
 		apply_filters( 'kuorinka_custom_background_args',
 			array(
 				'default-color' => 'e6eff7',
-				'default-image' => ''
+				'default-image' => '%1$s/images/kuorinka_background.png'
 			) 
 		)
 	);
