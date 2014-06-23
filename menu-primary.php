@@ -1,4 +1,6 @@
 <?php if ( has_nav_menu( 'primary' ) ) { ?>
+
+	<button id="nav-toggle"><?php _e( 'Menu', 'kuorinka' ); ?></button>
 	
 	<nav id="menu-primary" class="menu main-navigation" role="navigation">	
 		<div class="wrap">
