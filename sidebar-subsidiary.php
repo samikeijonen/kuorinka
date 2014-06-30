@@ -1,6 +1,6 @@
-<?php if ( is_active_sidebar( 'subsidiary' ) ) { ?>
+<?php if ( is_active_sidebar( 'subsidiary' ) ) : ?>
 
-	<aside id="sidebar-subsidiary" class="sidebar" role="complementary">
+	<aside id="sidebar-subsidiary" class="sidebar" role="complementary" aria-label="<?php echo _x( 'Subsidiary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>">
 		
 		<div class="wrap">
 			<div class="wrap-inside">
@@ -12,4 +12,4 @@
 
 	</aside><!-- #sidebar-subsidiary .sidebar -->
 
-<?php } ?>
+<?php endif; // End check for subsidiary sidebar. ?>

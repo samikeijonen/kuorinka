@@ -28,10 +28,14 @@ and Blueprint http://www.blueprintcss.org/
 1.0 - Reset
 2.0 - Typography
 3.0 - Elements
+	3.1 - Blockquotes, paragraphs, code, lists, tables
+    3.2 - Genericons
 4.0 - Forms
 5.0 - Navigation
 	5.1 - Links
 	5.2 - Menus
+		5.2.1 - Primary menu
+		5.2.2 - Social menu
 6.0 - Accessibility
 7.0 - Alignments
 8.0 - Clearings
@@ -155,7 +159,7 @@ h6 {
 	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1.3333333;
-	margin: 0 0 20px 0;
+	margin: 0 0 30px 0;
 	text-transform: uppercase;
 }
 .entry-title {
@@ -186,20 +190,16 @@ h6 {
 	padding: 20px 0;
 }
 #site-description {
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 20px;
+	font-size: 2rem;
 	text-transform: none;
 	padding: 0 0 10px 0;
 	margin: 0;
 }
 
-#kuorinka-header {
+#kuorinka-header-image {
 	padding: 0;
 	margin: 0;	
-}
-.custom-header-image #kuorinka-header-image img.header-image {
-	border-top: 6px solid #054e92;
-	margin-bottom: -54px;
 }
 
 
@@ -208,12 +208,13 @@ h6 {
 	#site-title,
 	#site-description {
 		display: inline-block;
-		width: 50%;
+		padding-right: 4%;
+		width: 51%;
 	}
 	#site-description {
 		padding-left: 0;
 		padding-right: 0;
-		width: 46%;
+		width: 48%;
 	}
 
 }
@@ -324,7 +325,7 @@ hr {
 }
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1.5em;
 }
 ul {
 	list-style: circle;
@@ -408,6 +409,94 @@ th {
 #wp-calendar #next {
 	text-align: right;
 }
+
+/* === 3.2 Genericons === */
+
+a[href^="mailto:"]::before,
+a[href^="tel:"]::before,
+.genericon,
+.nav-toggle:before,
+.featured-post:before,
+.byline .author a::before,
+.entry-date a::before,
+.comments-link::before,
+.post-edit-link::before,
+.entry-permalink a::before,
+.post-format-link::before,
+.entry-terms::before,
+.image-sizes::before,
+.chat-author cite::before,
+.comment-published::before,
+.comment-edit-link::before,
+.comment-author::before,
+.comment-permalink::before,
+.comment-reply-link::before,
+.comment-reply-login::before,
+.loop-nav a[rel="prev"]::before,
+.loop-nav a[rel="next"]::after,
+.nav-links .nav-previous a::before,
+.nav-links .nav-next a::after,
+a.more-link::after,
+#menu-social li a::before,
+.widget li::before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font: normal 16px/1 Genericons;
+	vertical-align: text-bottom;
+}
+
+.entry-date a,
+.byline .author a,
+.entry-permalink a {
+	margin-right: 8px;
+}
+
+a[href^="mailto:"]::before,
+a[href^="tel:"]::before,
+.entry-date a::before,
+.byline .author a::before,
+.entry-permalink a::before,
+.entry-terms::before, 
+.nav-links .nav-previous a::before, 
+.nav-links .nav-next a::after {	
+	content: '\f307';
+	padding-right: 4px;
+	position: relative;
+	bottom: 2px;
+}
+
+a[href^="mailto:"]::before {
+	content: '\f410';
+}
+a[href^="tel:"]::before {
+	content: '\f437';
+	bottom: 5px;
+}
+
+.byline .author a::before {
+	content: '\f304';
+}
+.entry-permalink a::before {
+	content: '\f107';
+}
+.entry-terms.category::before {
+	content: '\f301';
+}
+.entry-terms.post_tag::before {
+	content: '\f302';
+}
+.nav-links .nav-previous a::before {
+	font-size: 20px;
+	content: '\f430';
+} 
+.nav-links .nav-next a::after {
+	bottom: 0;
+	font-size: 20px;
+	content: '\f429';
+	padding-left: 4px;
+	padding-right: 0;
+}
+
 
 /*--------------------------------------------------------------
 4.0 Forms
@@ -557,7 +646,6 @@ select {
 }
 textarea {
 	min-height: 160px;
-	min-height: 10rem;
 }
 
 
@@ -604,6 +692,8 @@ a.more-link::after {
 5.2 Menus
 --------------------------------------------------------------*/
 
+/* === 5.2.1 Primary menu === */
+
 .nav-collapse ul {
 	margin: 0;
 	padding: 0;
@@ -627,7 +717,14 @@ button#nav-toggle.focus,
 	color: #fff;
 }
 
-@media screen and (max-width: 799px) {
+.custom-header-image #kuorinka-header-image img.header-image {
+	border-top: 6px solid #054e92;
+}
+.custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
+	margin-bottom: -81px;
+}
+
+@media screen and (max-width: 899px) {
 
 	.nav-collapse ul {
 		width: 100%;
@@ -652,18 +749,18 @@ button#nav-toggle.focus,
 		border-bottom: 1px solid #fff;
 		color: #fff;
 		display: block;
-		padding: .5em 1em .5em 4%;
+		padding: 10px 4%;
 		width: 100%;
 	}
 
 	#menu-primary ul ul li a {
-		padding-left: 7%;
-	}
-	#menu-primary ul ul ul li a {
 		padding-left: 9%;
 	}
-	#menu-primary ul ul ul ul li a {
+	#menu-primary ul ul ul li a {
 		padding-left: 11%;
+	}
+	#menu-primary ul ul ul ul li a {
+		padding-left: 13%;
 	}
 
 	.js .nav-collapse {
@@ -705,7 +802,7 @@ button#nav-toggle.focus,
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
 
 	.js .nav-collapse {
 		position: relative;
@@ -721,7 +818,10 @@ button#nav-toggle.focus,
 		background: #054e92;
 		padding: 0 4%;
 	}
-	.custom-header-image #menu-primary .wrap {
+	.custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
+		margin-bottom: -55px;
+	}
+	.custom-header-image.primary-menu-active #menu-primary .wrap {
 		background-color: rgba(11,84,152,0.92);
 	}
 	
@@ -803,7 +903,7 @@ button#nav-toggle.focus,
 	#menu-primary li .menu-item-has-children > a,
 	#menu-primary li .page_item_has_children > a {
 		padding-right: 20px;
-		width: 168px;
+		width: 200px;
 	}
 
 	#menu-primary .menu-item-has-children li.menu-item-has-children > a:after,
@@ -835,6 +935,139 @@ button#nav-toggle.focus,
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/* === 5.2.2 Social menu === */
+
+#menu-social ul {
+	list-style: none;
+	padding: 30px 0;
+	margin: 0;
+	text-align: center;
+}
+
+#menu-social ul li {
+	display: inline-block;
+}
+
+#menu-social li a::before {
+	position: relative;
+	font: 32px/1 'Genericons';
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* Social icons. */
+#menu-social li a[href*="codepen.io"]::before,
+#menu-social li a[href*="digg.com"]::before,
+#menu-social li a[href*="dri9f9f9fle.com"]::before,
+#menu-social li a[href*="facebook.com"]::before,
+#menu-social li a[href*="flickr.com"]::before,
+#menu-social li a[href*="plus.google.com"]::before,
+#menu-social li a[href*="github.com"]::before,
+#menu-social li a[href*="instagram.com"]::before,
+#menu-social li a[href*="linkedin.com"]::before,
+#menu-social li a[href*="pinterest.com"]::before,
+#menu-social li a[href*="polldaddy.com"]::before,
+#menu-social li a[href*="getpocket.com"]::before,
+#menu-social li a[href*="reddit.com"]::before,
+#menu-social li a[href*="skype.com"]::before,
+#menu-social li a[href*="skype:"]::before,
+#menu-social li a[href*="stumbleupon.com"]::before,
+#menu-social li a[href*="tumblr.com"]::before,
+#menu-social li a[href*="twitter.com"]::before,
+#menu-social li a[href*="vimeo.com"]::before,
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before,
+#menu-social li a[href*="youtube.com"]::before {
+	display: inline-block;
+	content: '\f409';
+	color: #c84d29;
+	padding:  0 5px 1px 5px;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: middle;
+}
+#menu-social li a[href*="codepen.io"]::before {
+	content: '\f216';
+	color: #fff;
+}
+#menu-social li a[href*="digg.com"]::before {
+	content: '\f221';
+	color: #fff;
+}
+#menu-social li a[href*="dri9f9f9fle.com"]::before {
+	content: '\f201';
+	color: #ea4c89;
+}
+#menu-social li a[href*="facebook.com"]::before {
+	content: '\f204';
+	color: #3b5998;
+}
+#menu-social li a[href*="flickr.com"]::before {
+	content: '\f211';
+	color: #ff0084;
+}
+#menu-social li a[href*="plus.google.com"]::before {
+	content: '\f206';
+	color: #dd4b39;
+}
+#menu-social li a[href*="github.com"]::before {
+	content: '\f200';
+	color: #4183c4;
+	}
+#menu-social li a[href*="instagram.com"]::before {
+	content: '\f215';
+	color: #3f729b;
+}
+#menu-social li a[href*="linkedin.com"]::before {
+	content: '\f208';
+	color: #0e76a8;
+}
+#menu-social li a[href*="pinterest.com"]::before {
+	content: '\f210';
+	color: #c8232c;
+}
+#menu-social li a[href*="polldaddy.com"]::before {
+	content: '\f217';
+	color: #bc0b0b;
+}
+#menu-social li a[href*="getpocket.com"]::before {
+	content: '\f224';
+	color: #ee4056;
+}
+#menu-social li a[href*="reddit.com"]::before {
+	content: '\f222'; 
+	color: #336699;
+}
+#menu-social li a[href*="skype.com"]::before,
+#menu-social li a[href*="skype:"]::before {
+	content: '\f220';
+	color: #00aff0;
+}
+#menu-social li a[href*="stumbleupon.com"]::before {
+	content: '\f223';
+	color: #ff2618;
+}
+#menu-social li a[href*="tumblr.com"]::before {
+	content: '\f214';
+	color: #34526f;
+}
+#menu-social li a[href*="twitter.com"]::before {
+	content: '\f202';
+	color: #33ccff;
+}
+#menu-social li a[href*="vimeo.com"]::before {
+	content: '\f212';
+	color: #1ab7ea;
+}
+#menu-social li a[href*="wordpress.org"]::before,
+#menu-social li a[href*="wordpress.com"]::before {
+	content: '\f205';
+	color: #21759b;
+}
+#menu-social li a[href*="youtube.com"]::before {
+	content: '\f213';
+	color: #c4302b;
 }
 
 
@@ -908,18 +1141,24 @@ button#nav-toggle.focus,
 .site-header:after,
 .site-branding:before,
 .site-branding:after,
-#kuorinka-header:before,
-#kuorinka-header:after,
+#kuorinka-header-image:before,
+#kuorinka-header-image:after,
 #site-navigation .wrap:before,
 #site-navigation .wrap:after,
 #content .wrap:before,
 #content .wrap:after,
 .site-content:before,
 .site-content:after,
+.entry-summary:before,
+.entry-summary:after,
 #sidebar-subsidiary:before,
 #sidebar-subsidiary:after,
 #sidebar-subsidiary .wrap:before,
 #sidebar-subsidiary .wrap:after,
+#sidebar-front-page:before,
+#sidebar-front-page:after,
+#sidebar-front-page .wrap:before,
+#sidebar-front-page .wrap:after,
 .site-footer:before,
 .site-footer:after {
 	content: '';
@@ -931,12 +1170,15 @@ button#nav-toggle.focus,
 .comment-content:after,
 .site-header:after,
 .site-branding:after,
-#kuorinka-header:after,
+#kuorinka-header-image:after,
 #site-navigation .wrap:after,
 #content .wrap:after,
 .site-content:after,
+.entry-summary:after,
 #sidebar-subsidiary:after,
 #sidebar-subsidiary .wrap:after,
+#sidebar-front-page:after,
+#sidebar-front-page .wrap:after,
 .site-footer:after {
 	clear: both;
 }
@@ -963,8 +1205,28 @@ button#nav-toggle.focus,
 }
 
 /* Search widget */
+.search-submit {
+	margin-bottom: 30px;
+}
 .widget_search .search-submit {
 	display: none;
+}
+
+.widget ul > li::before {
+	content: '\f432';
+	font-size: 12px;
+	margin-bottom: 2px;
+	margin-right: 6px;
+	vertical-align: middle;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.widget.widget_recent_comments ul > li::before {
+	
 }
 
 
@@ -987,14 +1249,6 @@ button#nav-toggle.focus,
 	padding: 0 0 1.5em;
 	margin: 0 0 1.5em;
 }
-.byline,
-.updated {
-	display: none;
-}
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1005,17 +1259,70 @@ button#nav-toggle.focus,
 	margin: 0 0 1.5em;
 }
 
-.entry-header .entry-title,
-.page.page-template-pagesfront-page-php .entry-header .entry-title {
-	border-bottom: 4px double #eee;
+.entry-header .entry-title {
+	border-bottom: 4px double #e6eff7;
 	margin-top: 20px;
 	padding-bottom: 20px;
 }
-.page .entry-header .entry-title,
+.page-template-pagesfront-page-php .entry-header .entry-title {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-top: 0;
+}
+.page-template-default .entry-header .entry-title,
 .single .entry-header .entry-title {
 	margin-top: 0;
 }
 
+.sticky .entry-header .entry-title {
+	border-bottom-color: #aacef0;
+}
+
+.thumbnail {
+	margin: 0 0 1em 0;
+}
+.page-template-pagesfront-page-php .thumbnail {
+	box-shadow: 0 0 0 4px #fff;
+	border-radius: 50%;
+}
+
+.page-template-pagesfront-page-php #kuorinka-front-page-posts .entry-title {
+	font-size: 22px;
+}
+#sidebar-front-page {
+	text-align: center;
+}
+.sidebar .genericon,
+.sidebar .genericon::before {
+	color: #054e92;
+	font-size: 60px;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+
+	.page-template-pagesfront-page-php  .thumbnail {
+		float: right;
+		margin: 0 0 1em 1.125em;
+	}
+
+}
+
+@media screen and (min-width: 608px) {
+
+	/* Front page post grid. */
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts {
+		margin-left: -3%;
+	}
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .hentry {
+		float: left;
+		padding-left: 3%;
+		width: 50%;
+	}
+	
+}
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -1148,8 +1455,9 @@ video {
 #masthead .site-branding,
 .breadcrumb-trail .wrap,
 #kuorinka-header-image,
-#content .wrap,
+#content > .wrap,
 #sidebar-subsidiary .wrap,
+#colophon #menu-social,
 #colophon .site-info {
 	background: #fff;
 }
@@ -1159,8 +1467,9 @@ video {
 body,
 #masthead .site-branding,
 .breadcrumb-trail .wrap,
-#content .wrap,
+#content > .wrap,
 #sidebar-subsidiary .wrap,
+#colophon #menu-social,
 #colophon .site-info {
 	padding: 0 4%;
 }
@@ -1169,7 +1478,7 @@ body,
 	padding-top: 30px;
 	text-align: center;
 }
-#content .wrap {
+#content > .wrap {
 	padding-bottom: 30px;
 	padding-top: 30px;
 }
@@ -1260,10 +1569,12 @@ body,
 
 	/* Sidebars. */
 	#sidebar-subsidiary .wrap-inside,
+	#sidebar-front-page .wrap-inside,
 	#sidebar-page-template .wrap-inside {
 		margin-left: -3%;
 	}
 	#sidebar-subsidiary .widget,
+	#sidebar-front-page .widget,
 	#sidebar-page-template .widget {
 		float: left;
 		padding-left: 3%;
@@ -1271,53 +1582,63 @@ body,
 
 	/* 1 widget in sidebar. */
 	.sidebar-subsidiary-1 #sidebar-subsidiary .widget,
+	.sidebar-fron-page-1 #sidebar-front-page .widget,
 	.sidebar-page-template-1 #sidebar-page-template .widget {
 		width: 100%;
 	}
 	
 	/* 2 widgets in sidebar. */
 	.sidebar-subsidiary-2 #sidebar-subsidiary .widget,
+	.sidebar-front-page-2 #sidebar-front-page .widget,
 	.sidebar-page-template-2 #sidebar-page-template .widget {
 		width: 50%;
 	}
 	
 	/* 3 widgets in sidebar. */
 	.sidebar-subsidiary-3 #sidebar-subsidiary .widget,
+	.sidebar-front-page-3 #sidebar-front-page .widget,
 	.sidebar-page-template-3 #sidebar-page-template .widget {
 		width: 33.333333333%;
 	}
 	
 	/* 4 widgets in sidebar. */
 	.sidebar-subsidiary-4 #sidebar-subsidiary .widget,
+	.sidebar-front-page-4 #sidebar-front-page .widget,
 	.sidebar-page-template-4 #sidebar-page-template .widget {
 		width: 50%;
 	}
 	/* Clear left for 3th widget. */
 	.sidebar-subsidiary-4 #sidebar-subsidiary .widget:nth-child(3),
+	.sidebar-front-page-4 #sidebar-front-page .widget:nth-child(3),
 	.sidebar-page-template-4 #sidebar-page-template .widget:nth-child(3) {
 		clear: left;
 	}
 	
 	/* 5 widgets in sidebar. */
 	.sidebar-subsidiary-5 #sidebar-subsidiary .widget,
+	.sidebar-front-page-5 #sidebar-front-page .widget,
 	.sidebar-page-template-5 #sidebar-page-template .widget	{
 		width: 33.333333333%;
 	}
 	/* Clear left for 4th widget. */
 	.sidebar-subsidiary-5 #sidebar-subsidiary .widget:nth-child(4),
+	.sidebar-front-page-5 #sidebar-front-page .widget:nth-child(4),
 	.sidebar-page-template-5 #sidebar-page-template .widget:nth-child(4) {
 		clear: left;
 	}
 	
 	/* 6 widgets in sidebar. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget,
+	.sidebar-front-page-6 #sidebar-front-page .widget,
 	.sidebar-page-template-6 #sidebar-page-template .widget	{
 		width: 50%;
 	}
 	/* Clear left for 3th and 5th widget. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget:nth-child(3),
+	.sidebar-front-page-6 #sidebar-front-page .widget:nth-child(3),
 	.sidebar-page-template-6 #sidebar-page-template .widget:nth-child(3),
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget:nth-child(5),
+	.sidebar-front-page-6 #sidebar-front-page .widget:nth-child(5),
 	.sidebar-page-template-6 #sidebar-page-template .widget:nth-child(5)	{
 		clear: left;
 	}
@@ -1329,40 +1650,48 @@ body,
 
 	/* 4 widgets in subsidiary sidebar. */
 	.sidebar-subsidiary-4 #sidebar-subsidiary .widget,
+	.sidebar-front-page-4 #sidebar-front-page .widget,
 	.sidebar-page-template-4 #sidebar-page-template .widget {
 		width: 25%;
 	}
 	/* Don't clear left for 3th widget. */
 	.sidebar-subsidiary-4 #sidebar-subsidiary .widget:nth-child(3),
+	.sidebar-front-page-4 #sidebar-front-page .widget:nth-child(3),
 	.sidebar-page-template-4 #sidebar-page-template .widget:nth-child(3) {
 		clear: none;
 	}
 	
 	/* 5 widgets in subsidiary sidebar. */
 	.sidebar-subsidiary-5 #sidebar-subsidiary .widget,
+	.sidebar-front-page-5 #sidebar-front-page .widget,
 	.sidebar-page-template-5 #sidebar-page-template .widget {
 		width: 20%;
 	}
 	/* Don't clear left for 4th widget. */
 	.sidebar-subsidiary-5 #sidebar-subsidiary .widget:nth-child(4),
+	.sidebar-front-page-5 #sidebar-front-page .widget:nth-child(4),
 	.sidebar-page-template-5 #sidebar-page-template .widget:nth-child(4) {
 		clear: none;
 	}
 	
 	/* 6 widgets in sidebar. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget,
+	.sidebar-front-page-6 #sidebar-front-page .widget,
 	.sidebar-page-template-6 #sidebar-page-template .widget	{
 		width: 33.333333333333%;
 	}
 	/* Don't clear left for 3th and 5th widget. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget:nth-child(3),
+	.sidebar-front-page-6 #sidebar-front-page .widget:nth-child(3),
 	.sidebar-page-template-6 #sidebar-page-template .widget:nth-child(3),
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget:nth-child(5),
+	.sidebar-front-page-6 #sidebar-front-page .widget:nth-child(5),
 	.sidebar-page-template-6 #sidebar-page-template .widget:nth-child(5)	{
 		clear: none;
 	}
 	/* But clear for 4th widget. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget:nth-child(4),
+	.sidebar-front-page-6 #sidebar-front-page .widget:nth-child(4),
 	.sidebar-page-template-6 #sidebar-page-template .widget:nth-child(4)	{
 		clear: left;
 	}
@@ -1374,37 +1703,14 @@ body,
 /* Minimum width of 560 pixels. */
 @media screen and (min-width: 560px) {
 
-	.page-template-pagesfront-page-php .wrap-inside {
-		margin-left: -3%;
-	}
 
-	.page-template-pagesfront-page-php .hentry {
-		float: left;
-		padding-left: 3%;
-		width: 50%;
-	}
-	
-	.page-template-pagesfront-page-php .hentry:nth-child(2n+3) {
-		clear: left;
-	}
 
 }
 
 /* Minimum width of 1056 pixels. */
 @media screen and (min-width: 1056px) {
 
-	.page-template-pagesfront-page-php .hentry {
-		width: 33.333333333333%;
-	}
 	
-	.page-template-pagesfront-page-php .hentry:nth-child(2n+3) {
-		clear: none;
-	}
-	
-	.page-template-pagesfront-page-php .hentry:nth-child(3n+4) {
-		clear: left;
-	}
-
 }
 
 

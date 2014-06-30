@@ -11,7 +11,7 @@
 	$( function() {
 	
 		// Focus styles for menus.
-		$( '.main-navigation' ).find( 'a' ).on( 'focus.twentyfourteen blur.twentyfourteen', function() {
+		$( '.main-navigation' ).find( 'a' ).on( 'focus blur', function() {
 			$( this ).parents().toggleClass( 'focus' );
 		} );
 		$( '.nav-toggle' ).on( 'focus blur', function() {

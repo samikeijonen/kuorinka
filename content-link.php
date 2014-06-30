@@ -8,15 +8,10 @@
 	
 	<header class="entry-header">
 	
-		<?php 
-		if ( has_post_format( 'video' ) ) :
-			echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true, 'before' => '<div class="entry-media">', 'after' => '</div>' ) ) );
-		else :
-			if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) );
-		endif // End check for video or thumbnail. ?>
+		<?php if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) ); ?>
 		
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
+		<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( kuorinka_get_link_url() ) . '">', is_rtl() ? ' <span class="meta-nav">&larr;</span>' : ' <span class="meta-nav">&rarr;</span>' . '</a></h1>' ); ?>
+	
 	</header><!-- .entry-header -->
 	
 	<?php if ( 'post' == get_post_type() ) : ?>
@@ -25,9 +20,9 @@
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>

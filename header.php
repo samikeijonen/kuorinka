@@ -22,23 +22,27 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kuorinka' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner" aria-labelledby="site-title">
 		
-		<div class="site-branding">
+		<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
+	
+			<div class="site-branding">
 		
-		<?php if ( get_theme_mod( 'logo_upload') ) : // Use logo if is set. Else use bloginfo name. ?>	
-				<h1 id="site-title">
-					<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-						<img class="cinemajoensuu-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-					</a>
-				</h1>
-			<?php else : ?>
-				<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif; // End check for logo. ?>
+				<?php if ( get_theme_mod( 'logo_upload') ) : // Use logo if is set. Else use bloginfo name. ?>	
+					<h1 id="site-title">
+						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+							<img class="cinemajoensuu-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+						</a>
+					</h1>
+				<?php else : ?>
+					<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php endif; // End check for logo. ?>
 			
-			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			
-		</div><!-- .site-branding -->
+			</div><!-- .site-branding -->
+			
+		<?php endif; // End check for header text. ?>
 		
 		<?php if ( get_header_image() ) : ?>
 			<div id="kuorinka-header-image" class="kuorinka-header-image">
@@ -52,7 +56,7 @@
 		
 	</header><!-- #masthead -->
 	
-	<?php if ( function_exists( 'breadcrumb_trail' ) ) :
+	<?php if ( function_exists( 'breadcrumb_trail' ) && current_theme_supports( 'breadcrumb-trail' ) ) :
 		breadcrumb_trail( array( 'container' => 'nav', 'separator' => _x( '&#8764;', 'Separator in breadcrumb trail.', 'mina-olen' ), 'show_on_front' => false, 'show_browse' => false, 'before' => '<div class="wrap">', 'after' => '</div>' ) );
 	endif; ?>
 

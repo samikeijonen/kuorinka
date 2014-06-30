@@ -1,6 +1,6 @@
 /* Import themes styles. */
-@import url( '../style.css' );
 @import url( '//fonts.googleapis.com/css?family=Source Sans Pro:400,600,700,400italic,600italic,700italic|Roboto Condensed:300,400,700,300italic,400italic,700italic' );
+@import url( '../style.min.css' );
 
 /* Styles specific to the editor. */
 
