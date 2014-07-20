@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-06-29 07:53:47+00:00\n"
+"POT-Creation-Date: 2014-07-19 19:52:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,20 +99,30 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: comments.php:35 comments.php:52
+#: comments.php:35 comments.php:53
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:36 comments.php:54
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:37 comments.php:55
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:65
 msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:30 content-link.php:41 content-quote.php:35
+#: content-status.php:31 content.php:35
+msgid "Posted in %s"
+msgstr ""
+
+#: content-aside.php:31 content-link.php:42 content-quote.php:36
+#: content-status.php:32 content.php:36
+msgid "Tagged %s"
 msgstr ""
 
 #: content-none.php:13
@@ -135,7 +145,8 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:19 content-single.php:20
+#: content-page.php:19 content-portfolio_item.php:19 content-quote.php:28
+#: content-quote.php:58 content.php:28
 msgid "Pages:"
 msgstr ""
 
@@ -152,15 +163,15 @@ msgstr ""
 msgid "Tagged %1$s"
 msgstr ""
 
-#: content-search.php:50 content.php:38
+#: content-search.php:50
 msgid "Leave a comment"
 msgstr ""
 
-#: content-search.php:50 content.php:38
+#: content-search.php:50
 msgid "1 Comment"
 msgstr ""
 
-#: content-search.php:50 content.php:38
+#: content-search.php:50
 msgid "% Comments"
 msgstr ""
 
@@ -168,14 +179,6 @@ msgstr ""
 #: inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188
 #: inc/breadcrumb-trail.php:1219
 msgid "Edit"
-msgstr ""
-
-#: content-single.php:27 content.php:33
-msgid "Posted in %s"
-msgstr ""
-
-#: content-single.php:28 content.php:34
-msgid "Tagged %s"
 msgstr ""
 
 #: footer.php:23
@@ -211,22 +214,26 @@ msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
 #: functions.php:115
-msgid "The main sidebar. It is displayed on right side of the page."
+msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 
 #: functions.php:125
-msgid "A sidebar located in the footer of the site."
+msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 
 #: functions.php:135
+msgid "A sidebar located in the footer of the site."
+msgstr ""
+
+#: functions.php:145
 msgid "A sidebar located in the Front Page Template."
 msgstr ""
 
-#: functions.php:208 menu-primary.php:3
+#: functions.php:219 menu-primary.php:3
 msgid "Menu"
 msgstr ""
 
-#: functions.php:285
+#: functions.php:278
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
@@ -276,6 +283,14 @@ msgstr ""
 msgid "Merge"
 msgstr ""
 
+#: inc/customizer.php:21
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "Upload custom logo."
+msgstr ""
+
 #: inc/template-tags.php:21
 msgid "Posts navigation"
 msgstr ""
@@ -314,7 +329,7 @@ msgid "Kuorinka"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "https://foxnet-themes/downloads/kuorinka"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -360,20 +375,25 @@ msgstr[1] ""
 
 #: functions.php:114
 msgctxt "sidebar"
-msgid "Primary"
+msgid "Header"
 msgstr ""
 
 #: functions.php:124
 msgctxt "sidebar"
-msgid "Subsidiary"
+msgid "Primary"
 msgstr ""
 
 #: functions.php:134
 msgctxt "sidebar"
+msgid "Subsidiary"
+msgstr ""
+
+#: functions.php:144
+msgctxt "sidebar"
 msgid "Front Page"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:172
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -381,7 +401,7 @@ msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:178
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -389,7 +409,7 @@ msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:56
+#: header.php:78
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr ""
@@ -444,6 +464,11 @@ msgstr ""
 #: sidebar-front-page.php:3
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
+msgstr ""
+
+#: sidebar-header.php:3
+msgctxt "Sidebar aria label"
+msgid "Header Sidebar"
 msgstr ""
 
 #: sidebar-primary.php:3

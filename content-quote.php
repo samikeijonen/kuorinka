@@ -39,16 +39,7 @@
 	<?php else : // If not viewing a single post. ?>
 	
 		<header class="entry-header">
-		
-			<?php 
-			if ( has_post_format( 'video' ) ) :
-				echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true, 'before' => '<div class="entry-media">', 'after' => '</div>' ) ) );
-			else :
-				if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) );
-			endif // End check for video or thumbnail. ?>
-		
 			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-		
 		</header><!-- .entry-header -->
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -60,9 +51,15 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'kuorinka' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
 	
 	<?php endif; // End single post check. ?>
 	

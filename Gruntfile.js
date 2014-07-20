@@ -63,6 +63,21 @@ grunt.initConfig({
 		}
 	},
 	
+	// Right to left styles
+	cssjanus: {
+		theme: {
+			options: {
+				swapLtrRtlInUrl: false
+			},
+			files: [
+				{
+					src: 'style.css',
+					dest: 'style-rtl.css'
+				}
+			]
+		}
+	},
+	
 	// Minify files
 	uglify: {
 		responsivenav: {

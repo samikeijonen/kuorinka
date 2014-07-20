@@ -64,8 +64,22 @@ get_header(); ?>
 			'post_type'      => array( 'post' ),
 			'post__not_in'   => $sticky,
 			'post_status'    => 'publish',
-			'posts_per_page' => 4
-			
+			'posts_per_page' => 4,
+			'tax_query'      => array(
+				array(
+					'taxonomy' => 'post_format',
+					'field'    => 'slug',
+					'terms'    => array( 
+						'post-format-aside',
+						'post-format-audio',
+						'post-format-chat',
+						'post-format-link',
+						'post-format-quote',
+						'post-format-status',
+					),
+					'operator' => 'NOT IN'
+				)
+			)
 		) ); ?>
 		
 		<section id="kuorinka-front-page-posts" class="kuorinka-front-page-section kuorinka-front-page-posts">

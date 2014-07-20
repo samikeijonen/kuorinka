@@ -5,31 +5,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : ?>
 	
-	<header class="entry-header">
-	
-		<?php
-		/* Arrow for right to left. */
-		if( is_rtl() ) :
-			$kuorinka_left_or_right = '&larr;';
-		else :
-			$kuorinka_left_or_right = '&rarr;';
-		endif;
-		?>
-		
-		<h1 class="entry-title">
-			<a href="<?php echo esc_url( kuorinka_get_link_url() ); ?>"><?php the_title(); ?> <span class="meta-nav"><?php echo esc_attr( $kuorinka_left_or_right ); ?></span></a>
-		</h1>
-		
-	</header><!-- .entry-header -->
-	
-	<?php if ( 'post' == get_post_type() ) : ?>
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		</header><!-- .entry-header -->
+
 		<div class="entry-meta">
 			<?php kuorinka_posted_on(); ?>
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 				<span class="comments-link"><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' ); ?></span>
 			<?php endif; ?>
 		</div><!-- .entry-meta -->
+		
 	<?php endif; ?>
 
 	<div class="entry-content">

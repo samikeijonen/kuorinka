@@ -21,7 +21,9 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kuorinka' ); ?></a>
-
+	
+	<?php do_action( 'kuorinka_before_header' ); // Hook before header. ?>
+	
 	<header id="masthead" class="site-header" role="banner" aria-labelledby="site-title">
 		
 		<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
@@ -30,8 +32,8 @@
 		
 				<?php if ( get_theme_mod( 'logo_upload') ) : // Use logo if is set. Else use bloginfo name. ?>	
 					<h1 id="site-title">
-						<a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-							<img class="cinemajoensuu-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
+						<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
+							<img class="kuorinka-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 						</a>
 					</h1>
 				<?php else : ?>
@@ -44,13 +46,29 @@
 			
 		<?php endif; // End check for header text. ?>
 		
-		<?php if ( get_header_image() ) : ?>
-			<div id="kuorinka-header-image" class="kuorinka-header-image">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="kuorinka-header-link" rel="home">
-					<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-				</a>
-			</div><!-- #kuorinka-header-image -->	
-		<?php endif; // End header image check. ?>
+		<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
+		
+		<?php
+		/* Use slider if it is set. */
+		$kuorinka_slider_header = get_post_meta( get_queried_object_id(), '_kuorinka_plus_slider_header', true );
+		if ( class_exists( 'KUORINKA_PLUS' ) && isset( $kuorinka_slider_header ) && !empty( $kuorinka_slider_header ) ) :
+			
+			/* Replace header by slider. */
+			if ( function_exists( 'soliloquy' ) ) :
+				soliloquy( absint( $kuorinka_slider_header ) );
+			endif;
+		
+		else :
+		
+			if ( get_header_image() ) : ?>
+				<div id="kuorinka-header-image" class="kuorinka-header-image">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="kuorinka-header-link" rel="home">
+						<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+					</a>
+				</div><!-- #kuorinka-header-image -->	
+			<?php endif; // End header image check. ?>
+			
+		<?php endif; // End header slider check. ?>
 		
 		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 		

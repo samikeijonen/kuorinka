@@ -74,7 +74,7 @@ function kuorinka_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link'
+		'aside', 'image', 'video', 'quote', 'link', 'status'
 	) );
 	
 	/* Add custom image sizes. */
@@ -109,6 +109,16 @@ add_action( 'after_setup_theme', 'kuorinka_setup' );
  */
 function kuorinka_widgets_init() {
 
+	$sidebar_header_args = array(
+		'id'            => 'header',
+		'name'          => _x( 'Header', 'sidebar', 'kuorinka' ),
+		'description'   => __( 'Header sidebar. It is displayed on top of the page.', 'kuorinka' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>'
+	);
+
 	$sidebar_primary_args = array(
 		'id'            => 'primary',
 		'name'          => _x( 'Primary', 'sidebar', 'kuorinka' ),
@@ -140,6 +150,7 @@ function kuorinka_widgets_init() {
 	);
 	
 	/* Register sidebars. */
+	register_sidebar( $sidebar_header_args );
 	register_sidebar( $sidebar_primary_args );
 	register_sidebar( $sidebar_subsidiary_args );
 	register_sidebar( $sidebar_front_page_args );
@@ -218,8 +229,8 @@ function kuorinka_scripts() {
 	/* Enqueue fonts. */
 	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
 	
-	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons.css', array(), '3.0.3' );
+	/* Add Genericons font, used in the main stylesheet. */
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons.css', array(), '3.1' );
 	
 	/* Enqueue comment reply. */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -227,24 +238,6 @@ function kuorinka_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
-
-/**
- * Disables sidebars if viewing a one-column page.
- *
- * @since  1.0.0
- */
-function kuorinka_disable_sidebars( $sidebars_widgets ) {
-	global $wp_customize;
-
-	$customize = ( is_object( $wp_customize ) && $wp_customize->is_preview() ) ? true : false;
-
-	if ( !is_admin() && !$customize && '1c' == get_theme_mod( 'theme_layout', '2c-l' ) ) {
-		$sidebars_widgets['primary'] = false;	
-	}
-	
-	return $sidebars_widgets;
-}
-add_filter( 'sidebars_widgets', 'kuorinka_disable_sidebars' );
 
 /**
  * Function for deciding which pages should have a one-column layout.
@@ -256,7 +249,7 @@ function kuorinka_one_column() {
 	if ( !is_active_sidebar( 'primary' ) && '1c' == get_theme_mod( 'theme_layout' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
-	elseif ( is_attachment() && wp_attachment_is_image() ) {
+	elseif ( is_page_template( 'pages/front-page.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
 	
@@ -327,7 +320,7 @@ add_filter( 'body_class', 'kuorinka_subsidiary_classes' );
  */
 function kuorinka_front_page_classes( $classes ) {
     
-	if ( is_active_sidebar( 'front-page' ) && is_page_template( 'pages/front-page.php' ) ) {
+	if ( is_active_sidebar( 'front-page' ) && ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) ) {
 		
 		$the_sidebars = wp_get_sidebars_widgets();
 		$num = count( $the_sidebars['front-page'] );
@@ -347,7 +340,7 @@ add_filter( 'body_class', 'kuorinka_front_page_classes' );
  */
 function kuorinka_front_page_sticky( $classes ) {
     
-	if ( is_page_template( 'pages/front-page.php' ) && is_sticky() ) {
+	if ( ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) && is_sticky() ) {
 		
 		$classes[] = 'sticky';
 	
@@ -379,6 +372,21 @@ function kuorinka_extra_layout_classes( $classes ) {
 	
 }
 add_filter( 'body_class', 'kuorinka_extra_layout_classes' );
+
+/**
+ * Add infinity sign after aside post format.
+ *
+ * @since     1.0.0
+ */
+function kuorinka_infinity_after_aside( $content ) {
+
+	if ( has_post_format( 'aside' ) && !is_singular() ) {
+		$content .= ' <a href="' . get_permalink() . '">&#8734;</a>';
+	}
+	
+	return $content;
+}
+add_filter( 'the_content', 'kuorinka_infinity_after_aside', 9 ); // run before wpautop
 
 /**
  * Callback function for adding editor styles. Use along with the add_editor_style() function.

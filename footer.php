@@ -27,6 +27,8 @@
 		
 	</footer><!-- #colophon -->
 	
+	<?php do_action( 'kuorinka_after_footer' ); // Hook after footer. ?>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

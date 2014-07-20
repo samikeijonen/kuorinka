@@ -42,6 +42,7 @@ a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 .entry-date a::before,
 .byline .author a::before,
+.comments-link a::before,
 .entry-terms::before,
 .nav-links .nav-previous a::before,
 .nav-links .nav-next a::after {
@@ -147,6 +148,24 @@ a.more-link::after {
 }
 .nav-links .nav-next a::after {
 	content: '\f430';
+}
+
+.entry-date a,
+.byline .author a,
+.comments-link a,
+.entry-permalink a {
+	margin-left: 8px;
+	margin-right: 0;
+}
+
+.widget ul > li::before {
+	margin-left: 6px;
+	margin-right: 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 480px) {

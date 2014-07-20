@@ -1,4 +1,4 @@
-<?php if ( has_nav_menu( 'primary' ) ) { ?>
+<?php if ( has_nav_menu( 'primary' ) ) : ?>
 
 	<button id="nav-toggle"><?php _e( 'Menu', 'kuorinka' ); ?></button>
 	
@@ -22,4 +22,4 @@
 		</div><!-- .wrap -->
 	</nav><!-- #menu-primary -->
 
-<?php } ?>
+<?php endif; ?>

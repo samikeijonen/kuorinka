@@ -1,20 +1,20 @@
 /*
 Theme Name: Kuorinka
-Theme URI: http://underscores.me/
+Theme URI: https://foxnet-themes/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxnet-themes.fi
-Description: Simple the best.
+Description: Theme check: accessibility-ready, right to left support, translation-ready Schema.org support, all the WordPress' built-in theme features and some more. Check.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
 Domain Path: /languages/
-Tags:
+Tags: blue, white, light, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
- Kuorinka is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Kuorinka is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
@@ -214,7 +214,7 @@ h6 {
 	#site-description {
 		padding-left: 0;
 		padding-right: 0;
-		width: 48%;
+		width: 48.6%;
 	}
 
 }
@@ -303,8 +303,7 @@ blockquote {
 	font-size: 22px;
 	font-size: 2.2rem;
 	font-style: italic;
-	margin: 16px 0 32px;
-	margin: 1.6rem 0 3.2rem;
+	margin: 0 0 1.5em;
 	padding: 3%;
 }
 
@@ -333,7 +332,8 @@ ul {
 ol {
 	list-style: decimal;
 }
-.sidebar ul {
+.sidebar ul,
+.error404 ul {
 	list-style: none;
 	margin: 0;
 }
@@ -419,7 +419,7 @@ a[href^="tel:"]::before,
 .featured-post:before,
 .byline .author a::before,
 .entry-date a::before,
-.comments-link::before,
+.comments-link a::before,
 .post-edit-link::before,
 .entry-permalink a::before,
 .post-format-link::before,
@@ -447,7 +447,8 @@ a.more-link::after,
 
 .entry-date a,
 .byline .author a,
-.entry-permalink a {
+.entry-permalink a,
+.comments-link a {
 	margin-right: 8px;
 }
 
@@ -455,6 +456,7 @@ a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 .entry-date a::before,
 .byline .author a::before,
+.comments-link a::before,
 .entry-permalink a::before,
 .entry-terms::before, 
 .nav-links .nav-previous a::before, 
@@ -470,7 +472,7 @@ a[href^="mailto:"]::before {
 }
 a[href^="tel:"]::before {
 	content: '\f437';
-	bottom: 5px;
+	bottom: 3px;
 }
 
 .byline .author a::before {
@@ -478,6 +480,9 @@ a[href^="tel:"]::before {
 }
 .entry-permalink a::before {
 	content: '\f107';
+}
+.comments-link a::before {
+	content: '\f300';
 }
 .entry-terms.category::before {
 	content: '\f301';
@@ -513,8 +518,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 4px solid #e6eff7;
-	border-color: #e6eff7 #e6eff7 #e6eff7 #e6eff7;
+	border: none;
+	border-radius: 2px;
 	background: #1668b5;
 	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -721,7 +726,7 @@ button#nav-toggle.focus,
 	border-top: 6px solid #054e92;
 }
 .custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
-	margin-bottom: -81px;
+	margin-bottom: -61px;
 }
 
 @media screen and (max-width: 899px) {
@@ -738,7 +743,9 @@ button#nav-toggle.focus,
 	
 	button#nav-toggle {
 		border: none;
+		border-radius: 0;
 		position: relative;
+		margin: 0;
 		z-index: 100;
 	}
 	
@@ -870,7 +877,7 @@ button#nav-toggle.focus,
 	#menu-primary ul ul a {
 		padding: 18px 12px;
 		white-space: normal;
-		width: 176px;
+		width: 200px;
 	}
 
 	#menu-primary ul li:hover > ul,
@@ -923,25 +930,41 @@ button#nav-toggle.focus,
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
+
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+	border-bottom: 2px solid #e6eff7;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+
+@media screen and (min-width: 900px) {
+
+	.comment-navigation .nav-previous,
+	.paging-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		border-bottom: none;
+		float: left;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		width: 50%;
+	}
+	.comment-navigation .nav-next,
+	.paging-navigation .nav-next,
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
 }
 
 /* === 5.2.2 Social menu === */
 
 #menu-social ul {
 	list-style: none;
-	padding: 30px 0;
+	padding: 0 0 30px 0;
 	margin: 0;
 	text-align: center;
 }
@@ -1075,7 +1098,7 @@ button#nav-toggle.focus,
 6.0 Accessibility
 --------------------------------------------------------------*/
 
-/* Text meant only for screen readers */
+/* Text meant only for screen readers. */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -1113,12 +1136,12 @@ button#nav-toggle.focus,
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin: 0 1.5em 1.5em 0;
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin: 0 0 1.5em 1.5em;
 }
 .aligncenter {
 	clear: both;
@@ -1133,6 +1156,8 @@ button#nav-toggle.focus,
 
 .clear:before,
 .clear:after,
+.hentry:before,
+.hentry:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -1166,6 +1191,7 @@ button#nav-toggle.focus,
 }
 
 .clear:after,
+.hentry:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
@@ -1190,6 +1216,10 @@ button#nav-toggle.focus,
 
 .widget {
 	margin: 0 0 1.5em;
+}
+#sidebar-header .widget {
+	margin: 0;
+	padding: 1.5em 0;
 }
 
 .widget-title {
@@ -1258,6 +1288,12 @@ button#nav-toggle.focus,
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.page-links a {
+	background: #e6eff7;
+	display: inline-block;
+	margin-bottom: 4px;
+	padding: 0.5em 1em;
+}
 
 .entry-header .entry-title {
 	border-bottom: 4px double #e6eff7;
@@ -1286,7 +1322,7 @@ button#nav-toggle.focus,
 	border-radius: 50%;
 }
 
-.page-template-pagesfront-page-php #kuorinka-front-page-posts .entry-title {
+.kuorinka-front-page-posts .entry-title {
 	font-size: 22px;
 }
 #sidebar-front-page {
@@ -1321,8 +1357,12 @@ button#nav-toggle.focus,
 		padding-left: 3%;
 		width: 50%;
 	}
-	
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .hentry:nth-child(2n+3) {
+		clear: left;
+	}
+
 }
+
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -1331,6 +1371,16 @@ button#nav-toggle.focus,
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+.format-status .avatar {
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #e6eff7;
+	float: left;
+	margin: 0 30px 30px 0;
+}
+.format-status .entry-content {
+	margin-top: 18px;
 }
 
 
@@ -1443,6 +1493,11 @@ video {
 13.0 Layouts
 --------------------------------------------------------------*/
 
+/* Make sure sidebar doesn't appear in customizer. */
+.layout-1c #sidebar-primary {
+	display: none;
+}
+
 /* === 13.1 Max-width. === */
 
 #page {
@@ -1461,11 +1516,14 @@ video {
 #colophon .site-info {
 	background: #fff;
 }
+#sidebar-header {
+	background: #e6eff7;
+}
 
 /* === 13.2 Paddings. === */
 
-body,
 #masthead .site-branding,
+#sidebar-header,
 .breadcrumb-trail .wrap,
 #content > .wrap,
 #sidebar-subsidiary .wrap,
@@ -1475,7 +1533,6 @@ body,
 }
 #colophon .site-info {
 	padding-bottom: 30px;
-	padding-top: 30px;
 	text-align: center;
 }
 #content > .wrap {
@@ -1647,32 +1704,6 @@ body,
 
 /* Minimum width of 1056 pixels. */
 @media screen and (min-width: 1056px) {
-
-	/* 4 widgets in subsidiary sidebar. */
-	.sidebar-subsidiary-4 #sidebar-subsidiary .widget,
-	.sidebar-front-page-4 #sidebar-front-page .widget,
-	.sidebar-page-template-4 #sidebar-page-template .widget {
-		width: 25%;
-	}
-	/* Don't clear left for 3th widget. */
-	.sidebar-subsidiary-4 #sidebar-subsidiary .widget:nth-child(3),
-	.sidebar-front-page-4 #sidebar-front-page .widget:nth-child(3),
-	.sidebar-page-template-4 #sidebar-page-template .widget:nth-child(3) {
-		clear: none;
-	}
-	
-	/* 5 widgets in subsidiary sidebar. */
-	.sidebar-subsidiary-5 #sidebar-subsidiary .widget,
-	.sidebar-front-page-5 #sidebar-front-page .widget,
-	.sidebar-page-template-5 #sidebar-page-template .widget {
-		width: 20%;
-	}
-	/* Don't clear left for 4th widget. */
-	.sidebar-subsidiary-5 #sidebar-subsidiary .widget:nth-child(4),
-	.sidebar-front-page-5 #sidebar-front-page .widget:nth-child(4),
-	.sidebar-page-template-5 #sidebar-page-template .widget:nth-child(4) {
-		clear: none;
-	}
 	
 	/* 6 widgets in sidebar. */
 	.sidebar-subsidiary-6 #sidebar-subsidiary .widget,
@@ -1722,10 +1753,6 @@ body,
 	margin-top: 30px;
 }
 
-#comments ul {
-	list-style-type: none;
-}
-
 ol.comment-list,
 ol.comment-list ol.children {
 	list-style: none;
@@ -1734,8 +1761,8 @@ ol.comment-list ol.children {
 }
 
 .comment-list > li {
-	margin-bottom: 5%;
-	padding-bottom: 5%;
+	margin-bottom: 6%;
+	padding-bottom: 6%;
 	border-bottom: solid 3px #e6eff7;
 }
 
@@ -1751,19 +1778,22 @@ ol.comment-list ol.children {
 li.comment .comment-wrap,
 li.ping .comment-wrap {
 	padding-bottom: 16px;
-	padding-bottom: 1rem;
+	padding-bottom: 1.6rem;
 	padding-top: 16px;
-	padding-top: 1rem;
+	padding-top: 1.6rem;
 }
 
 li.bypostauthor {
+	background: #e6eff7;
+	border-bottom: 2px solid #054e92;
+	padding: 3%;
 }
 
 ol.comment-list ul,
 ol.comment-list ol,
 ol.comment-list dl {
 	margin-bottom: 16px;
-	margin-bottom: 1rem;
+	margin-bottom: 1.6rem;
 }
 ol.comment-list ul ul,
 ol.comment-list ol ol,
@@ -1774,10 +1804,12 @@ ol.comment-list dl dl {
 /* Avatars. */
 
 .comment-list .avatar {
-	margin: 4px 16px 16px 0;
-	margin: 0.25rem 1rem 1rem 0;
-	width: 40px;
-	height: 40px;
+	border-radius: 50%;
+	float: left;
+	margin: 0 16px 16px 0;
+	margin: 0 1.6rem 1.6rem 0;
+	width: 70px;
+	height: 70px;
 }
 
 /* Meta. */
@@ -1793,20 +1825,29 @@ ol.comment-list dl dl {
 	font-weight: bold;
 }
 
+.comment-content,
+.comment-author .fn {
+	clear: left;
+	display: block;
+}
 
-@media screen and (min-width: 608px) {	
+.parent .comment-reply-link {
+	display: block;
+	margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 608px) {
+
+	.comment-author .fn {
+		clear: none;
+		display: inline;
+	}
 
 	ol.comment-list ol.children {
 		margin-left: 2%;
 	}
 
-	.comment-list .avatar {
-		float: left;
-	}
-
-	.comment-content {
-		clear: left;
-	}
 	.comment-meta {
 		margin-top: 16px;
 	}
