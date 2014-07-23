@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-19 19:52:43+00:00\n"
+"POT-Creation-Date: 2014-07-22 20:19:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -146,39 +146,8 @@ msgid ""
 msgstr ""
 
 #: content-page.php:19 content-portfolio_item.php:19 content-quote.php:28
-#: content-quote.php:58 content.php:28
+#: content-quote.php:58 content.php:28 image.php:37
 msgid "Pages:"
-msgstr ""
-
-#: content-search.php:30 content-search.php:40
-#. translators: used between list items, there is a space after the comma
-msgid ", "
-msgstr ""
-
-#: content-search.php:34
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content-search.php:44
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content-search.php:50
-msgid "Leave a comment"
-msgstr ""
-
-#: content-search.php:50
-msgid "1 Comment"
-msgstr ""
-
-#: content-search.php:50
-msgid "% Comments"
-msgstr ""
-
-#: content-search.php:53 inc/breadcrumb-trail.php:1135
-#: inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188
-#: inc/breadcrumb-trail.php:1219
-msgid "Edit"
 msgstr ""
 
 #: footer.php:23
@@ -233,7 +202,7 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: functions.php:278
+#: functions.php:281
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
@@ -273,6 +242,11 @@ msgstr ""
 #: inc/breadcrumb-trail.php:189
 #. Translators: Weekly archive title. %s is the week date format.
 msgid "Week %s"
+msgstr ""
+
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
+#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+msgid "Edit"
 msgstr ""
 
 #: inc/breadcrumb-trail.php:1163
@@ -333,7 +307,10 @@ msgid "https://foxnet-themes/downloads/kuorinka"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Simple the best."
+msgid ""
+"Theme check: accessibility-ready, right to left support, translation-ready "
+"Schema.org support, all the WordPress' built-in theme features and some "
+"more. Check."
 msgstr ""
 
 #. Author of the plugin/theme

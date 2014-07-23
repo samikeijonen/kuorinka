@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-19 19:52:43+00:00\n"
-"PO-Revision-Date: 2014-07-19 22:52+0200\n"
+"POT-Creation-Date: 2014-07-22 09:43:36+00:00\n"
+"PO-Revision-Date: 2014-07-22 12:46+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -154,37 +154,6 @@ msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on ap
 msgid "Pages:"
 msgstr "Sivut:"
 
-#. translators: used between list items, there is a space after the comma
-#: content-search.php:30 content-search.php:40
-msgid ", "
-msgstr ", "
-
-#: content-search.php:34
-msgid "Posted in %1$s"
-msgstr "Artikkeli kategoriassa %1$s"
-
-#: content-search.php:44
-msgid "Tagged %1$s"
-msgstr "Avainsanat %1$s"
-
-#: content-search.php:50
-msgid "Leave a comment"
-msgstr "Kommentoi"
-
-#: content-search.php:50
-msgid "1 Comment"
-msgstr "Yksi kommentti"
-
-#: content-search.php:50
-msgid "% Comments"
-msgstr "% Kommenttia"
-
-#: content-search.php:53 inc/breadcrumb-trail.php:1135
-#: inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188
-#: inc/breadcrumb-trail.php:1219
-msgid "Edit"
-msgstr "Muokkaa"
-
 #: footer.php:23
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
@@ -282,6 +251,11 @@ msgstr "Minuutti %s"
 msgid "Week %s"
 msgstr "Viikko %s"
 
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
+#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+msgid "Edit"
+msgstr "Muokkaa"
+
 #: inc/breadcrumb-trail.php:1163
 msgid "Split"
 msgstr "Jaa"
@@ -340,8 +314,14 @@ msgid "https://foxnet-themes/downloads/kuorinka"
 msgstr "https://foxnet-themes/downloads/kuorinka"
 
 #. Description of the plugin/theme
-msgid "Simple the best."
-msgstr "Paras"
+msgid ""
+"Theme check: accessibility-ready, right to left support, translation-ready "
+"Schema.org support, all the WordPress' built-in theme features and some "
+"more. Check."
+msgstr ""
+"Mitä teema pitää sisällään: \"accessibility\"-valmis, right to left -tuki, "
+"Schema.org tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon "
+"muuta."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
