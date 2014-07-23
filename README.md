@@ -1,6 +1,6 @@
 # Kuorinka
 
-Theme check: accessibility-ready, right to left support, translation-ready [Schema.org](http://schema.org) microdata, all the WordPress' built-in theme features and some more. Check.
+Theme check: accessibility-ready, right to left support, translation-ready, [Schema.org](http://schema.org) microdata, all the WordPress' built-in theme features and some more. Check.
 
 ## About Kuorinka
 
