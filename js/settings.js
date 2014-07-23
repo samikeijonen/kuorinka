@@ -1,6 +1,6 @@
     var nav = responsiveNav(".main-navigation", { // Selector
         animate: true, // Boolean: Use CSS3 transitions, true or false
-        transition: 284, // Integer: Speed of the transition, in milliseconds
+        transition: 350, // Integer: Speed of the transition, in milliseconds
         //label: kuorinka_script_vars.menu, // String: Label for the navigation toggle
         insert: "before", // String: Insert the toggle before or after the navigation
         customToggle: "#nav-toggle", // Selector: Specify the ID of a custom toggle
