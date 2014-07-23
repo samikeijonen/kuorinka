@@ -1,6 +1,6 @@
 <?php if ( '1c' != get_theme_mod( 'theme_layout' ) ) : // If the layout is not one column. ?>
 	
-	<aside id="sidebar-primary" class="sidebar" role="complementary" aria-label="<?php echo _x( 'Primary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>">
+	<aside id="sidebar-primary" class="sidebar" role="complementary" aria-label="<?php echo _x( 'Primary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>" <?php hybrid_attr( 'sidebar', 'primary' ); ?>>
 
 		<?php if ( is_active_sidebar( 'primary' ) ) : // If the sidebar has widgets. ?>
 		
