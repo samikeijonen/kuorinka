@@ -68,7 +68,7 @@ if ( ! function_exists( 'kuorinka_posted_on' ) ) :
 function kuorinka_posted_on() {
 
 	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
+	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"' . hybrid_get_attr( 'entry-author' ) . '><a class="url fn n" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
@@ -148,7 +148,7 @@ function kuorinka_get_post_terms( $args = array() ) {
 
 	if ( !empty( $terms ) ) {
 		$html .= $args['before'];
-		$html .= sprintf( $args['items_wrap'], 'class="entry-terms ' . $args['taxonomy'] . '"', sprintf( $args['text'], $terms ) );
+		$html .= sprintf( $args['items_wrap'], 'class="entry-terms ' . $args['taxonomy'] . '" ' . hybrid_get_attr( 'entry-terms', $args['taxonomy'] ) . '', sprintf( $args['text'], $terms ) );
 		$html .= $args['after'];
 	}
 
