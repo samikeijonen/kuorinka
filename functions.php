@@ -252,6 +252,9 @@ function kuorinka_one_column() {
 	elseif ( is_page_template( 'pages/front-page.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
+	elseif ( is_attachment() && wp_attachment_is_image() && '1c' != get_post_layout( get_queried_object_id() ) ) {
+		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
+	}
 	
 }
 add_action( 'template_redirect', 'kuorinka_one_column' );
@@ -341,9 +344,7 @@ add_filter( 'body_class', 'kuorinka_front_page_classes' );
 function kuorinka_front_page_sticky( $classes ) {
     
 	if ( ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) && is_sticky() ) {
-		
 		$classes[] = 'sticky';
-	
     }
     
     return $classes;
@@ -492,3 +493,8 @@ require_once( get_template_directory() . '/inc/media-grabber.php' );
  * Load breadcrumb trail.
  */
 require_once( get_template_directory() . '/inc/breadcrumb-trail.php' );
+
+/**
+ * Load Schema.org file.
+ */
+require_once( get_template_directory() . '/inc/schema.php' );

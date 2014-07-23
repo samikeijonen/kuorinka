@@ -15,7 +15,7 @@
 	
 	<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo" <?php hybrid_attr( 'footer' ); ?>>
 	
 		<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 		

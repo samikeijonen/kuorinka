@@ -18,29 +18,29 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php hybrid_attr( 'body' ); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'kuorinka' ); ?></a>
 	
 	<?php do_action( 'kuorinka_before_header' ); // Hook before header. ?>
 	
-	<header id="masthead" class="site-header" role="banner" aria-labelledby="site-title">
+	<header id="masthead" class="site-header" role="banner" aria-labelledby="site-title" <?php hybrid_attr( 'header' ); ?>>
 		
 		<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 	
 			<div class="site-branding">
 		
 				<?php if ( get_theme_mod( 'logo_upload') ) : // Use logo if is set. Else use bloginfo name. ?>	
-					<h1 id="site-title">
+					<h1 id="site-title" class="site-title-logo" <?php hybrid_attr( 'site-title' ); ?>>
 						<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
 							<img class="kuorinka-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
 						</a>
 					</h1>
 				<?php else : ?>
-					<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h1 id="site-title" <?php hybrid_attr( 'site-title' ); ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php endif; // End check for logo. ?>
 			
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h2 id="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></h2>
 			
 			</div><!-- .site-branding -->
 			
