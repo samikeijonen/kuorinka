@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : ?>
 	
@@ -16,7 +16,7 @@
 
 		<?php endif; // End avatars check. ?>
 		
-		<div class="entry-content">
+		<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
 
@@ -49,7 +49,7 @@
 
 		<?php endif; // End avatars check. ?>
 
-		<div class="entry-content">
+		<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
 

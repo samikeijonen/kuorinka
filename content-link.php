@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 	
 	<header class="entry-header">
 	
@@ -17,7 +17,7 @@
 		endif;
 		?>
 		
-		<h1 class="entry-title">
+		<h1 class="entry-title" <?php hybrid_get_attr( 'entry-title' ); ?>>
 			<a href="<?php echo esc_url( kuorinka_get_link_url() ); ?>"><?php the_title(); ?> <span class="meta-nav"><?php echo esc_attr( $kuorinka_left_or_right ); ?></span></a>
 		</h1>
 		
@@ -32,7 +32,7 @@
 		</div><!-- .entry-meta -->
 	<?php endif; ?>
 
-	<div class="entry-content">
+	<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 

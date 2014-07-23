@@ -4,12 +4,12 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 	
 		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 	
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -21,7 +21,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		
-		<div class="entry-content">
+		<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -39,7 +39,7 @@
 	<?php else : // If not viewing a single post. ?>
 	
 		<header class="entry-header">
-			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+			<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		</header><!-- .entry-header -->
 		
 		<?php if ( 'post' == get_post_type() ) : ?>
