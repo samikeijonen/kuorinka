@@ -15,8 +15,16 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main" <?php hybrid_attr( 'content' ); ?>>
+		
+		<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
+
+			<?php locate_template( array( 'loop-meta.php' ), true ); // Loads the loop-meta.php template. ?>
+
+		<?php endif; // End check for multi-post page. ?>
 
 		<?php if ( have_posts() ) : ?>
+		
+			<?php do_action( 'kuorinka_before_loop' ); // Action hook before loop. ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -38,6 +46,8 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
+		
+		<?php do_action( 'kuorinka_after_loop' ); // Action hook after loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
