@@ -60,7 +60,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		
-		<div class="entry-summary"  <?php hybrid_attr( 'entry-summary' ); ?>>
+		<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 	
