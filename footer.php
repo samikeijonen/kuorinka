@@ -8,8 +8,9 @@
  */
 ?>
 
-		<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
-		
+			<?php get_sidebar( 'primary' ); // Loads the sidebar-primary.php template. ?>
+			
+			</div><!-- .wrap-inside -->
 		</div><!-- .wrap -->
 	</div><!-- #content -->
 	
