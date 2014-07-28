@@ -1,9 +1,9 @@
 <?php
 /**
- * HTML attribute functions and filters.  The purposes of this is to provide a way for theme/plugin devs 
- * to hook into the attributes for specific HTML elements and create new or modify existing attributes.  
- * This is sort of like `body_class()`, `post_class()`, and `comment_class()` on steroids.  Plus, it 
- * handles attributes for many more elements.  The biggest benefit of using this is to provide richer 
+ * This is a stripped down version of Justin Tadlocks attributes and elements addition. I'll add the
+ * classes and divs "manually" and add Schema.org support via filters below.
+ *
+ * The biggest benefit of using this is to provide richer 
  * microdata while being forward compatible with the ever-changing Web. Currently, the default microdata 
  * vocabulary supported is Schema.org.
  *
@@ -389,6 +389,8 @@ function hybrid_attr_entry_author( $attr ) {
  */
 function hybrid_attr_entry_published( $attr ) {
 
+	$attr['itemprop'] = 'datePublished';
+
 	return $attr;
 }
 
@@ -402,7 +404,11 @@ function hybrid_attr_entry_published( $attr ) {
  */
 function hybrid_attr_entry_content( $attr ) {
 
-	$attr['itemprop'] = 'articleBody';
+	if ( 'post' === get_post_type() ) {
+		$attr['itemprop'] = 'articleBody';
+	} else {
+		$attr['itemprop'] = 'text';
+	}
 
 	return $attr;
 }
