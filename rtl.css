@@ -181,3 +181,12 @@ blockquote {
 	border-left: none;
 	border-right: 4px solid #054e92;
 }
+
+caption, th, td {
+	text-align: right;
+}
+
+.format-status .avatar {
+	float: right;
+	margin: 0  0 30px 30px;
+}
