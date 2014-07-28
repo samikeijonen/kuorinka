@@ -44,6 +44,7 @@ and Blueprint http://www.blueprintcss.org/
 	10.1 - Posts and pages
 	10.2 - Asides
 	10.3 - Comments
+	10.4 - Loop meta
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
@@ -52,6 +53,8 @@ and Blueprint http://www.blueprintcss.org/
 14.0 - Comments
 15.0 - Plugins
 	15.1 - Gravity Forms CSS
+	15.2 - Webshare CSS
+	15.3 - Grid Columns CSS 
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -360,20 +363,18 @@ figure {
 /* Tables. */
 
 table {
-	border-right: 1px solid #eee;
+	border-right: 1px solid #e6eff7;
 	border-collapse: collapse;
 	border-spacing: 0;
-	margin: 0 0 32px 0;
-	margin: 0 0 2rem 0;
+	margin: 0 0 1.5em 0;
 	width: 100%;
 }
 th,
 td {
-	border-top: 1px solid #eee;
-	border-left: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	padding: 8px 2%;
-	padding: 0.5rem 2%;
+	border-top: 1px solid #e6eff7;
+	border-left: 1px solid #e6eff7;
+	border-bottom: 1px solid #e6eff7;
+	padding: 6px 2%;
 }
 caption,
 th,
@@ -381,8 +382,7 @@ td {
 	text-align: left;
 }
 caption {
-	margin: 16px 0;
-	margin: 1rem 0;
+	margin: 1em 0;
 }
 th {
 	font-weight: bold;
@@ -418,7 +418,7 @@ a[href^="tel:"]::before,
 .genericon,
 .nav-toggle:before,
 .featured-post:before,
-.byline .author a::before,
+.byline .entry-author a::before,
 .entry-date a::before,
 .comments-link a::before,
 .post-edit-link::before,
@@ -447,7 +447,7 @@ a.more-link::after,
 }
 
 .entry-date a,
-.byline .author a,
+.byline .entry-author a,
 .entry-permalink a,
 .comments-link a {
 	margin-right: 8px;
@@ -456,8 +456,9 @@ a.more-link::after,
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 .entry-date a::before,
-.byline .author a::before,
+.byline .entry-author a::before,
 .comments-link a::before,
+.comment-reply-link::before,
 .entry-permalink a::before,
 .entry-terms::before, 
 .nav-links .nav-previous a::before, 
@@ -476,7 +477,7 @@ a[href^="tel:"]::before {
 	bottom: 3px;
 }
 
-.byline .author a::before {
+.byline .entry-author a::before {
 	content: '\f304';
 }
 .entry-permalink a::before {
@@ -484,6 +485,9 @@ a[href^="tel:"]::before {
 }
 .comments-link a::before {
 	content: '\f300';
+}
+.comment-reply-link::before {
+	content: '\f412';
 }
 .entry-terms::before {
 	content: '\f301';
@@ -593,9 +597,8 @@ textarea {
 }
 
 fieldset {
-	border: 1px solid #eee;
-	margin: 0 0 32px 0;
-	margin: 0 0 2rem 0;
+	border: 1px solid #e6eff7;
+	margin: 0 0 1.5em 0;
 	padding: 3%;
 }
 
@@ -733,7 +736,7 @@ button#nav-toggle.focus,
 	border-top: 6px solid #054e92;
 }
 .custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
-	margin-bottom: -61px;
+	margin-bottom: -60px;
 }
 
 @media screen and (max-width: 899px) {
@@ -765,6 +768,12 @@ button#nav-toggle.focus,
 		display: block;
 		padding: 10px 4%;
 		width: 100%;
+	}
+	button#nav-toggle {
+		border-bottom: none;
+	}
+	button#nav-toggle.active {
+		border-bottom: 1px solid #e6eff7;;
 	}
 
 	#menu-primary ul ul li a {
@@ -812,6 +821,9 @@ button#nav-toggle.focus,
 		vertical-align: middle;
 		width: 32px;
 		height: 32px;
+	}
+	button#nav-toggle.active:before {
+		content: "\f405";
 	}
 
 }
@@ -1173,8 +1185,8 @@ button#nav-toggle.focus,
 
 .clear:before,
 .clear:after,
-.hentry:before,
-.hentry:after,
+.entry:before,
+.entry:after,
 .entry-content:before,
 .entry-content:after,
 .comment-content:before,
@@ -1208,7 +1220,7 @@ button#nav-toggle.focus,
 }
 
 .clear:after,
-.hentry:after,
+.entry:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,
@@ -1281,18 +1293,15 @@ button#nav-toggle.focus,
 10.0 Content
 --------------------------------------------------------------*/
 
-
-/*--------------------------------------------------------------
-10.1 Posts and pages
---------------------------------------------------------------*/
+/* === 10.1 Posts and pages === */
 
 .sticky,
-.sticky.hentry {
+.sticky.entry {
 	background: #e6eff7;
 	border-bottom: 2px solid #054e92;
 	padding: 3%;
 }
-.hentry {
+.entry {
 	padding: 0 0 1.5em;
 	margin: 0 0 1.5em;
 }
@@ -1370,23 +1379,21 @@ button#nav-toggle.focus,
 
 	/* Front page post grid. */
 	.page-template-pagesfront-page-php #kuorinka-front-page-posts {
-		margin-left: -3%;
+		margin-left: -5%;
 	}
-	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .hentry {
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .entry {
 		float: left;
-		padding-left: 3%;
+		padding-left: 5%;
 		width: 50%;
 	}
-	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .hentry:nth-child(2n+3) {
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .entry:nth-child(2n+3) {
 		clear: left;
 	}
 
 }
 
 
-/*--------------------------------------------------------------
-10.2 Asides
---------------------------------------------------------------*/
+/* === 10.2 Asides === */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -1404,15 +1411,31 @@ button#nav-toggle.focus,
 }
 
 
-/*--------------------------------------------------------------
-10.3 Comments
---------------------------------------------------------------*/
+/* === 10.3 Comments === */
 
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 }
+
+
+/* === 10.2 Loop meta === */
+
+.loop-meta {
+	border-bottom: 1px solid #e6eff7;
+	padding-bottom: 1.5em;
+	margin-bottom: 1.5em;
+}
+.loop-title {
+	margin: 0;
+}
+.loop-description {
+	color: #555;
+	font-style: italic;
+	margin-top: 1.5em;
+}
+
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
@@ -1608,34 +1631,44 @@ video {
 	}
 
 	/* Two column layout. */
+
+	.layout-2c-l .site-content > .wrap > .wrap-inside,
+	.layout-default .site-content > .wrap > .wrap-inside {
+		margin-left: -5%;
+	}
+	.layout-2c-r .site-content > .wrap > .wrap-inside {
+		margin-right: -5%;
+	}
 	
 	.layout-2c-l .content-area,
 	.layout-default .content-area,
-	.layout-3c-l .content-area,
 	.layout-2c-r #sidebar-primary {
 		float: left;
+		padding-left: 5%;
 	}
 	
 	.layout-2c-l .content-area,
 	.layout-default .content-area,
 	.layout-2c-r .content-area {
-		width: 66%;
+		width: 66.666666666%;
 	}
 
 	.layout-2c-l #sidebar-primary,
 	.layout-2c-r #sidebar-primary {
 		float: left;
-		padding-left: 6%;
-		width: 34%;
+		padding-left: 5%;
+		width: 33.33333333333%;
 	}
 	.layout-2c-r #sidebar-primary {
 		padding-left: 0;
-		padding-right: 6%;
+		padding-right: 5%;
 	}
 	
 	.layout-2c-r .content-area,
 	.layout-2c-r #sidebar-primary {
 		float: right;
+		padding-left: 0;
+		padding-right: 5%;
 	}
 
 }
@@ -1649,13 +1682,13 @@ video {
 	#sidebar-subsidiary .wrap-inside,
 	#sidebar-front-page .wrap-inside,
 	#sidebar-page-template .wrap-inside {
-		margin-left: -3%;
+		margin-left: -5%;
 	}
 	#sidebar-subsidiary .widget,
 	#sidebar-front-page .widget,
 	#sidebar-page-template .widget {
 		float: left;
-		padding-left: 3%;
+		padding-left: 5%;
 	}
 
 	/* 1 widget in sidebar. */
@@ -1846,9 +1879,8 @@ ol.comment-list dl dl {
 	font-weight: bold;
 }
 
-.comment-content,
-.comment-author .fn {
-	clear: left;
+.comment-content {
+	clear: both;
 	display: block;
 }
 
@@ -1859,11 +1891,6 @@ ol.comment-list dl dl {
 
 
 @media screen and (min-width: 608px) {
-
-	.comment-author .fn {
-		clear: none;
-		display: inline;
-	}
 
 	ol.comment-list ol.children {
 		margin-left: 2%;
@@ -1908,4 +1935,12 @@ body #gforms_confirmation_message {
 	background: #e6eff7;
 	padding: 3%;
 	margin-bottom: 1.5em;
+}
+
+/* === 15.2 Webshare CSS === */
+
+body #webshare-wrapper {
+	border-top-color: #e6eff7;
+	border-bottom-color: #e6eff7;
+	margin: 1.5em 0;
 }
