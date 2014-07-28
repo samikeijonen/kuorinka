@@ -202,7 +202,7 @@ function kuorinka_fonts_url() {
 function kuorinka_scripts() {
 
 	/* Enqueue styles. */
-	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri(), array(), KUORINKA_VERSION );
 	
 	/* Enqueue Fitvids. */
 	wp_enqueue_script( 'kuorinka-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, false );
@@ -337,15 +337,24 @@ function kuorinka_front_page_classes( $classes ) {
 add_filter( 'body_class', 'kuorinka_front_page_classes' );
 
 /**
- * Add sticky class to Front page template when using post_class.
+ * Add sticky class to Front page template when using post_class. Remove hentry and add entry at the same time.
  *
  * @since     1.0.0
  */
 function kuorinka_front_page_sticky( $classes ) {
     
+	/* Add sticky class also in front page template. */
 	if ( ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) && is_sticky() ) {
 		$classes[] = 'sticky';
     }
+	
+	/* Remove .hentry class because we're using Schema.org markup. */
+	if( ( $key = array_search( 'hentry', $classes ) ) !== false ) {
+		unset( $classes[$key] );
+	}
+	
+	/* Add entry class for Schema markup. */
+	$classes[] = 'entry';
     
     return $classes;
 	
@@ -450,6 +459,53 @@ function kuorinka_get_link_url() {
 }
 
 /**
+ * Use a template for individual comment output.
+ *
+ * @param object $comment Comment to display.
+ * @param int    $depth   Depth of comment.
+ * @param array  $args    An array of arguments.
+ *
+ * @since 1.0.0
+ */
+function kuorinka_comment_callback( $comment, $args, $depth ) {
+	include( locate_template( 'comment.php') );
+}
+
+/**
+ * Adds microdata to the comment reply link.
+ *
+ * @author  Justin Tadlock, justintadlock.com
+ * @link    http://themehybrid.com/hybrid-core
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $link
+ * @return string
+ */
+function kuorinka_comment_reply_link_filter( $link ) {
+	return preg_replace( '/(<a\s)/i', '$1itemprop="replyToUrl"', $link );
+}
+add_filter( 'comment_reply_link', 'kuorinka_comment_reply_link_filter', 5 );
+
+/**
+ * Adds microdata to the comments popup link.
+ *
+ * @author  Justin Tadlock, justintadlock.com
+ * @link    http://themehybrid.com/hybrid-core
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $attr
+ * @return string
+ */
+function kuorinka_comments_popup_link_attributes( $attr ) {
+	return 'itemprop="discussionURL"';
+}
+add_filter( 'comments_popup_link_attributes', 'kuorinka_comments_popup_link_attributes', 5 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -498,3 +554,8 @@ require_once( get_template_directory() . '/inc/breadcrumb-trail.php' );
  * Load Schema.org file.
  */
 require_once( get_template_directory() . '/inc/schema.php' );
+
+/**
+ * Load template general file.
+ */
+require_once( get_template_directory() . '/inc/template-general.php' );
