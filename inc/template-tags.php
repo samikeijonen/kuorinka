@@ -68,7 +68,7 @@ if ( ! function_exists( 'kuorinka_posted_on' ) ) :
 function kuorinka_posted_on() {
 
 	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"' . hybrid_get_attr( 'entry-author' ) . '><a class="url fn n" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
+	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s"' . hybrid_get_attr( 'entry-published' ) . '>%3$s</time></a></span> <span class="byline"><span class="entry-author" ' . hybrid_get_attr( 'entry-author' ) . '><a class="entry-author-link" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
