@@ -179,7 +179,7 @@ a.more-link::after {
 
 blockquote {
 	border-left: none;
-	border-right: 4px solid #054e92;
+	border-right: 2px solid #054e92;
 }
 
 caption, th, td {
