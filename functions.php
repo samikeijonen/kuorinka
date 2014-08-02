@@ -57,8 +57,9 @@ function kuorinka_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'kuorinka' ),
-		'social'  => __( 'Social Menu', 'kuorinka' )
+		'primary'   => __( 'Primary Menu', 'kuorinka' ),
+		'social'    => __( 'Social Menu', 'kuorinka' ),
+		'portfolio' => __( 'Portfolio Menu', 'kuorinka' )
 	) );
 	
 	/*
@@ -74,7 +75,7 @@ function kuorinka_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'status'
+		'audio', 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery'
 	) );
 	
 	/* Add custom image sizes. */
@@ -94,6 +95,12 @@ function kuorinka_setup() {
 	
 	/* Add theme support for breadcrumb trail. */
 	add_theme_support( 'breadcrumb-trail' );
+	
+	/* Add excerpt support for team member. */
+	add_post_type_support( 'team-member', 'excerpt' );
+	
+	/* Add custom-header support for portfolio. */
+	add_post_type_support( 'portfolio_item', 'custom-header' );
 	
 	/* Add Editor styles. */
 	add_editor_style( kuorinka_get_editor_styles() );
@@ -201,8 +208,13 @@ function kuorinka_fonts_url() {
  */
 function kuorinka_scripts() {
 
-	/* Enqueue styles. */
-	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri(), array(), KUORINKA_VERSION );
+	/* Enqueue parent theme styles. */
+	wp_enqueue_style( 'kuorinka-style', trailingslashit( get_template_directory_uri() ) . 'style' . KUORINKA_SUFFIX . '.css', array(), KUORINKA_VERSION );
+	
+	/* Enqueue child theme styles. */
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'kuorinka-child-style', get_stylesheet_uri(), array(), null );
+	}
 	
 	/* Enqueue Fitvids. */
 	wp_enqueue_script( 'kuorinka-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, false );
@@ -211,7 +223,7 @@ function kuorinka_scripts() {
 	wp_enqueue_script( 'kuorinka-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-fitvids' ), KUORINKA_VERSION, true );
 	
 	/* Enqueue responsive navigation. */
-	wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), '20140512', true );
+	wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
 
 	/* Enqueue settings. */
 	wp_enqueue_script( 'kuorinka-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-navigation' ), KUORINKA_VERSION, true );
@@ -246,10 +258,7 @@ add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
  */
 function kuorinka_one_column() {
 
-	if ( !is_active_sidebar( 'primary' ) && '1c' == get_theme_mod( 'theme_layout' ) ) {
-		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
-	}
-	elseif ( is_page_template( 'pages/front-page.php' ) ) {
+	if ( is_page_template( 'pages/front-page.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
 	elseif ( is_attachment() && wp_attachment_is_image() && '1c' != get_post_layout( get_queried_object_id() ) ) {
@@ -437,6 +446,23 @@ function kuorinka_transient_flusher() {
 	delete_transient( 'kuorinka_post_query' );
 }
 add_action( 'save_post', 'kuorinka_transient_flusher' );
+
+/**
+ * Returns a link to the porfolio item URL if it has been set.
+ *
+ * @since  0.1.0
+ * @access public
+ * @return void
+ */
+function kuorinka_get_portfolio_item_link() {
+
+	$url = get_post_meta( get_the_ID(), 'portfolio_item_url', true );
+
+	if ( !empty( $url ) ) {
+		return '<a class="button portfolio-item-link" href="' . esc_url( $url ) . '">' . __( 'Visit Project', 'kuorinka' ) . '</a>';
+	}
+
+}
 
 /**
  * Return the post URL.
