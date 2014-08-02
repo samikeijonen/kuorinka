@@ -139,7 +139,7 @@ function kuorinka_admin_header_image() {
 		<h1 id="site-title" class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<div id="site-description" class="displaying-header-text"><?php bloginfo( 'description' ); ?></div>
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
+			<img src="<?php header_image(); ?>" alt="">
 		<?php endif; ?>
 	</div>
 <?php
