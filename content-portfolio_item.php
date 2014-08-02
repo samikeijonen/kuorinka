@@ -14,18 +14,13 @@
 			<?php the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content">
+		<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
-			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'kuorinka' ),
-					'after'  => '</div>',
-				) );
-			?>
+			<?php echo wpautop( kuorinka_get_portfolio_item_link() ); ?>
 		</div><!-- .entry-content -->
 		
 		<footer class="entry-footer">
-			<?php kuorinka_post_terms( array( 'taxonomy' => 'portfolio' ) ); ?>
+			<?php kuorinka_post_terms( array( 'taxonomy' => 'portfolio', 'sep' => ' ' ) ); ?>
 		</footer><!-- .entry-footer -->
 		
 	<?php else : // If not viewing a single post. ?>
@@ -37,11 +32,6 @@
 			<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 	
 		</header><!-- .entry-header -->
-		
-		<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
-			<?php the_excerpt(); ?>
-			<?php wp_link_pages(); ?>
-		</div><!-- .entry-summary -->
 
 	<?php endif; // End single post check. ?>
 
