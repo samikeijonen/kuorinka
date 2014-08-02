@@ -21,7 +21,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 		
-		<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
+		<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -40,13 +40,8 @@
 	
 		<header class="entry-header">
 		
-			<?php 
-			if ( has_post_format( 'video' ) ) :
-				echo ( $video = hybrid_media_grabber( array( 'type' => 'video', 'split_media' => true, 'before' => '<div class="entry-media">', 'after' => '</div>' ) ) );
-			else :
-				if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) );
-			endif // End check for video or thumbnail. ?>
-		
+			<?php if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) ); ?>
+			
 			<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		
 		</header><!-- .entry-header -->
