@@ -29,18 +29,14 @@
 		<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 	
 			<div class="site-branding">
-		
-				<?php if ( get_theme_mod( 'logo_upload') ) : // Use logo if is set. Else use bloginfo name. ?>	
-					<h1 id="site-title" class="site-title-logo" <?php hybrid_attr( 'site-title' ); ?>>
-						<a href="<?php echo esc_url( home_url() ); ?>" rel="home">
-							<img class="kuorinka-logo" src="<?php echo esc_url( get_theme_mod( 'logo_upload' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" />
-						</a>
-					</h1>
-				<?php else : ?>
-					<h1 id="site-title" <?php hybrid_attr( 'site-title' ); ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php endif; // End check for logo. ?>
 			
-				<h2 id="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></h2>
+				<h1 id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
+					<div class="site-title-inner">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					</div>
+				</h1>
+				
+				<h2 id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></h2>
 			
 			</div><!-- .site-branding -->
 			
@@ -51,7 +47,7 @@
 		<?php
 		/* Use slider if it is set. */
 		$kuorinka_slider_header = get_post_meta( get_queried_object_id(), '_kuorinka_plus_slider_header', true );
-		if ( class_exists( 'KUORINKA_PLUS' ) && isset( $kuorinka_slider_header ) && !empty( $kuorinka_slider_header ) ) :
+		if ( class_exists( 'KUORINKA_PLUS' ) && isset( $kuorinka_slider_header ) && !empty( $kuorinka_slider_header ) && is_singular() ) :
 			
 			/* Replace header by slider. */
 			if ( function_exists( 'soliloquy' ) ) :
