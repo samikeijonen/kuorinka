@@ -7,7 +7,11 @@
 		<div class="loop-description" <?php hybrid_attr( 'loop-description' ); ?>>
 			<?php echo $desc; ?>
 		</div><!-- .loop-description -->
-
+		
 	<?php endif; // End paged check. ?>
+	
+	<?php if ( is_post_type_archive( 'portfolio_item' ) || is_tax( 'portfolio' ) ) :
+		get_template_part( 'menu', 'portfolio' ); // Loads the menu-portfolio.php template. ?>
+	<?php endif; // End portfolio check. ?>
 
 </div><!-- .loop-meta -->
