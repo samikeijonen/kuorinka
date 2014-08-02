@@ -12,6 +12,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main" <?php hybrid_attr( 'content' ); ?>>
 		
+		<?php do_action( 'kuorinka_before_front_page_sidebar' ); // Hook before sidebar. ?>
+		
 		<?php get_sidebar( 'front-page' ); // Loads the sidebar-front-page.php template. ?>
 		
 		<?php
