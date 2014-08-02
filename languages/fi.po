@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-26 08:50:42+00:00\n"
-"PO-Revision-Date: 2014-07-26 11:51+0200\n"
+"POT-Creation-Date: 2014-08-01 06:58:33+00:00\n"
+"PO-Revision-Date: 2014-08-01 20:55+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -58,15 +58,23 @@ msgstr "Uudemmat kommentit &rarr;"
 msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
-#: content-aside.php:30 content-link.php:41 content-quote.php:35
-#: content-status.php:31 content.php:35
+#: content-aside.php:30 content-audio.php:35 content-gallery.php:35
+#: content-link.php:41 content-quote.php:35 content-status.php:31
+#: content-video.php:35 content.php:35
 msgid "Posted in %s"
 msgstr "Artikkeli kategoriassa %s"
 
-#: content-aside.php:31 content-link.php:42 content-quote.php:36
-#: content-status.php:32 content.php:36
+#: content-aside.php:31 content-audio.php:36 content-gallery.php:36
+#: content-link.php:42 content-quote.php:36 content-status.php:32
+#: content-video.php:36 content.php:36
 msgid "Tagged %s"
 msgstr "Avainsanat %s"
+
+#: content-audio.php:28 content-gallery.php:28 content-gallery.php:62
+#: content-page.php:19 content-quote.php:28 content-quote.php:58
+#: content-video.php:28 content.php:28 image.php:37
+msgid "Pages:"
+msgstr "Sivut:"
 
 #: content-none.php:13
 msgid "Nothing Found"
@@ -93,22 +101,17 @@ msgid ""
 "searching can help."
 msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
 
-#: content-page.php:19 content-portfolio_item.php:21 content-quote.php:28
-#: content-quote.php:58 content.php:28 image.php:37
-msgid "Pages:"
-msgstr "Sivut:"
-
-#: footer.php:24
+#: footer.php:31
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:24
+#: footer.php:31
 msgid "Proudly powered by %s"
 msgstr "Voimanlähteenä %s"
 
-#: footer.php:26
+#: footer.php:33
 msgid "Theme: %1$s by %2$s."
-msgstr "Teema: %1$s tekijä %2$s."
+msgstr "Teeman %1$s on tehnyt %2$s."
 
 #: functions.php:60 menu-primary.php:5
 msgid "Primary Menu"
@@ -118,45 +121,53 @@ msgstr "Ensisijainen valikko"
 msgid "Social Menu"
 msgstr "Somevalikko"
 
-#: functions.php:88
+#: functions.php:62 menu-portfolio.php:1
+msgid "Portfolio Menu"
+msgstr "Portfolio valikko"
+
+#: functions.php:89
 msgid "1 Column"
 msgstr "1 sarake"
 
-#: functions.php:89
+#: functions.php:90
 msgid "2 Columns: Content / Sidebar"
 msgstr "Kaksi saraketta: sisältö / sivupalkki"
 
-#: functions.php:90
+#: functions.php:91
 msgid "2 Columns: Sidebar / Content"
 msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
-#: functions.php:115
+#: functions.php:119
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
 "yläpuolella."
 
-#: functions.php:125
+#: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
-#: functions.php:135
+#: functions.php:139
 msgid "A sidebar located in the footer of the site."
 msgstr "Sivupalkki sijaitsee alapalkissa."
 
-#: functions.php:145
+#: functions.php:149
 msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
-#: functions.php:219 menu-primary.php:3
+#: functions.php:223 menu-primary.php:3
 msgid "Menu"
 msgstr "Valikko"
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:284
+#: functions.php:285
 msgid "Read more %s"
 msgstr "Lue lisää %s"
+
+#: functions.php:457
+msgid "Visit Project"
+msgstr "Näytä sivusto"
 
 #: header.php:23
 msgid "Skip to content"
@@ -212,14 +223,6 @@ msgstr "Jaa"
 msgid "Merge"
 msgstr "Yhdistä"
 
-#: inc/customizer.php:21
-msgid "Logo"
-msgstr "Logo"
-
-#: inc/customizer.php:40
-msgid "Upload custom logo."
-msgstr "Lataa logo."
-
 #: inc/template-general.php:126
 msgid "You are browsing the search results for &#8220;%s&#8221;"
 msgstr "Selaat hakutuloksia haulle &#8220;%s&#8221;"
@@ -258,18 +261,19 @@ msgstr "Uudemmat artikkelit"
 msgid "Post navigation"
 msgstr "Artikkelien selaus"
 
-#: inc/theme-layouts.php:437 inc/theme-layouts.php:547
-#: inc/theme-layouts.php:632
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
 msgid "Layout"
 msgstr "Ulkoasu"
 
-#: inc/theme-layouts.php:463
-msgid "Layout is a theme-specific structure for the single view of the post."
-msgstr "Tällä voi vaihtaa yksittäisen sivun tai artikkelin ulkoasua."
-
-#: inc/theme-layouts.php:665
+#: inc/theme-layouts.php:683
 msgid "Global Layout"
 msgstr "Globaali ulkoasu"
+
+#. Translators: "All" is a link that points to the portfolio archive.
+#: menu-portfolio.php:27
+msgid "All"
+msgstr "Kaikki"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -281,13 +285,14 @@ msgstr "https://foxnet-themes/downloads/kuorinka"
 
 #. Description of the plugin/theme
 msgid ""
-"Theme check: accessibility-ready, right to left support, translation-ready "
-"Schema.org support, all the WordPress' built-in theme features and some "
-"more. Check."
+"Are you looking for a theme with these features: accessibility-ready, right "
+"to left support, translation-ready, Schema.org support, all the WordPress' "
+"built-in theme features and some more. Well, you got it."
 msgstr ""
-"Mitä teema pitää sisällään: \"accessibility\"-valmis, right to left -tuki, "
-"Schema.org tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon "
-"muuta."
+"Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, "
+"right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org tuki, "
+"kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. Etsit "
+"löytämäsi."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
@@ -313,22 +318,27 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Yksi kommentti &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s kommenttia &ldquo;%2$s&rdquo;"
 
-#: functions.php:114
+#: footer.php:32
+msgctxt "Separator in site info."
+msgid "&middot;"
+msgstr "&middot;"
+
+#: functions.php:118
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläpalkin vimpain"
 
-#: functions.php:124
+#: functions.php:128
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Sivupalkki"
 
-#: functions.php:134
+#: functions.php:138
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Sivupalkki alhaalla"
 
-#: functions.php:144
+#: functions.php:148
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Etusivu"
@@ -336,7 +346,7 @@ msgstr "Etusivu"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:172
+#: functions.php:176
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
@@ -344,12 +354,12 @@ msgstr ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:178
+#: functions.php:182
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:78
+#: header.php:74
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
@@ -415,7 +425,7 @@ msgid ", "
 msgstr ", "
 
 #. Translators: Default theme layout option.
-#: inc/theme-layouts.php:345
+#: inc/theme-layouts.php:363
 msgctxt "theme layout"
 msgid "Default"
 msgstr "Oletus"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-07-28 08:49:43+00:00\n"
+"POT-Creation-Date: 2014-08-02 18:43:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,14 +59,23 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:30 content-link.php:41 content-quote.php:35
-#: content-status.php:31 content.php:35
+#: content-aside.php:30 content-audio.php:35 content-gallery.php:35
+#: content-image.php:35 content-link.php:41 content-quote.php:35
+#: content-status.php:31 content-video.php:35 content.php:35
 msgid "Posted in %s"
 msgstr ""
 
-#: content-aside.php:31 content-link.php:42 content-quote.php:36
-#: content-status.php:32 content.php:36
+#: content-aside.php:31 content-audio.php:36 content-gallery.php:36
+#: content-image.php:36 content-link.php:42 content-quote.php:36
+#: content-status.php:32 content-video.php:36 content.php:36
 msgid "Tagged %s"
+msgstr ""
+
+#: content-audio.php:28 content-gallery.php:28 content-gallery.php:62
+#: content-image.php:28 content-image.php:60 content-page.php:19
+#: content-quote.php:28 content-quote.php:58 content-video.php:28
+#: content.php:28 image.php:37
+msgid "Pages:"
 msgstr ""
 
 #: content-none.php:13
@@ -89,20 +98,15 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:19 content-portfolio_item.php:21 content-quote.php:28
-#: content-quote.php:58 content-team-member.php:51 content.php:28 image.php:37
-msgid "Pages:"
-msgstr ""
-
-#: footer.php:24
+#: footer.php:31
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:24
+#: footer.php:31
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:26
+#: footer.php:33
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -114,41 +118,49 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:88
-msgid "1 Column"
+#: functions.php:62 menu-portfolio.php:1
+msgid "Portfolio Menu"
 msgstr ""
 
 #: functions.php:89
-msgid "2 Columns: Content / Sidebar"
+msgid "1 Column"
 msgstr ""
 
 #: functions.php:90
+msgid "2 Columns: Content / Sidebar"
+msgstr ""
+
+#: functions.php:91
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:122
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 
-#: functions.php:125
+#: functions.php:132
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 
-#: functions.php:135
+#: functions.php:142
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:145
+#: functions.php:152
 msgid "A sidebar located in the Front Page Template."
 msgstr ""
 
-#: functions.php:219 menu-primary.php:3
+#: functions.php:231 menu-primary.php:3
 msgid "Menu"
 msgstr ""
 
-#: functions.php:281
+#: functions.php:290
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
+msgstr ""
+
+#: functions.php:462
+msgid "Visit Project"
 msgstr ""
 
 #: header.php:23
@@ -205,14 +217,6 @@ msgstr ""
 msgid "Merge"
 msgstr ""
 
-#: inc/customizer.php:21
-msgid "Logo"
-msgstr ""
-
-#: inc/customizer.php:40
-msgid "Upload custom logo."
-msgstr ""
-
 #: inc/template-general.php:126
 msgid "You are browsing the search results for &#8220;%s&#8221;"
 msgstr ""
@@ -251,17 +255,18 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/theme-layouts.php:437 inc/theme-layouts.php:547
-#: inc/theme-layouts.php:632
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
 msgid "Layout"
 msgstr ""
 
-#: inc/theme-layouts.php:463
-msgid "Layout is a theme-specific structure for the single view of the post."
+#: inc/theme-layouts.php:683
+msgid "Global Layout"
 msgstr ""
 
-#: inc/theme-layouts.php:665
-msgid "Global Layout"
+#: menu-portfolio.php:27
+#. Translators: "All" is a link that points to the portfolio archive.
+msgid "All"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -274,9 +279,9 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Theme check: accessibility-ready, right to left support, translation-ready "
-"Schema.org support, all the WordPress' built-in theme features and some "
-"more. Check."
+"Are you looking for a theme with these features: accessibility-ready, right "
+"to left support, translation-ready, Schema.org support, all the WordPress' "
+"built-in theme features and some more. Well, you got it."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -303,27 +308,32 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:114
+#: footer.php:32
+msgctxt "Separator in site info."
+msgid "&middot;"
+msgstr ""
+
+#: functions.php:121
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:131
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:141
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:151
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr ""
 
-#: functions.php:172
+#: functions.php:179
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -331,7 +341,7 @@ msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:185
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -339,7 +349,7 @@ msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:78
+#: header.php:74
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr ""
@@ -404,7 +414,7 @@ msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ""
 
-#: inc/theme-layouts.php:345
+#: inc/theme-layouts.php:363
 #. Translators: Default theme layout option.
 msgctxt "theme layout"
 msgid "Default"
