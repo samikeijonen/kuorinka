@@ -20,11 +20,19 @@
 	
 		<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 		
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kuorinka' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'kuorinka' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'kuorinka' ), 'Kuorinka', '<a href="https://foxnet-themes.fi" rel="designer">Sami Keijonen</a>' ); ?>
-		</div><!-- .site-info -->
+		<?php if ( get_theme_mod( 'footer_text') ) : // Check footer text. ?>
+			<div class="site-info">
+				<?php echo ( get_theme_mod( 'footer_text' ) ); ?>
+			</div><!-- .site-info -->
+		<?php endif; // End check for footer check. ?>
+		
+		<?php if ( !get_theme_mod( 'hide_site_info') ) : // Check site info. ?>
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kuorinka' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'kuorinka' ), 'WordPress' ); ?></a>
+				<span class="sep"><?php echo _x( '&middot;', 'Separator in site info.', 'kuorinka' ); ?></span>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'kuorinka' ), 'Kuorinka', '<a href="https://foxnet-themes.fi" rel="designer">Sami Keijonen</a>' ); ?>
+			</div><!-- .site-info -->
+		<?php endif; // End check for site info. ?>
 		
 	</footer><!-- #colophon -->
 	
