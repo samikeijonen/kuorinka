@@ -2,7 +2,7 @@
 
 	<button id="nav-toggle"><?php _e( 'Menu', 'kuorinka' ); ?></button>
 	
-	<nav id="menu-primary" class="menu main-navigation" role="navigation" aria-label="<?php _e( 'Primary Menu', 'kuorinka' ); ?>" <?php hybrid_attr( 'menu', 'primary' ); ?>>	
+	<nav id="menu-primary" class="menu main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'kuorinka' ); ?>" <?php hybrid_attr( 'menu', 'primary' ); ?>>	
 		<div class="wrap">
 			
 			<?php
