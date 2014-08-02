@@ -3,7 +3,7 @@ Theme Name: Kuorinka
 Theme URI: https://foxnet-themes/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxnet-themes.fi
-Description: Theme check: accessibility-ready, right to left support, translation-ready Schema.org support, all the WordPress' built-in theme features and some more. Check.
+Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more. Well, you got it.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -36,6 +36,7 @@ and Blueprint http://www.blueprintcss.org/
 	5.2 - Menus
 		5.2.1 - Primary menu
 		5.2.2 - Social menu
+		5.2.3 - Portfolio menu
 6.0 - Accessibility
 7.0 - Alignments
 8.0 - Clearings
@@ -52,9 +53,16 @@ and Blueprint http://www.blueprintcss.org/
 13.0 - Layouts
 14.0 - Comments
 15.0 - Plugins
-	15.1 - Gravity Forms CSS
-	15.2 - Webshare CSS
-	15.3 - Grid Columns CSS 
+    15.1 - Jetpack CSS 
+	15.2 - Gravity Forms CSS
+	15.3 - Webshare CSS
+	15.4 - Custom Content Portfolio and Our Team CSS
+16.0 - Child theme friendly zone
+	16.1 - Font Family
+	16.2 - Colors
+	16.3 - Backgrounds
+	16.4 - Borders
+	16.5 - Box Shadows
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -143,8 +151,6 @@ button,
 input,
 select,
 textarea {
-	color: #303030;
-	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	font-size: 2rem;
 	line-height: 1.5;
@@ -160,14 +166,10 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1.3333333;
 	margin: 0 0 30px 0;
 	text-transform: uppercase;
-}
-.entry-title {
-	color: #054e92;
 }
 
 h1 {
@@ -243,14 +245,7 @@ address {
 	margin: 0 0 1.5em;
 }
 pre {
-	background-color: #e6eff7;
-	background-image: -webkit-gradient(linear,0 0,0 100%,color-stop(.5,rgba(255,255,255,.5)),color-stop(.5,transparent),to(transparent));
-	background-image: -webkit-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
-	background-image: -moz-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
-	background-image: -o-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
-	background-image: linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
 	background-size: 56px 56px;
-	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 18px;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -263,16 +258,14 @@ code,
 kbd,
 tt,
 var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
 }
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 mark,
 ins {
-	background: #fff9c0;
 	text-decoration: none;
 }
 sup,
@@ -303,9 +296,8 @@ big {
 /* === 3.1 Blockquotes, paragraphs, code, lists, tables === */
 
 blockquote {
-	border-left: 4px solid #054e92;
-	font-size: 22px;
-	font-size: 2.2rem;
+	font-size: 24px;
+	font-size: 2.4rem;
 	font-style: italic;
 	margin: 0 0 1.5em;
 	padding: 3%;
@@ -321,7 +313,6 @@ blockquote p {
 }
 
 hr {
-	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -363,7 +354,6 @@ figure {
 /* Tables. */
 
 table {
-	border-right: 1px solid #e6eff7;
 	border-collapse: collapse;
 	border-spacing: 0;
 	margin: 0 0 1.5em 0;
@@ -371,9 +361,6 @@ table {
 }
 th,
 td {
-	border-top: 1px solid #e6eff7;
-	border-left: 1px solid #e6eff7;
-	border-bottom: 1px solid #e6eff7;
 	padding: 6px 2%;
 }
 caption,
@@ -440,6 +427,7 @@ a[href^="tel:"]::before,
 a.more-link::after,
 #menu-social li a::before,
 .widget li::before {
+	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font: normal 16px/1 Genericons;
@@ -509,6 +497,10 @@ a[href^="tel:"]::before {
 	padding-left: 4px;
 	padding-right: 0;
 }
+.entry-terms.portfolio::before {
+	content: '';
+	display: none;
+}
 
 
 /*--------------------------------------------------------------
@@ -525,11 +517,11 @@ textarea {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.entry a.portfolio-item-link,
+.kuorinka-callout .kuorinka-button {
 	border: none;
 	border-radius: 2px;
-	background: #1668b5;
-	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	line-height: 1;
@@ -541,23 +533,37 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
+.entry a.portfolio-item-link:hover,
+.kuorinka-callout .kuorinka-button:hover,
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
+.entry a.portfolio-item-link:focus,
+.kuorinka-callout .kuorinka-button:focus,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active {
-	background: #303030;
+input[type="submit"]:active,
+.entry a.portfolio-item-link:active,
+.kuorinka-callout .kuorinka-button:active {
+
 }
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+input[type="search"]::-webkit-search-decoration,
+.entry a.portfolio-item-link,
+.kuorinka-callout .kuorinka-button { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
+.entry a.portfolio-item-link,
+.kuorinka-callout .kuorinka-button {
+	display: inline-block;
+	margin-top: 0;
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
 	border: 0;
@@ -569,8 +575,6 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 4px solid #e6eff7;
 	transition: all 0.25s ease-in-out;
 }
 input[type="text"]:focus,
@@ -579,8 +583,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 4px solid #1668b5;
-	color: #111;
+	
 }
 input[type="text"],
 input[type="email"],
@@ -597,7 +600,6 @@ textarea {
 }
 
 fieldset {
-	border: 1px solid #e6eff7;
 	margin: 0 0 1.5em 0;
 	padding: 3%;
 }
@@ -665,11 +667,6 @@ textarea {
 
 /* Form fields, general styles */
 
-input,
-textarea {
-	color: #555;
-}
-
 input:focus,
 textarea:focus {
 	outline: 0;
@@ -682,17 +679,14 @@ textarea:focus {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #1668b5;
 	text-decoration: none;
 	transition: all 0.25s ease-in-out;
 }
 a:visited {
-	color: #1668b5;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #1668b5;
 	text-decoration: underline;
 }
 a.more-link::after {
@@ -719,22 +713,6 @@ button#nav-toggle {
 	text-decoration: none;
 }
 
-#menu-primary li:hover > a,
-#menu-primary li.focus > a,
-button#nav-toggle:hover,
-button#nav-toggle:focus,
-button#nav-toggle.focus,
-#menu-primary li.current-menu-item,
-#menu-primary li.current-menu-item > a,
-#menu-primary ul ul a:hover,
-#menu-primary ul ul li.focus > a {
-	background-color: #303030;
-	color: #fff;
-}
-
-.custom-header-image #kuorinka-header-image img.header-image {
-	border-top: 6px solid #054e92;
-}
 .custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
 	margin-bottom: -60px;
 }
@@ -761,19 +739,12 @@ button#nav-toggle.focus,
 	
 	.nav-collapse li a,
 	button#nav-toggle {
-		background: #054e92;
-		background: rgba(11,84,152,0.92);
-		border-bottom: 1px solid #e6eff7;
-		color: #fff;
 		display: block;
 		padding: 10px 4%;
 		width: 100%;
 	}
 	button#nav-toggle {
 		border-bottom: none;
-	}
-	button#nav-toggle.active {
-		border-bottom: 1px solid #e6eff7;;
 	}
 
 	#menu-primary ul ul li a {
@@ -841,14 +812,10 @@ button#nav-toggle.focus,
 	}
 	
 	#menu-primary .wrap {
-		background: #054e92;
 		padding: 0 4%;
 	}
 	.custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
 		margin-bottom: -55px;
-	}
-	.custom-header-image.primary-menu-active #menu-primary .wrap {
-		background-color: rgba(11,84,152,0.92);
 	}
 	
 	#menu-primary ul {
@@ -864,15 +831,12 @@ button#nav-toggle.focus,
 	}
 
 	#menu-primary a {
-		color: #fff;
 		display: inline-block;
 		padding: 0 12px;
 		white-space: nowrap;
 	}
 
 	#menu-primary ul ul {
-		background-color: #054e92;
-		background-color: rgba(11,84,152,0.92);
 		float: left;
 		margin: 0;
 		position: absolute;
@@ -899,7 +863,6 @@ button#nav-toggle.focus,
 	}
 
 	#menu-primary ul ul a {
-		border-bottom: 1px solid #e6eff7;
 		padding: 18px 12px;
 		white-space: normal;
 		width: 200px;
@@ -963,7 +926,6 @@ button#nav-toggle.focus,
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
-	border-bottom: 2px solid #e6eff7;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 }
@@ -973,7 +935,6 @@ button#nav-toggle.focus,
 	.comment-navigation .nav-previous,
 	.paging-navigation .nav-previous,
 	.post-navigation .nav-previous {
-		border-bottom: none;
 		float: left;
 		margin-bottom: 0;
 		padding-bottom: 0;
@@ -1122,6 +1083,24 @@ button#nav-toggle.focus,
 	color: #c4302b;
 }
 
+/* === 5.2.3 Social menu === */
+
+#menu-portfolio ul {
+	list-style: none;
+	padding: 20px 0 0 0;
+	margin: 0 0 3px 0;
+}
+#menu-portfolio ul li,
+.single-portfolio_item .entry-terms.portfolio a {
+	display: inline-block;
+	margin-bottom: 3px;
+}
+#menu-portfolio ul li a,
+.single-portfolio_item .entry-terms.portfolio a {
+	border-radius: 2px;
+	padding: 2px 8px;
+}
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -1139,13 +1118,11 @@ button#nav-toggle.focus,
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #21759b;
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 	height: auto;
 	left: 5px;
@@ -1252,8 +1229,6 @@ button#nav-toggle.focus,
 }
 
 .widget-title {
-	background: #e6eff7;
-	border-bottom: 2px solid #054e92;
 	font-size: 22px;
 	padding: 3%;
 }
@@ -1297,8 +1272,6 @@ button#nav-toggle.focus,
 
 .sticky,
 .sticky.entry {
-	background: #e6eff7;
-	border-bottom: 2px solid #054e92;
 	padding: 3%;
 }
 .entry {
@@ -1315,14 +1288,12 @@ button#nav-toggle.focus,
 	margin: 0 0 1.5em;
 }
 .page-links a {
-	background: #e6eff7;
 	display: inline-block;
 	margin-bottom: 4px;
 	padding: 0.5em 1em;
 }
 
 .entry-header .entry-title {
-	border-bottom: 4px double #e6eff7;
 	margin-top: 20px;
 	padding-bottom: 20px;
 }
@@ -1336,9 +1307,6 @@ button#nav-toggle.focus,
 	margin-top: 0;
 }
 
-.sticky .entry-header .entry-title {
-	border-bottom-color: #aacef0;
-}
 .single-attachment .entry-title {
 	text-align: center;
 }
@@ -1347,7 +1315,6 @@ button#nav-toggle.focus,
 	margin: 0 0 1em 0;
 }
 .page-template-pagesfront-page-php .thumbnail {
-	box-shadow: 0 0 0 4px #fff;
 	border-radius: 50%;
 }
 
@@ -1359,7 +1326,6 @@ button#nav-toggle.focus,
 }
 .sidebar .genericon,
 .sidebar .genericon::before {
-	color: #054e92;
 	font-size: 60px;
 	width: 60px;
 	height: 60px;
@@ -1402,14 +1368,12 @@ button#nav-toggle.focus,
 
 .format-status .avatar {
 	border-radius: 50%;
-	box-shadow: 0 0 0 4px #e6eff7;
 	float: left;
 	margin: 0 30px 30px 0;
 }
 .format-status .entry-content {
 	margin-top: 18px;
 }
-
 
 /* === 10.3 Comments === */
 
@@ -1420,10 +1384,9 @@ button#nav-toggle.focus,
 }
 
 
-/* === 10.2 Loop meta === */
+/* === 10.4 Loop meta === */
 
 .loop-meta {
-	border-bottom: 1px solid #e6eff7;
 	padding-bottom: 1.5em;
 	margin-bottom: 1.5em;
 }
@@ -1431,7 +1394,6 @@ button#nav-toggle.focus,
 	margin: 0;
 }
 .loop-description {
-	color: #555;
 	font-style: italic;
 	margin-top: 1.5em;
 }
@@ -1440,6 +1402,7 @@ button#nav-toggle.focus,
 /*--------------------------------------------------------------
 11.0 Infinite scroll
 --------------------------------------------------------------*/
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
@@ -1485,8 +1448,7 @@ video {
 	margin: 0 auto;
 }
 .wp-caption-text {
-	color: #555;
-	margin-bottom: 1em;
+	margin: 6px 0 1em 0;
 	text-align: center;
 }
 
@@ -1549,21 +1511,6 @@ video {
 	max-width: 1142px;
 }
 
-/* === 13.1.1 Background. === */
-
-#masthead .site-branding,
-.breadcrumb-trail .wrap,
-#kuorinka-header-image,
-#content > .wrap,
-#sidebar-subsidiary .wrap,
-#colophon #menu-social,
-#colophon .site-info {
-	background: #fff;
-}
-#sidebar-header {
-	background: #e6eff7;
-}
-
 /* === 13.2 Paddings. === */
 
 #masthead .site-branding,
@@ -1579,6 +1526,7 @@ video {
 	padding-bottom: 30px;
 	text-align: center;
 }
+
 #content > .wrap {
 	padding-bottom: 30px;
 	padding-top: 30px;
@@ -1817,7 +1765,6 @@ ol.comment-list ol.children {
 .comment-list > li {
 	margin-bottom: 6%;
 	padding-bottom: 6%;
-	border-bottom: solid 3px #e6eff7;
 }
 
 ol.comment-list ol.children ul {
@@ -1838,8 +1785,6 @@ li.ping .comment-wrap {
 }
 
 li.bypostauthor {
-	background: #e6eff7;
-	border-bottom: 2px solid #054e92;
 	padding: 3%;
 }
 
@@ -1919,7 +1864,32 @@ ol.comment-list dl dl {
 15.0 Plugins
 --------------------------------------------------------------*/
 
-/* === 15.1 Gravity Forms CSS === */
+/* === 15.1 Jetpack CSS === */
+
+body #infinite-handle span {
+	border: none;
+	border-radius: 2px;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	display: inline-block;
+	font-size: 1em;
+	line-height: 1;
+	padding: .8em 1em;
+	margin: 0 0 1.5em 0;
+	transition: all 0.25s ease-in-out;	
+}
+
+body .infinite-loader {
+	margin-bottom: 1.5em;
+}
+
+body div.sharedaddy h3.sd-title,
+body div#jp-relatedposts h3.jp-relatedposts-headline,
+body div#jp-relatedposts h3.jp-relatedposts-headline em {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* === 15.2 Gravity Forms CSS === */
 
 body .gform_wrapper input[type=text],
 body .gform_wrapper input[type=url],
@@ -1932,15 +1902,375 @@ body .gform_wrapper textarea {
 	font-size: 100%;
 }
 body #gforms_confirmation_message {
-	background: #e6eff7;
 	padding: 3%;
 	margin-bottom: 1.5em;
 }
 
-/* === 15.2 Webshare CSS === */
+/* === 15.3 Webshare CSS === */
+
+body #webshare-wrapper {
+	margin: 1.5em 0;
+}
+
+/* === 15.4 Custom Content Portfolio and Our Team CSS === */
+
+.post-type-archive-team-member .avatar,
+.post-type-archive-team-member .thumbnail-team-member,
+.tax-team-member-category .avatar,
+.tax-team-member-category .thumbnail-team-member,
+.single-team-member .avatar,
+.single-team-member .thumbnail-team-member {
+	border-radius: 50%;
+}
+.post-type-archive-portfolio_item .entry-header,
+.tax-portfolio .entry-header,
+.term-post-format-video .entry-header {
+	text-align: center;
+}
+.post-type-archive-portfolio_item .entry-title a,
+.tax-portfolio .entry-header .entry-title a,
+.term-post-format-video .entry-title a {
+	padding: 0 2%;
+}
+
+/* === 15.5 Soliloquy Slider CSS === */
+
+.entry-content .soliloquy-container {
+	margin-bottom: 1.5em;
+}
+
+
+/*--------------------------------------------------------------
+16.0 Child theme friendly zone
+--------------------------------------------------------------*/
+
+/*
+ * At this point there are fonts, colors, background and borders used in a theme. 
+ * You can overwrite them in your child theme 'style.css' if you need custom design.
+ */
+
+/* === 16.1 Font Family === */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+/* === 16.2 Colors === */
+
+/* == #303030 == */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #303030;
+}
+
+/* == #555 == */
+
+.breadcrumb-trail,
+.loop-description,
+.wp-caption-text,
+#colophon .site-info,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+input {
+	color: #555;
+}
+
+/* == #054e92 == */
+
+.entry-title,
+.sidebar .genericon,
+.sidebar .genericon::before,
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	color: #054e92;
+}
+
+
+/* == Links - #1668b5 == */
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+	color: #1668b5;
+}
+
+/* == #fff == */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.entry a.portfolio-item-link,
+.kuorinka-callout .kuorinka-button,
+body #infinite-handle span {
+	color: #fff;
+}
+
+/* == Menu colors and backgrounds == */
+
+#menu-primary li:hover > a,
+#menu-primary li.focus > a,
+button#nav-toggle:hover,
+button#nav-toggle:focus,
+button#nav-toggle.focus,
+#menu-primary li.current-menu-item,
+#menu-primary li.current-menu-item > a,
+#menu-primary ul ul a:hover,
+#menu-primary ul ul li.focus > a {
+	background-color: #303030;
+	color: #fff;
+}
+
+.custom-header-image #kuorinka-header-image img.header-image {
+	border-top: 6px solid #054e92;
+}
+
+@media screen and (max-width: 899px) {
+
+	.nav-collapse li a,
+	button#nav-toggle {
+		background: #054e92;
+		background: rgba(11,84,152,0.92);
+		border-bottom: 1px solid #e6eff7;
+		color: #fff;
+	}
+	button#nav-toggle.active {
+		border-bottom: 1px solid #e6eff7;;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+	
+	#menu-primary .wrap {
+		background: #054e92;
+	}
+	.custom-header-image.primary-menu-active #menu-primary .wrap {
+		background-color: rgba(11,84,152,0.92);
+	}
+
+	#menu-primary a {
+		color: #fff;
+	}
+
+	#menu-primary ul ul {
+		background-color: #054e92;
+		background-color: rgba(11,84,152,0.92);
+	}
+
+	#menu-primary ul ul a {
+		border-bottom: 1px solid #e6eff7;
+	}
+
+}
+
+/* === 16.3 Backgrounds === */
+
+pre {
+	background-color: #e6eff7;
+	background-image: -webkit-gradient(linear,0 0,0 100%,color-stop(.5,rgba(255,255,255,.5)),color-stop(.5,transparent),to(transparent));
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: -moz-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: -o-linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+	background-image: linear-gradient(rgba(255,255,255,.5) 50%,transparent 50%,transparent);
+}
+
+mark,
+ins {
+	background: #fff9c0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.entry a.portfolio-item-link,
+.kuorinka-callout .kuorinka-button,
+body #infinite-handle span {
+	background: #1668b5;
+}
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.entry a.portfolio-item-link:hover,
+.kuorinka-callout .kuorinka-button:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.entry a.portfolio-item-link:focus,
+.kuorinka-callout .kuorinka-button:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.entry a.portfolio-item-link:active,
+.kuorinka-callout .kuorinka-button:active,
+body #infinite-handle span:hover,
+body #infinite-handle span:focus,
+body #infinite-handle span:active {
+	background: #303030;
+}
+
+hr,
+#sidebar-header,
+#menu-portfolio ul li a,
+li.bypostauthor,
+.widget-title,
+.sticky,
+.sticky.entry,
+.page-links a,
+.single-portfolio_item .entry-terms.portfolio a,
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus,
+body #gforms_confirmation_message,
+.post-type-archive-portfolio_item .entry-header,
+.tax-portfolio .entry-header,
+.term-post-format-video .entry-header {
+	background: #e6eff7;
+}
+
+#masthead .site-branding,
+.breadcrumb-trail .wrap,
+#kuorinka-header-image,
+#content > .wrap,
+#sidebar-subsidiary .wrap,
+#colophon #menu-social,
+#colophon .site-info {
+	background: #fff;
+}
+
+/* === 16.4 Borders === */
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #555;
+}
+
+blockquote {
+	border-left: 2px solid #054e92;
+}
+
+table {
+	border-right: 1px solid #e6eff7;
+}
+th,
+td {
+	border-top: 1px solid #e6eff7;
+	border-left: 1px solid #e6eff7;
+	border-bottom: 1px solid #e6eff7;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: 4px solid #e6eff7;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border-color: #1668b5;
+}
+
+fieldset {
+	border: 1px solid #e6eff7;
+}
+
+.loop-meta {
+	border-bottom: 1px solid #e6eff7;
+}
+
+	@media screen and (max-width: 899px) {
+	
+	.comment-navigation .nav-previous,
+	.paging-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		border-bottom: 2px solid #e6eff7;
+	}
+
+}
+
+.widget-title,
+.sticky,
+.sticky.entry,
+li.bypostauthor,
+.post-type-archive-portfolio_item .entry-header .entry-title,
+.tax-portfolio .entry-header .entry-title,
+.term-post-format-video .entry-header .entry-title {
+	border-bottom: 2px solid #054e92;
+}
+
+.entry-header .entry-title {
+	border-bottom: 4px double #e6eff7;
+}
+.sticky .entry-header .entry-title {
+	border-bottom-color: #aacef0;
+}
+
+.comment-list > li {
+	border-bottom: solid 3px #e6eff7;
+}
 
 body #webshare-wrapper {
 	border-top-color: #e6eff7;
 	border-bottom-color: #e6eff7;
-	margin: 1.5em 0;
+}
+
+/* === 16.5 Box Shadows === */
+
+.page-template-pagesfront-page-php .thumbnail {
+	box-shadow: 0 0 0 4px #fff;
+}
+
+.format-status .avatar,
+.post-type-archive-team-member .avatar,
+.post-type-archive-team-member .thumbnail-team-member,
+.tax-team-member-category .avatar,
+.tax-team-member-category .thumbnail-team-member,
+.single-team-member .avatar,
+.single-team-member .thumbnail-team-member {
+	box-shadow: 0 0 0 4px #e6eff7;
 }
