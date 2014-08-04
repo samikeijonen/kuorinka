@@ -1,6 +1,6 @@
 <?php if ( is_active_sidebar( 'subsidiary' ) ) : ?>
 
-	<aside id="sidebar-subsidiary" class="sidebar" role="complementary" aria-label="<?php echo _x( 'Subsidiary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>" <?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
+	<aside id="sidebar-subsidiary" class="sidebar" role="complementary" aria-label="<?php echo esc_attr_x( 'Subsidiary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>" <?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
 		
 		<div class="wrap">
 			<div class="wrap-inside">
