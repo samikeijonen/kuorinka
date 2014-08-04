@@ -97,19 +97,18 @@ grunt.initConfig({
 				'js/functions.min.js': ['js/functions.js'],
 				'js/customizer.min.js': ['js/customizer.js']
 			}
-		},
-		skiplink: {
-			files: {
-				'js/skip-link-focus-fix.min.js': ['js/skip-link-focus-fix.js']
-			}
 		}
 	},
 	
 	// Minify css
 	cssmin : {
-		css:{
+		css: {
 			src: 'style.css',
 			dest: 'style.min.css'
+		},
+		genericons: {
+			src: 'fonts/genericons/genericons/genericons.css',
+			dest: 'fonts/genericons/genericons/genericons.min.css'
 		}
 	},
 
