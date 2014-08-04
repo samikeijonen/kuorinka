@@ -217,32 +217,27 @@ function kuorinka_scripts() {
 	}
 	
 	/* Enqueue Fitvids. */
-	wp_enqueue_script( 'kuorinka-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, false );
+	wp_enqueue_script( 'kuorinka-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, true );
 	
 	/* Fitvids settings. */
 	wp_enqueue_script( 'kuorinka-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-fitvids' ), KUORINKA_VERSION, true );
 	
-	/* Enqueue responsive navigation. */
-	wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
-
-	/* Enqueue settings. */
-	wp_enqueue_script( 'kuorinka-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-navigation' ), KUORINKA_VERSION, true );
-	wp_localize_script( 'kuorinka-settings', 'kuorinka_script_vars', array(
-		'menu' => __( 'Menu', 'kuorinka' )
-		)
-	);
+	/* Enqueue responsive navigation if primary menu is in use. */
+	if ( has_nav_menu( 'primary' ) ) {
+		wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
+	
+		/* Enqueue settings. */
+		wp_enqueue_script( 'kuorinka-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-navigation' ), KUORINKA_VERSION, true );
+	}
 	
 	/* Enqueue functions. */
-	wp_enqueue_script( 'kuorinka-script', get_template_directory_uri() . '/js/functions' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, true );
-	
-	/* Enqueue skip link fix. */
-	wp_enqueue_script( 'kuorinka-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
+	wp_enqueue_script( 'kuorinka-script', get_template_directory_uri() . '/js/functions' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
 	
 	/* Enqueue fonts. */
 	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
 	
 	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons.css', array(), '3.1' );
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.1' );
 	
 	/* Enqueue comment reply. */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -332,7 +327,7 @@ add_filter( 'body_class', 'kuorinka_subsidiary_classes' );
  */
 function kuorinka_front_page_classes( $classes ) {
     
-	if ( is_active_sidebar( 'front-page' ) && ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) ) {
+	if ( is_active_sidebar( 'front-page' ) && ( is_page_template( 'pages/front-page.php' ) ) ) {
 		
 		$the_sidebars = wp_get_sidebars_widgets();
 		$num = count( $the_sidebars['front-page'] );
