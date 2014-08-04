@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-08-01 06:58:33+00:00\n"
-"PO-Revision-Date: 2014-08-01 20:55+0200\n"
+"POT-Creation-Date: 2014-08-03 17:56:03+00:00\n"
+"PO-Revision-Date: 2014-08-03 20:56+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -59,20 +59,21 @@ msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
 #: content-aside.php:30 content-audio.php:35 content-gallery.php:35
-#: content-link.php:41 content-quote.php:35 content-status.php:31
-#: content-video.php:35 content.php:35
+#: content-image.php:35 content-link.php:41 content-quote.php:35
+#: content-status.php:31 content-video.php:35 content.php:35
 msgid "Posted in %s"
 msgstr "Artikkeli kategoriassa %s"
 
 #: content-aside.php:31 content-audio.php:36 content-gallery.php:36
-#: content-link.php:42 content-quote.php:36 content-status.php:32
-#: content-video.php:36 content.php:36
+#: content-image.php:36 content-link.php:42 content-quote.php:36
+#: content-status.php:32 content-video.php:36 content.php:36
 msgid "Tagged %s"
 msgstr "Avainsanat %s"
 
 #: content-audio.php:28 content-gallery.php:28 content-gallery.php:62
-#: content-page.php:19 content-quote.php:28 content-quote.php:58
-#: content-video.php:28 content.php:28 image.php:37
+#: content-image.php:28 content-image.php:60 content-page.php:19
+#: content-quote.php:28 content-quote.php:58 content-video.php:28
+#: content.php:28 image.php:37
 msgid "Pages:"
 msgstr "Sivut:"
 
@@ -137,28 +138,24 @@ msgstr "Kaksi saraketta: sisältö / sivupalkki"
 msgid "2 Columns: Sidebar / Content"
 msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
-#: functions.php:119
+#: functions.php:122
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
 "yläpuolella."
 
-#: functions.php:129
+#: functions.php:132
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
-#: functions.php:139
+#: functions.php:142
 msgid "A sidebar located in the footer of the site."
 msgstr "Sivupalkki sijaitsee alapalkissa."
 
-#: functions.php:149
+#: functions.php:152
 msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
-
-#: functions.php:223 menu-primary.php:3
-msgid "Menu"
-msgstr "Valikko"
 
 #. Translators: The %s is the post title shown to screen readers.
 #: functions.php:285
@@ -275,6 +272,10 @@ msgstr "Globaali ulkoasu"
 msgid "All"
 msgstr "Kaikki"
 
+#: menu-primary.php:3
+msgid "Menu"
+msgstr "Valikko"
+
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
 msgstr "Kuorinka"
@@ -323,22 +324,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:118
+#: functions.php:121
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläpalkin vimpain"
 
-#: functions.php:128
+#: functions.php:131
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Sivupalkki"
 
-#: functions.php:138
+#: functions.php:141
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Sivupalkki alhaalla"
 
-#: functions.php:148
+#: functions.php:151
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Etusivu"
@@ -346,7 +347,7 @@ msgstr "Etusivu"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:176
+#: functions.php:179
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
@@ -354,7 +355,7 @@ msgstr ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:182
+#: functions.php:185
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
