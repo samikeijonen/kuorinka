@@ -1981,7 +1981,19 @@ var {
 
 /* === 16.2 Colors === */
 
-/* == #303030 == */
+/* Her is a list of used colors to help you out.
+ *
+ * Dark color for text and hover:           #303030
+ * Lighter color for text:                  #555
+ *
+ * Dark color for titles and borders:       #054e92
+ * Lighter color for links and backgrounds: #1668b5
+ * Color for text with above backgrounds:   #fff
+ *
+ * Light background color:                  #e6eff7
+ 
+ * For front page sticky post border:       #aacef0
+ */
 
 body,
 button,
@@ -1990,8 +2002,6 @@ select,
 textarea {
 	color: #303030;
 }
-
-/* == #555 == */
 
 .breadcrumb-trail,
 .loop-description,
@@ -2007,8 +2017,6 @@ input {
 	color: #555;
 }
 
-/* == #054e92 == */
-
 .entry-title,
 .sidebar .genericon,
 .sidebar .genericon::before,
@@ -2018,9 +2026,6 @@ input {
 	color: #054e92;
 }
 
-
-/* == Links - #1668b5 == */
-
 a,
 a:visited,
 a:hover,
@@ -2028,8 +2033,6 @@ a:focus,
 a:active {
 	color: #1668b5;
 }
-
-/* == #fff == */
 
 button,
 input[type="button"],
@@ -2070,7 +2073,7 @@ button#nav-toggle.focus,
 		color: #fff;
 	}
 	button#nav-toggle.active {
-		border-bottom: 1px solid #e6eff7;;
+		border-bottom: 1px solid #e6eff7;
 	}
 
 }
@@ -2163,7 +2166,8 @@ li.bypostauthor,
 body #gforms_confirmation_message,
 .post-type-archive-portfolio_item .entry-header,
 .tax-portfolio .entry-header,
-.term-post-format-video .entry-header {
+.term-post-format-video .entry-header,
+.kuorinka-callout {
 	background: #e6eff7;
 }
 
