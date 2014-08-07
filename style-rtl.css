@@ -41,7 +41,7 @@ margin: 0 1.5em 1.5em 0;
 a[href^="mailto:"]::before,
 a[href^="tel:"]::before,
 .entry-date a::before,
-.byline .author a::before,
+.byline .entry-author a::before,
 .comments-link a::before,
 .entry-terms::before,
 .nav-links .nav-previous a::before,
@@ -151,7 +151,7 @@ a.more-link::after {
 }
 
 .entry-date a,
-.byline .author a,
+.byline .entry-author a,
 .comments-link a,
 .entry-permalink a {
 	margin-left: 8px;

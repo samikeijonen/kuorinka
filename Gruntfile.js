@@ -106,6 +106,10 @@ grunt.initConfig({
 			src: 'style.css',
 			dest: 'style.min.css'
 		},
+		cssrtl: {
+			src: 'style-rtl.css',
+			dest: 'style-rtl.min.css'
+		},
 		genericons: {
 			src: 'fonts/genericons/genericons/genericons.css',
 			dest: 'fonts/genericons/genericons/genericons.min.css'

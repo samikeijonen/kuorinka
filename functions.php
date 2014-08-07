@@ -207,9 +207,14 @@ function kuorinka_fonts_url() {
  * Enqueue scripts and styles.
  */
 function kuorinka_scripts() {
-
+	
 	/* Enqueue parent theme styles. */
 	wp_enqueue_style( 'kuorinka-style', trailingslashit( get_template_directory_uri() ) . 'style' . KUORINKA_SUFFIX . '.css', array(), KUORINKA_VERSION );
+
+	/* Enqueue right to left styles. */
+	if ( is_rtl() ) {
+		wp_enqueue_style( 'kuorinka-rtl-style', trailingslashit( get_template_directory_uri() ) . 'style-rtl' . KUORINKA_SUFFIX . '.css', array( 'kuorinka-style' ), KUORINKA_VERSION );
+	}
 	
 	/* Enqueue child theme styles. */
 	if ( is_child_theme() ) {
