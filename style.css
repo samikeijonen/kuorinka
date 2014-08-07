@@ -1,6 +1,6 @@
 /*
 Theme Name: Kuorinka
-Theme URI: https://foxnet-themes/downloads/kuorinka
+Theme URI: https://foxnet-themes.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxnet-themes.fi
 Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more. Well, you got it.
@@ -57,6 +57,7 @@ and Blueprint http://www.blueprintcss.org/
 	15.2 - Gravity Forms CSS
 	15.3 - Webshare CSS
 	15.4 - Custom Content Portfolio and Our Team CSS
+	15.5 - Soliloquy Slider CSS
 16.0 - Child theme friendly zone
 	16.1 - Font Family
 	16.2 - Colors
@@ -1083,7 +1084,7 @@ button#nav-toggle {
 	color: #c4302b;
 }
 
-/* === 5.2.3 Social menu === */
+/* === 5.2.3 Portfolio menu === */
 
 #menu-portfolio ul {
 	list-style: none;
