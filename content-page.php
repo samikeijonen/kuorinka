@@ -12,7 +12,7 @@
 		<?php the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
+	<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(

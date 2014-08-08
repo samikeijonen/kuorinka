@@ -12,12 +12,7 @@
 			<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-meta">
-			<?php kuorinka_posted_on(); ?>
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				<span class="comments-link"><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' ); ?></span>
-			<?php endif; ?>
-		</div><!-- .entry-meta -->
+		<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
 		
 	<?php endif; ?>
 
@@ -25,7 +20,7 @@
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : // Hide category and tag text for pages on Search ?>
+	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : // Hide category and tag text for non singular views. ?>
 		<footer class="entry-footer">
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'kuorinka' ) ) ); ?>
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'kuorinka' ), 'before' => '<br />' ) ); ?>

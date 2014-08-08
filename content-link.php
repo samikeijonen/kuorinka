@@ -23,20 +23,13 @@
 		
 	</header><!-- .entry-header -->
 	
-	<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php kuorinka_posted_on(); ?>
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				<span class="comments-link"><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' ); ?></span>
-			<?php endif; ?>
-		</div><!-- .entry-meta -->
-	<?php endif; ?>
+	<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
 
 	<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : // Hide category and tag text for pages on Search ?>
+	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : // Hide category and tag text for non singular views. ?>
 		<footer class="entry-footer">
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'kuorinka' ) ) ); ?>
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'kuorinka' ), 'before' => '<br />' ) ); ?>

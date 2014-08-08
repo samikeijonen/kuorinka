@@ -6,7 +6,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
-	<?php if ( 'post' == get_post_type() && is_singular( get_post_type() ) ) : ?>
+	<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post. ?>
 	
 		<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 
@@ -20,19 +20,14 @@
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
 
-		<div class="entry-meta">
-			<?php kuorinka_posted_on(); ?>
-			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				<span class="comments-link"><?php comments_popup_link( number_format_i18n( 0 ), number_format_i18n( 1 ), '%', 'comments-link', '' ); ?></span>
-			<?php endif; ?>
-		</div><!-- .entry-meta -->
+		<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
 		
 		<footer class="entry-footer">
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'category', 'text' => __( 'Posted in %s', 'kuorinka' ) ) ); ?>
 			<?php kuorinka_post_terms( array( 'taxonomy' => 'post_tag', 'text' => __( 'Tagged %s', 'kuorinka' ), 'before' => '<br />' ) ); ?>
 		</footer><!-- .entry-footer -->
 		
-	<?php else : ?>
+	<?php else : // If not viewing a single post. ?>
 	
 		<?php if ( get_option( 'show_avatars' ) ) : // If avatars are enabled. ?>
 
@@ -49,10 +44,10 @@
 
 		<?php endif; // End avatars check. ?>
 
-		<div class="entry-content"  <?php hybrid_attr( 'entry-content' ); ?>>
+		<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 			<?php the_content(); ?>
 		</div><!-- .entry-content -->
 
-	<?php endif; // End if 'post' == get_post_type() ?>
+	<?php endif; // End single post check. ?>
 	
 </article><!-- #post-## -->
