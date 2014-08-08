@@ -45,7 +45,7 @@ function kuorinka_setup() {
 	 */
 	load_theme_textdomain( 'kuorinka', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
+	/* Add default posts and comments RSS feed links to head. */
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
@@ -55,7 +55,7 @@ function kuorinka_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	/* This theme uses wp_nav_menu() in three locations. */
 	register_nav_menus( array(
 		'primary'   => __( 'Primary Menu', 'kuorinka' ),
 		'social'    => __( 'Social Menu', 'kuorinka' ),
@@ -82,7 +82,7 @@ function kuorinka_setup() {
 	add_image_size( 'kuorinka-large', 720, 405, true );
 	add_image_size( 'kuorinka-thumbnail', 250, 250, true );
 	
-	/* Enable theme layouts (need to add stylesheet support). */
+	/* Enable theme layouts. */
 	add_theme_support( 
 		'theme-layouts', 
 		array( 
@@ -353,7 +353,7 @@ add_filter( 'body_class', 'kuorinka_front_page_classes' );
 function kuorinka_front_page_sticky( $classes ) {
     
 	/* Add sticky class also in front page template. */
-	if ( ( is_page_template( 'pages/front-page.php' ) || is_page_template( 'pages/front-page-2.php' ) ) && is_sticky() ) {
+	if ( is_page_template( 'pages/front-page.php' ) && is_sticky() ) {
 		$classes[] = 'sticky';
     }
 	
