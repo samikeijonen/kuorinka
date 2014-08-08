@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-08-04 09:01:30+00:00\n"
+"POT-Creation-Date: 2014-08-08 08:17:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -59,22 +59,22 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-aside.php:30 content-audio.php:35 content-gallery.php:35
-#: content-image.php:35 content-link.php:41 content-quote.php:35
-#: content-status.php:31 content-video.php:35 content.php:35
+#: content-aside.php:25 content-audio.php:28 content-gallery.php:28
+#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr ""
 
-#: content-aside.php:31 content-audio.php:36 content-gallery.php:36
-#: content-image.php:36 content-link.php:42 content-quote.php:36
-#: content-status.php:32 content-video.php:36 content.php:36
+#: content-aside.php:26 content-audio.php:29 content-gallery.php:29
+#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr ""
 
-#: content-audio.php:28 content-gallery.php:28 content-gallery.php:62
-#: content-image.php:28 content-image.php:60 content-page.php:19
-#: content-quote.php:28 content-quote.php:58 content-video.php:28
-#: content.php:28 image.php:37
+#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
+#: content-image.php:21 content-image.php:46 content-page.php:19
+#: content-quote.php:21 content-quote.php:44 content-video.php:21
+#: content.php:21 image.php:37
 msgid "Pages:"
 msgstr ""
 
@@ -107,7 +107,7 @@ msgid "Proudly powered by %s"
 msgstr ""
 
 #: footer.php:33
-msgid "Theme: %1$s by %2$s."
+msgid "Theme %1$s by %2$s"
 msgstr ""
 
 #: functions.php:60 menu-primary.php:5
@@ -274,7 +274,7 @@ msgid "Kuorinka"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes/downloads/kuorinka"
+msgid "https://foxnet-themes.fi/downloads/kuorinka"
 msgstr ""
 
 #. Description of the plugin/theme
