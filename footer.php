@@ -21,7 +21,7 @@
 		<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 		
 		<?php if ( get_theme_mod( 'footer_text') ) : // Check footer text. ?>
-			<div class="site-info">
+			<div class="site-info footer-text">
 				<?php echo ( get_theme_mod( 'footer_text' ) ); ?>
 			</div><!-- .site-info -->
 		<?php endif; // End check for footer check. ?>
@@ -30,7 +30,7 @@
 			<div class="site-info">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'kuorinka' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'kuorinka' ), 'WordPress' ); ?></a>
 				<span class="sep"><?php echo _x( '&middot;', 'Separator in site info.', 'kuorinka' ); ?></span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'kuorinka' ), 'Kuorinka', '<a href="https://foxnet-themes.fi" rel="designer">Sami Keijonen</a>' ); ?>
+				<?php printf( __( 'Theme %1$s by %2$s', 'kuorinka' ), 'Kuorinka', '<a href="https://foxnet-themes.fi" rel="designer">Foxnet</a>' ); ?>
 			</div><!-- .site-info -->
 		<?php endif; // End check for site info. ?>
 		
