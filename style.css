@@ -2270,7 +2270,7 @@ fieldset {
 	border-bottom: 1px solid #e6eff7;
 }
 
-	@media screen and (max-width: 899px) {
+@media screen and (max-width: 899px) {
 	
 	.comment-navigation .nav-previous,
 	.paging-navigation .nav-previous,
