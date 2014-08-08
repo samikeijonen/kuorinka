@@ -37,6 +37,7 @@ and Blueprint http://www.blueprintcss.org/
 		5.2.1 - Primary menu
 		5.2.2 - Social menu
 		5.2.3 - Portfolio menu
+	5.3 - Comment and post navigation
 6.0 - Accessibility
 7.0 - Alignments
 8.0 - Clearings
@@ -44,13 +45,16 @@ and Blueprint http://www.blueprintcss.org/
 10.0 - Content
 	10.1 - Posts and pages
 	10.2 - Asides
-	10.3 - Comments
-	10.4 - Loop meta
+	10.3 - Loop meta
 11.0 - Infinite scroll
 12.0 - Media
 	12.1 - Captions
 	12.2 - Galleries
 13.0 - Layouts
+	13.1 - Max-width
+	13.2 - Paddings
+	13.3 - Media queries
+	13.4 - Sidebar layouts
 14.0 - Comments
 15.0 - Plugins
     15.1 - Jetpack CSS 
@@ -69,6 +73,7 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 1.0 - Reset
 --------------------------------------------------------------*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -144,18 +149,34 @@ a img {
 	border: 0;
 }
 
+
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+
 body,
 button,
 input,
 select,
 textarea {
-	font-size: 20px;
-	font-size: 2rem;
-	line-height: 1.5;
+	font-size: 18px;
+	font-size: 1.8rem;
+	line-height: 1.4;
 	word-wrap: break-word;
+}
+
+@media screen and (min-width: 600px) {
+
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 20px;
+		font-size: 2rem;
+		line-height: 1.5;
+	}
+
 }
 
 /* === 2.1 Headers === */
@@ -174,22 +195,54 @@ h6 {
 }
 
 h1 {
-	font-size: 36px;
-}
-h2 {
 	font-size: 30px;
 }
-h3 {
+h2 {
 	font-size: 26px;
 }
-h4 {
+h3 {
 	font-size: 22px;
 }
-h5 {
+h4 {
 	font-size: 18px;
+}
+h5 {
+	font-size: 17px;
 }
 h6 {
 	font-size: 16px;
+}
+
+@media screen and (min-width: 600px) {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.2;
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+	h2 {
+		font-size: 32px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	h4 {
+		font-size: 24px;
+	}
+	h5 {
+		font-size: 20px;
+	}
+	h6 {
+		font-size: 18px;
+	}
+
 }
 
 #site-title {
@@ -290,6 +343,7 @@ big {
 	font-size: 125%;
 }
 
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
@@ -310,7 +364,7 @@ blockquote blockquote {
 	
 blockquote p {
 	margin: 20px 0;
-	margin: 1.25rem 0;
+	margin: 2rem 0;
 }
 
 hr {
@@ -507,6 +561,7 @@ a[href^="tel:"]::before {
 /*--------------------------------------------------------------
 4.0 Forms
 --------------------------------------------------------------*/
+
 button,
 input,
 select,
@@ -673,12 +728,13 @@ textarea:focus {
 	outline: 0;
 }
 
+
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-5.1 Links
---------------------------------------------------------------*/
+
+/* === 5.1 Links === */
+
 a {
 	text-decoration: none;
 	transition: all 0.25s ease-in-out;
@@ -697,6 +753,7 @@ a.more-link::after {
 	font: normal 1.25em/1 Genericons;
 	vertical-align: text-bottom;
 }
+
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -917,40 +974,6 @@ button#nav-toggle {
 
 }
 
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-}
-
-@media screen and (min-width: 900px) {
-
-	.comment-navigation .nav-previous,
-	.paging-navigation .nav-previous,
-	.post-navigation .nav-previous {
-		float: left;
-		margin-bottom: 0;
-		padding-bottom: 0;
-		width: 50%;
-	}
-	.comment-navigation .nav-next,
-	.paging-navigation .nav-next,
-	.post-navigation .nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-
-}
-
 /* === 5.2.2 Social menu === */
 
 #menu-social ul {
@@ -1100,6 +1123,42 @@ button#nav-toggle {
 .single-portfolio_item .entry-terms.portfolio a {
 	border-radius: 2px;
 	padding: 2px 8px;
+}
+
+/* === Comment and post navigation === */
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+@media screen and (min-width: 900px) {
+
+	.comment-navigation .nav-previous,
+	.paging-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		float: left;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		width: 50%;
+	}
+	.comment-navigation .nav-next,
+	.paging-navigation .nav-next,
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
 }
 
 
@@ -1260,10 +1319,6 @@ button#nav-toggle {
 	transform: rotate(90deg);
 }
 
-.widget.widget_recent_comments ul > li::before {
-	
-}
-
 
 /*--------------------------------------------------------------
 10.0 Content
@@ -1359,7 +1414,6 @@ button#nav-toggle {
 
 }
 
-
 /* === 10.2 Asides === */
 
 .blog .format-aside .entry-title,
@@ -1376,16 +1430,11 @@ button#nav-toggle {
 	margin-top: 18px;
 }
 
-/* === 10.3 Comments === */
-
-.comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
+.mejs-container {
+	margin-bottom: 1.5em;
 }
 
-
-/* === 10.4 Loop meta === */
+/* === 10.3 Loop meta === */
 
 .loop-meta {
 	padding-bottom: 1.5em;
@@ -1427,6 +1476,7 @@ button#nav-toggle {
 	margin-top: 0;
 	padding: 0;
 }
+
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
@@ -1435,10 +1485,7 @@ video {
 	max-width: 100%;
 }
 
-
-/*--------------------------------------------------------------
-12.1 Captions
---------------------------------------------------------------*/
+/* === 12.1 Captions === */
 
 .wp-caption {
 	margin-bottom: 1.5em;
@@ -1453,10 +1500,7 @@ video {
 	text-align: center;
 }
 
-
-/*--------------------------------------------------------------
-12.2 Galleries
---------------------------------------------------------------*/
+/* === 12.2 Galleries === */
 
 .gallery {
 	margin-bottom: 1.5em;
@@ -1505,7 +1549,7 @@ video {
 	display: none;
 }
 
-/* === 13.1 Max-width. === */
+/* === 13.1 Max-width === */
 
 #page {
 	margin: 0 auto;
@@ -1622,7 +1666,7 @@ video {
 
 }
 
-/* === 13.4 Subsidiary sidebar. === */
+/* === 13.4 Sidebar layouts === */
 
 /* Minimum width of 608 pixels. */
 @media screen and (min-width: 608px) {
@@ -1732,25 +1776,14 @@ video {
 
 }
 
-/* === 13.5 Front page layout. === */
-
-/* Minimum width of 560 pixels. */
-@media screen and (min-width: 560px) {
-
-
-
-}
-
-/* Minimum width of 1056 pixels. */
-@media screen and (min-width: 1056px) {
-
-	
-}
-
 
 /*--------------------------------------------------------------
-15.0 Comments
+14.0 Comments
 --------------------------------------------------------------*/
+
+.comment-content a {
+	word-wrap: break-word;
+}
 
 #respond {
 	margin-top: 30px;
@@ -2014,7 +2047,8 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea,
-input {
+input,
+blockquote {
 	color: #555;
 }
 
@@ -2190,7 +2224,7 @@ acronym {
 }
 
 blockquote {
-	border-left: 2px solid #054e92;
+	border: 2px dotted #054e92;
 }
 
 table {
