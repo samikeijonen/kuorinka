@@ -772,7 +772,15 @@ button#nav-toggle {
 }
 
 .custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
-	margin-bottom: -60px;
+	margin-bottom: -58px;
+}
+
+@media screen and (min-width: 600px) {
+
+	.custom-header-image.primary-menu-active #kuorinka-header-image img.header-image {
+		margin-bottom: -60px;
+	}
+
 }
 
 @media screen and (max-width: 899px) {
