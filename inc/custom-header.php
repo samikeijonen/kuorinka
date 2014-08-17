@@ -76,9 +76,7 @@ if ( ! function_exists( 'kuorinka_admin_header_style' ) ) :
 function kuorinka_admin_header_style() {
 ?>
 	<style type="text/css">
-		
-		@import url( '//fonts.googleapis.com/css?family=Source Sans Pro:400,600,700,400italic,600italic,700italic|Roboto Condensed:300,400,700,300italic,400italic,700italic' );
-		
+	
 		.appearance_page_custom-header #headimg {
 			border: none;
 		}
