@@ -25,6 +25,13 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.1
+
+* Fix wrong textdomain.
+* Add hybrid_attachment_is_video() and hybrid_attachment_is_audio() functions for schema.org check.
+* Use admin_print_styles-appearance_page_custom-header hook to add theme fonts in admin header page.
+* Don't import theme fonts in editor-style.css but add theme in array of add_editor_style() function.
+
 ### Version 1.0.0
 
 * Everything's new!
