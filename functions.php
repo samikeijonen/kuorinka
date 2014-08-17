@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.0.0' );
+define( 'KUORINKA_VERSION', '1.0.1' );
 
 /**
  * The suffix to use for scripts.
@@ -252,6 +252,16 @@ function kuorinka_scripts() {
 add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
 
 /**
+ * Enqueue theme fonts in admin header page.
+ *
+ * @since 1.0.0
+ */
+function kuorinka_custom_header_fonts() {
+	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
+}
+add_action( 'admin_print_styles-appearance_page_custom-header', 'kuorinka_custom_header_fonts' );
+
+/**
  * Function for deciding which pages should have a one-column layout.
  *
  * @since  1.0.0
@@ -423,6 +433,9 @@ function kuorinka_get_editor_styles() {
 
 	/* Add the theme's editor styles. */
 	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
+	
+	/* Add theme fonts. */
+	$editor_styles[] = kuorinka_fonts_url();
 
 	/* If a child theme, add its editor styles. Note: WP checks whether the file exists before using it. */
 	if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . 'css/editor-style.css' ) ) {
