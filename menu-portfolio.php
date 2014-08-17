@@ -24,7 +24,7 @@
 				<a href="<?php echo get_post_type_archive_link( 'portfolio_item' ); ?>">
 					<?php 
 						/* Translators: "All" is a link that points to the portfolio archive. */
-						_e( 'All', 'ravel' );
+						_e( 'All', 'kuorinka' );
 					?>
 				</a>
 			</li>
