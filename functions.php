@@ -356,7 +356,7 @@ function kuorinka_front_page_classes( $classes ) {
 add_filter( 'body_class', 'kuorinka_front_page_classes' );
 
 /**
- * Add sticky class to Front page template when using post_class. Remove hentry and add entry at the same time.
+ * Add sticky class to Front page template when using post_class.
  *
  * @since     1.0.0
  */
@@ -366,14 +366,6 @@ function kuorinka_front_page_sticky( $classes ) {
 	if ( is_page_template( 'pages/front-page.php' ) && is_sticky() ) {
 		$classes[] = 'sticky';
     }
-	
-	/* Remove .hentry class because we're using Schema.org markup. */
-	if( ( $key = array_search( 'hentry', $classes ) ) !== false ) {
-		unset( $classes[$key] );
-	}
-	
-	/* Add entry class for Schema markup. */
-	$classes[] = 'entry';
     
     return $classes;
 	
@@ -405,7 +397,8 @@ add_filter( 'body_class', 'kuorinka_extra_layout_classes' );
 /**
  * Add infinity sign after aside post format.
  *
- * @since     1.0.0
+ * @since  1.0.0
+ * @return array
  */
 function kuorinka_infinity_after_aside( $content ) {
 
@@ -509,40 +502,6 @@ function kuorinka_get_link_url() {
 function kuorinka_comment_callback( $comment, $args, $depth ) {
 	include( locate_template( 'comment.php') );
 }
-
-/**
- * Adds microdata to the comment reply link.
- *
- * @author  Justin Tadlock, justintadlock.com
- * @link    http://themehybrid.com/hybrid-core
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- *
- * @since  1.0.0
- * @access public
- * @param  string  $link
- * @return string
- */
-function kuorinka_comment_reply_link_filter( $link ) {
-	return preg_replace( '/(<a\s)/i', '$1itemprop="replyToUrl"', $link );
-}
-add_filter( 'comment_reply_link', 'kuorinka_comment_reply_link_filter', 5 );
-
-/**
- * Adds microdata to the comments popup link.
- *
- * @author  Justin Tadlock, justintadlock.com
- * @link    http://themehybrid.com/hybrid-core
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- *
- * @since  1.0.0
- * @access public
- * @param  string  $attr
- * @return string
- */
-function kuorinka_comments_popup_link_attributes( $attr ) {
-	return 'itemprop="discussionURL"';
-}
-add_filter( 'comments_popup_link_attributes', 'kuorinka_comments_popup_link_attributes', 5 );
 
 /**
  * Implement the Custom Header feature.

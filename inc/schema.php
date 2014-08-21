@@ -7,8 +7,7 @@
  * microdata while being forward compatible with the ever-changing Web. Currently, the default microdata 
  * vocabulary supported is Schema.org.
  *
- * @package    HybridCore
- * @subpackage Functions
+ * @package    Kuorinka
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2008 - 2014, Justin Tadlock
  * @link       http://themehybrid.com/hybrid-core
@@ -572,3 +571,64 @@ function hybrid_attachment_is_video( $post_id = 0 ) {
 
 	return 'video' === $type ? true : false;
 }
+
+/**
+ * This is the end of hybrid attributes additions. After this there are 
+ * functions that are related to schema.org markup. This way it's easier to track down
+ * what kind of additions is needed for the Schema.org markup.
+ */
+
+/**
+ * Remove hentry and add entry at the same time.
+ *
+ * @since  1.0.0
+ * @return array
+ */
+function kuorinka_entry_markup( $classes ) {
+	
+	/* Remove .hentry class because we're using Schema.org markup. */
+	if( ( $key = array_search( 'hentry', $classes ) ) !== false ) {
+		unset( $classes[$key] );
+	}
+	
+	/* Add entry class for Schema.org markup. */
+	$classes[] = 'entry';
+    
+    return $classes;
+	
+}
+add_filter( 'post_class', 'kuorinka_entry_markup' );
+
+/**
+ * Adds microdata to the comment reply link.
+ *
+ * @author  Justin Tadlock, justintadlock.com
+ * @link    http://themehybrid.com/hybrid-core
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $link
+ * @return string
+ */
+function kuorinka_comment_reply_link_filter( $link ) {
+	return preg_replace( '/(<a\s)/i', '$1itemprop="replyToUrl"', $link );
+}
+add_filter( 'comment_reply_link', 'kuorinka_comment_reply_link_filter', 5 );
+
+/**
+ * Adds microdata to the comments popup link.
+ *
+ * @author  Justin Tadlock, justintadlock.com
+ * @link    http://themehybrid.com/hybrid-core
+ * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  string  $attr
+ * @return string
+ */
+function kuorinka_comments_popup_link_attributes( $attr ) {
+	return 'itemprop="discussionURL"';
+}
+add_filter( 'comments_popup_link_attributes', 'kuorinka_comments_popup_link_attributes', 5 );
