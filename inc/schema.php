@@ -584,7 +584,7 @@ function hybrid_attachment_is_video( $post_id = 0 ) {
  * @since  1.0.0
  * @return array
  */
-function kuorinka_entry_markup( $classes ) {
+function hybrid_entry_markup( $classes ) {
 	
 	/* Remove .hentry class because we're using Schema.org markup. */
 	if( ( $key = array_search( 'hentry', $classes ) ) !== false ) {
@@ -597,7 +597,7 @@ function kuorinka_entry_markup( $classes ) {
     return $classes;
 	
 }
-add_filter( 'post_class', 'kuorinka_entry_markup' );
+add_filter( 'post_class', 'hybrid_entry_markup' );
 
 /**
  * Adds microdata to the comment reply link.
@@ -611,10 +611,10 @@ add_filter( 'post_class', 'kuorinka_entry_markup' );
  * @param  string  $link
  * @return string
  */
-function kuorinka_comment_reply_link_filter( $link ) {
+function hybrid_comment_reply_link_filter( $link ) {
 	return preg_replace( '/(<a\s)/i', '$1itemprop="replyToUrl"', $link );
 }
-add_filter( 'comment_reply_link', 'kuorinka_comment_reply_link_filter', 5 );
+add_filter( 'comment_reply_link', 'hybrid_comment_reply_link_filter', 5 );
 
 /**
  * Adds microdata to the comments popup link.
@@ -628,7 +628,7 @@ add_filter( 'comment_reply_link', 'kuorinka_comment_reply_link_filter', 5 );
  * @param  string  $attr
  * @return string
  */
-function kuorinka_comments_popup_link_attributes( $attr ) {
+function hybrid_comments_popup_link_attributes( $attr ) {
 	return 'itemprop="discussionURL"';
 }
-add_filter( 'comments_popup_link_attributes', 'kuorinka_comments_popup_link_attributes', 5 );
+add_filter( 'comments_popup_link_attributes', 'hybrid_comments_popup_link_attributes', 5 );
