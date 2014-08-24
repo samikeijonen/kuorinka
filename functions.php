@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.0.1' );
+define( 'KUORINKA_VERSION', '1.0.2' );
 
 /**
  * The suffix to use for scripts.
@@ -146,7 +146,7 @@ function kuorinka_widgets_init() {
 		'after_title'   => '</h1>'
 	);
 	
-	$sidebar_front_page_args = array(
+	$sidebar_front_page_args = apply_filters( 'kuorinka_sidebar_front_page_args', array(
 		'id'            => 'front-page',
 		'name'          => _x( 'Front Page', 'sidebar', 'kuorinka' ),
 		'description'   => __( 'A sidebar located in the Front Page Template.', 'kuorinka' ),
@@ -154,7 +154,7 @@ function kuorinka_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>'
-	);
+	) );
 	
 	/* Register sidebars. */
 	register_sidebar( $sidebar_header_args );
