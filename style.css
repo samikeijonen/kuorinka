@@ -4,7 +4,7 @@ Theme URI: https://foxnet-themes.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxnet-themes.fi
 Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more. Well, you got it.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
@@ -1394,6 +1394,53 @@ button#nav-toggle {
 	width: 60px;
 	height: 60px;
 	margin: 0 auto;
+}
+/* WP text menu widget. Also default. */
+#sidebar-front-page .widget_text .genericon.genericon-front-page-widget::before,
+#sidebar-front-page .genericon.genericon-front-page-widget::before {
+	content: '\f409';
+}
+/* WP RSS menu widget. */
+#sidebar-front-page .widget_rss .genericon.genericon-front-page-widget::before {
+	content: '\f413';
+}
+/* WP nav menu widget. */
+#sidebar-front-page .widget_nav_menu .genericon.genericon-front-page-widget::before {
+	content: '\f419';
+}
+/* WordPress other widgets. */
+#sidebar-front-page .widget_archive .genericon.genericon-front-page-widget::before {
+	content: '\f303';
+}
+#sidebar-front-page .widget_calendar .genericon.genericon-front-page-widget::before {
+	content: '\f307';
+}
+#sidebar-front-page .widget_categories .genericon.genericon-front-page-widget::before {
+	content: '\f301';
+}
+#sidebar-front-page .widget_links .genericon.genericon-front-page-widget::before {
+	content: '\f107';
+}
+#sidebar-front-page .widget_meta .genericon.genericon-front-page-widget::before {
+	content: '\f455';
+}
+#sidebar-front-page .widget_pages .genericon.genericon-front-page-widget::before {
+	content: '\f443';
+}
+#sidebar-front-page .widget_recent_comments .genericon.genericon-front-page-widget::before {
+	content: '\f300';
+}
+#sidebar-front-page .widget_recent_entries .genericon.genericon-front-page-widget::before {
+	content: '\f411';
+}
+#sidebar-front-page .widget_search .genericon.genericon-front-page-widget::before {
+	content: '\f400';
+}
+#sidebar-front-page .widget_tag_cloud .genericon.genericon-front-page-widget::before {
+	content: '\f302';
+}
+#sidebar-front-page .widget_text .genericon.genericon-front-page-widgetbefore {
+	content: '\f100';
 }
 
 @media screen and (min-width: 480px) {
