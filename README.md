@@ -25,6 +25,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.2
+
+* Add front page content.
+* Add checks and hooks in front page template.
+* Move Schema.org related stuff mostly in the same file (inc/schema.org).
+
 ### Version 1.0.1
 
 * Fix wrong textdomain.
