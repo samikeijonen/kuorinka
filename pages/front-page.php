@@ -12,9 +12,31 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main" <?php hybrid_attr( 'content' ); ?>>
 		
+			<?php while ( have_posts() ) : the_post(); ?>
+			
+				<section id="kuorinka-front-page-content" class="kuorinka-front-page-content kuorinka-callout">
+				
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
+
+						<header class="entry-header">
+							<?php the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' ); ?>
+						</header><!-- .entry-header -->
+						
+						<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
+							<?php the_content(); ?>
+						</div><!-- .entry-content -->
+						
+					</article><!-- #post-## -->
+					
+				</section><!-- .kuorinka-front-page-content -->
+
+			<?php endwhile; // end of the loop. ?>
+		
 		<?php do_action( 'kuorinka_before_front_page_sidebar' ); // Hook before sidebar. ?>
 		
 		<?php get_sidebar( 'front-page' ); // Loads the sidebar-front-page.php template. ?>
+		
+		<?php do_action( 'kuorinka_after_front_page_sidebar' ); // Hook after sidebar. ?>
 		
 		<?php
 		
@@ -125,6 +147,8 @@ get_header(); ?>
 			</section><!-- #kuorinka-front-page-posts -->
 			
 		<?php endif; // End check for show posts. ?>
+		
+		<?php do_action( 'kuorinka_after_front_page_posts' ); // Hook after posts. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
