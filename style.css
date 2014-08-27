@@ -1342,6 +1342,10 @@ button#nav-toggle {
 	padding: 0 0 1.5em;
 	margin: 0 0 1.5em;
 }
+.kuorinka-front-page-content .entry {
+	padding: 0;
+	margin: 0;
+}
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1371,6 +1375,13 @@ button#nav-toggle {
 	margin-top: 0;
 }
 
+/* Callout in front page. */
+.kuorinka-callout {
+	padding: 3%;
+	margin-bottom: 1.5em;
+	text-align: center;
+}
+
 .single-attachment .entry-title {
 	text-align: center;
 }
@@ -1389,10 +1400,12 @@ button#nav-toggle {
 	text-align: center;
 }
 .sidebar .genericon,
-.sidebar .genericon::before {
-	font-size: 60px;
-	width: 60px;
-	height: 60px;
+.sidebar .genericon::before,
+.kuorinka-front-page-content .genericon,
+.kuorinka-front-page-content .genericon::before {
+	font-size: 64px;
+	width: 64px;
+	height: 64px;
 	margin: 0 auto;
 }
 /* WP text menu widget. Also default. */
@@ -2110,6 +2123,8 @@ blockquote {
 .entry-title,
 .sidebar .genericon,
 .sidebar .genericon::before,
+.kuorinka-front-page-content .genericon,
+.kuorinka-front-page-content .genericon::before,
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
