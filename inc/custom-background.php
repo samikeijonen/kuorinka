@@ -60,8 +60,24 @@ function kuorinka_custom_background_callback() {
 	/* Use 'background' instead of 'background-color'. */
 	$style = "background: #{$color};";
 
-?>
-<style type="text/css" id="custom-background-css">body.custom-background { <?php echo trim( $style ); ?> }</style>
-<?php
+	?>
+	<style type="text/css" id="custom-background-css">body.custom-background { <?php echo trim( $style ); ?> }</style>
+	<?php
 
+	/* Add custom-background body class if we get this far. */
+	add_filter( 'body_class', 'kuorinka_add_custom_background_class' );
+}
+
+/**
+ * Add custom-background body class before it's saved.
+ *
+ * @since  1.0.3
+ * @return array
+ */
+function kuorinka_add_custom_background_class( $classes ) {
+
+	if( !get_theme_mod( 'background_color' ) ) {
+		$classes[] = 'custom-background';
+	}
+	return $classes;
 }
