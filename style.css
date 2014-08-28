@@ -265,16 +265,13 @@ h6 {
 
 @media screen and (min-width: 800px) {
 
-	#site-title,
-	#site-description {
+	#site-title {
 		display: inline-block;
 		padding-right: 4%;
-		width: 51%;
+		width: 52%;
 	}
 	#site-description {
-		padding-left: 0;
-		padding-right: 0;
-		width: 48.6%;
+		display: inline-block;
 	}
 
 }
