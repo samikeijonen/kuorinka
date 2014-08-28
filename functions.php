@@ -102,7 +102,7 @@ function kuorinka_setup() {
 	/* Add custom-header support for portfolio. */
 	add_post_type_support( 'portfolio_item', 'custom-header' );
 	
-	/* Add Editor styles. */
+	/* Add editor styles. */
 	add_editor_style( kuorinka_get_editor_styles() );
 	
 }
@@ -255,11 +255,26 @@ add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
  * Enqueue theme fonts in admin header page.
  *
  * @since 1.0.0
+ * @return void
  */
-function kuorinka_custom_header_fonts() {
+function kuorinka_custom_header_styles() {
+
+	/* Load fonts. */
 	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
+	
+	/* Load css/admin-custom-header.css file. */
+	wp_enqueue_style( 'kuorinka-admin-custom-header', trailingslashit( get_template_directory_uri() ) . 'css/admin-custom-header.css' );
+	
+	/* Load css/admin-custom-header.css file from child theme if it exists. */
+	if ( is_child_theme() ) {
+		$dir = trailingslashit( get_stylesheet_directory() );
+		$uri = trailingslashit( get_stylesheet_directory_uri() );
+
+		if ( file_exists( $dir . 'css/admin-custom-header.css' ) )
+			wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}css/admin-custom-header.css" );
+	}
 }
-add_action( 'admin_print_styles-appearance_page_custom-header', 'kuorinka_custom_header_fonts' );
+add_action( 'admin_print_styles-appearance_page_custom-header', 'kuorinka_custom_header_styles' );
 
 /**
  * Function for deciding which pages should have a one-column layout.
