@@ -23,6 +23,7 @@ function kuorinka_custom_header_setup() {
 		'admin-head-callback'    => 'kuorinka_admin_header_style',
 		'admin-preview-callback' => 'kuorinka_admin_header_image',
 	) ) );
+
 }
 add_action( 'after_setup_theme', 'kuorinka_custom_header_setup', 15 );
 
@@ -56,58 +57,31 @@ endif; // kuorinka_header_style
 
 if ( ! function_exists( 'kuorinka_admin_header_style' ) ) :
 /**
- * Styles the header image displayed on the Appearance > Header admin panel.
+ * Callback function for outputting the custom header CSS to `admin_head` on "Appearance > Custom Header".  See 
+ * the `css/admin-custom-header.css` file for all the style rules specific to this screen.
  *
  * @see kuorinka_custom_header_setup().
  */
 function kuorinka_admin_header_style() {
-?>
-	<style type="text/css">
+
+	/* Get out if we don't use header text. */
+	if ( !display_header_text() ) {
+		return;
+	}
+
+	$header_color = get_header_textcolor();
 	
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#site-title {
-			font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 36px;
-			font-weight: 400;
-			margin: 0;
-			padding: 20px 0;
-			text-transform: uppercase;
-		}
-		#site-title a {
-			text-decoration: none;
-		}
-		#site-description {
-			font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 20px;
-			text-transform: none;
-			padding: 0 0 10px 0;
-			margin: 0;
-		}
+	/* Get out if we don't have header text text color. */
+	if ( empty( $header_color ) ) {
+		return;
+	}
 
-		#headimg img {
-			max-width: 100%;
-			height: auto;			
-		}
+	$style = '';
 
+	$style .= "#site-title, #site-title a { color: #{$header_color} }";
 
-		@media screen and (min-width: 800px) {
+	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
 
-			#site-title,
-			#site-description {
-				display: inline-block;
-				width: 50%;
-			}
-			#site-description {
-				padding-left: 0;
-				padding-right: 0;
-				width: 46%;
-			}
-
-		}
-	</style>
-<?php
 }
 endif; // kuorinka_admin_header_style
 
