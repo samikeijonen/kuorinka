@@ -25,6 +25,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.3
+
+* Rewrite header styles in front end that actually works.
+* Add `custom-background` body class if background is not set so that default background works.
+* Move admin header styles to `css/admin-custom-header.css file`.
+
 ### Version 1.0.2
 
 * Add front page content.
