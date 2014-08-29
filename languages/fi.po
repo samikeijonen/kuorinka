@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-08-26 18:34:20+00:00\n"
-"PO-Revision-Date: 2014-08-26 21:34+0200\n"
+"POT-Creation-Date: 2014-08-29 14:30:32+00:00\n"
+"PO-Revision-Date: 2014-08-29 17:30+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -158,11 +158,11 @@ msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:300
+#: functions.php:315
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
-#: functions.php:468
+#: functions.php:483
 msgid "Visit Project"
 msgstr "Näytä sivusto"
 
