@@ -25,6 +25,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.4
+
+* Add pt_BR translation files. Credit [Thiago Senna](http://thremes.com.br/portfolio/temas/).
+* Add Genericons in editor styles.
+
 ### Version 1.0.3
 
 * Rewrite header styles in front end that actually works.
