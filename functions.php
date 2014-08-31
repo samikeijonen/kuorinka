@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.0.3' );
+define( 'KUORINKA_VERSION', '1.0.4' );
 
 /**
  * The suffix to use for scripts.
@@ -441,6 +441,9 @@ function kuorinka_get_editor_styles() {
 
 	/* Add the theme's editor styles. */
 	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
+	
+	/* Add genericons styles. */
+	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css';
 	
 	/* Add theme fonts. */
 	$editor_styles[] = kuorinka_fonts_url();
