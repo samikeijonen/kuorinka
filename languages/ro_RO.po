@@ -1,0 +1,450 @@
+# Copyright (C) 2014 Sami Keijonen
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kuorinka 1.0.4\n"
+"Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
+"POT-Creation-Date: 2014-08-31 18:19:29+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-10 16:11+0200\n"
+"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
+"Language-Team:  <razvan.diaconu@gmail.com>\n"
+"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
+"2:1));\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"Language: ro\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Această pagină nu există."
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Se pare că nu există nimic la această adresă. Dorești să folosești linkurile "
+"de mai jos sau căsuța de search?"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Cele mai folosite categorii"
+
+#. translators: %1$s: smiley
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Încearcă să cauți în arhivele lunare. %1$s"
+
+#: comments.php:35 comments.php:54
+msgid "Comment navigation"
+msgstr "Navigația comentariilor"
+
+#: comments.php:36 comments.php:55
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarii mai vechi"
+
+#: comments.php:37 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "Comentarii recente &rarr;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Comentariile sunt închise."
+
+#: content-aside.php:25 content-audio.php:28 content-gallery.php:28
+#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-status.php:26 content-video.php:28 content.php:28
+msgid "Posted in %s"
+msgstr "Postat în %s"
+
+# In Romanian we don’t say “Tagged” but “This article has the following tags” and that’s why I’ve put “:”
+#: content-aside.php:26 content-audio.php:29 content-gallery.php:29
+#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-status.php:27 content-video.php:29 content.php:29
+msgid "Tagged %s"
+msgstr "Taguri: %s"
+
+#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
+#: content-image.php:21 content-image.php:46 content-page.php:19
+#: content-quote.php:21 content-quote.php:44 content-video.php:21
+#: content.php:21 image.php:37
+msgid "Pages:"
+msgstr "Pagini:"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "Nu s-a găsit nimic"
+
+#: content-none.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Ești gata să publici primul tău post? <a href=\"%1$s\">Începe aici</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Ne pare rău, însă nimic nu se potrivește cu ce ai căutat. Te rugăm să "
+"încerci din nou folosind alte cuvinte cheie."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Nu există ceea ce cauți. Poate căsuța de căutare te poate ajuta."
+
+#: footer.php:31
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#: footer.php:31
+msgid "Proudly powered by %s"
+msgstr "Susținut cu mândrie de %s"
+
+#: footer.php:33
+msgid "Theme %1$s by %2$s"
+msgstr "Tema %1$s este realizată de %2$s"
+
+#: functions.php:60 menu-primary.php:5
+msgid "Primary Menu"
+msgstr "Meniu Principal"
+
+#: functions.php:61
+msgid "Social Menu"
+msgstr "Meniu Social"
+
+#: functions.php:62 menu-portfolio.php:1
+msgid "Portfolio Menu"
+msgstr "Meniu Portofoliu"
+
+#: functions.php:89
+msgid "1 Column"
+msgstr "O Coloană"
+
+#: functions.php:90
+msgid "2 Columns: Content / Sidebar"
+msgstr "Două Coloane: Conținut / Sidebar"
+
+#: functions.php:91
+msgid "2 Columns: Sidebar / Content"
+msgstr "Două Coloane: Sidebar / Conținut"
+
+#: functions.php:122
+msgid "Header sidebar. It is displayed on top of the page."
+msgstr "Sidebarul din header. Se afișează în partea de sus a paginii."
+
+#: functions.php:132
+msgid "The main sidebar. It is displayed on right side of the page."
+msgstr "Sidebarul principal. Se afișează în partea dreaptă a paginii."
+
+#: functions.php:142
+msgid "A sidebar located in the footer of the site."
+msgstr "Un sidebar aflat în partea de jos a paginii."
+
+#: functions.php:152
+msgid "A sidebar located in the Front Page Template."
+msgstr "Un sidebar aflat în templateul Prima Pagină."
+
+#. Translators: The %s is the post title shown to screen readers.
+#: functions.php:315
+msgid "Read more %s"
+msgstr "Citește mai mult %s"
+
+#: functions.php:486
+msgid "Visit Project"
+msgstr "Vizitează Proiectul"
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "Sări la conținut"
+
+#: inc/breadcrumb-trail.php:178
+msgid "Browse:"
+msgstr "Navighează:"
+
+#: inc/breadcrumb-trail.php:179
+msgid "Home"
+msgstr "Acasă"
+
+#: inc/breadcrumb-trail.php:180 inc/template-general.php:334
+msgid "404 Not Found"
+msgstr "404 Nu s-a găsit"
+
+#: inc/breadcrumb-trail.php:181 inc/template-general.php:160
+msgid "Archives"
+msgstr "Arhivă"
+
+#. Translators: %s is the search query. The HTML entities are opening and
+#. closing curly quotes.
+#: inc/breadcrumb-trail.php:183 inc/template-general.php:315
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Rezultatele căutării pentru &#8220;%s&#8221;"
+
+#. Translators: %s is the page number.
+#: inc/breadcrumb-trail.php:185 inc/extras.php:63
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#. Translators: Minute archive title. %s is the minute time format.
+#: inc/breadcrumb-trail.php:187 inc/template-general.php:276
+msgid "Minute %s"
+msgstr "Minutul %s"
+
+#. Translators: Weekly archive title. %s is the week date format.
+#: inc/breadcrumb-trail.php:189
+msgid "Week %s"
+msgstr "Săptămâna %s"
+
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
+#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+msgid "Edit"
+msgstr "Editează"
+
+#: inc/breadcrumb-trail.php:1163
+msgid "Split"
+msgstr "Împarte"
+
+#: inc/breadcrumb-trail.php:1167
+msgid "Merge"
+msgstr "Unește"
+
+#: inc/template-general.php:126
+msgid "You are browsing the search results for &#8220;%s&#8221;"
+msgstr "Navighezi rezultatele căutării pentru &#8220;%s&#8221;"
+
+#: inc/template-general.php:132
+msgid "You are browsing the site archives by time."
+msgstr "Navighezi arhiva siteului ordonată după timp."
+
+#: inc/template-general.php:135 inc/template-general.php:138
+#: inc/template-general.php:141
+msgid "You are browsing the site archives for %s."
+msgstr "Navighezi arhiva siteului pentru %s."
+
+#: inc/template-general.php:144
+msgid "You are browsing the site archives."
+msgstr "Navighezi arhiva siteului."
+
+#. Translators: 1 is the week number and 2 is the year.
+#: inc/template-general.php:218
+msgid "Week %1$s of %2$s"
+msgstr "Săptămâna %1$s din %2$s"
+
+#: inc/template-tags.php:21
+msgid "Posts navigation"
+msgstr "Navigația posturilor"
+
+#: inc/template-tags.php:25
+msgid "Older posts"
+msgstr "Posturi mai vechi"
+
+#: inc/template-tags.php:29
+msgid "Newer posts"
+msgstr "Posturi mai noi"
+
+#: inc/template-tags.php:52
+msgid "Post navigation"
+msgstr "Navigația postului"
+
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
+#: inc/theme-layouts.php:650
+msgid "Layout"
+msgstr "Aspect"
+
+#: inc/theme-layouts.php:683
+msgid "Global Layout"
+msgstr "Aspect global"
+
+#. Translators: "All" is a link that points to the portfolio archive.
+#: menu-portfolio.php:27
+msgid "All"
+msgstr "Tot"
+
+#: menu-primary.php:3
+msgid "Menu"
+msgstr "Meniu"
+
+#. Theme Name of the plugin/theme
+msgid "Kuorinka"
+msgstr "Kuorinka"
+
+#. Theme URI of the plugin/theme
+msgid "https://foxnet-themes.fi/downloads/kuorinka"
+msgstr "https://foxnet-themes.fi/downloads/kuorinka"
+
+#. Description of the plugin/theme
+msgid ""
+"Are you looking for a theme with these features: accessibility-ready, right "
+"to left support, translation-ready, Schema.org support, all the WordPress' "
+"built-in theme features and some more. Well, you got it."
+msgstr ""
+"Cauți o temă care să aibă următoarele dotari: accesibilitate, suport pentru "
+"scriere de la dreapta la stânga, traducere, suport Schema.org, toate "
+"opțiunile unei teme WordPress și mult mai multe? Ei bine, ai găsit-o."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "https://foxnet-themes.fi"
+msgstr "https://foxnet-themes.fi"
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr "Prima pagină"
+
+#: comment.php:7
+msgctxt "%1%s is for comment date"
+msgid "%1$s"
+msgstr "%1$s"
+
+#: comments.php:28
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentariu la &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarii la &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s comentarii la &ldquo;%2$s&rdquo;"
+
+#: footer.php:32
+msgctxt "Separator in site info."
+msgid "&middot;"
+msgstr "&middot;"
+
+#: functions.php:121
+msgctxt "sidebar"
+msgid "Header"
+msgstr "Antet"
+
+#: functions.php:131
+msgctxt "sidebar"
+msgid "Primary"
+msgstr "Principal"
+
+#: functions.php:141
+msgctxt "sidebar"
+msgid "Subsidiary"
+msgstr "Secundar"
+
+#: functions.php:151
+msgctxt "sidebar"
+msgid "Front Page"
+msgstr "Prima pagină"
+
+#. Translators: If there are characters in your language that are not
+#. * supported by Source Sans Pro, translate this to 'off'. Do not translate
+#. * into your own language.
+#: functions.php:179
+msgctxt "Source Sans Pro font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Translators: If there are characters in your language that are not
+#. * supported by Roboto Condensed, translate this to 'off'. Do not translate
+#. * into your own language.
+#: functions.php:185
+msgctxt "Roboto Condensed font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:74
+msgctxt "Separator in breadcrumb trail."
+msgid "&#8764;"
+msgstr "&#8764;"
+
+#: inc/breadcrumb-trail.php:716 inc/template-general.php:295
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr "g:i a"
+
+#: inc/breadcrumb-trail.php:733 inc/template-general.php:276
+msgctxt "minute archives time format"
+msgid "i"
+msgstr "i"
+
+#: inc/breadcrumb-trail.php:750 inc/template-general.php:256
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr "g a"
+
+#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
+#: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
+#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198
+#: inc/template-general.php:218
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
+#: inc/breadcrumb-trail.php:1040
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr "F"
+
+#: inc/breadcrumb-trail.php:768 inc/breadcrumb-trail.php:1044
+msgctxt "daily archives date format"
+msgid "j"
+msgstr "j"
+
+#: inc/template-general.php:237
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr "j F, Y"
+
+#: inc/breadcrumb-trail.php:796 inc/template-general.php:218
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr "W"
+
+#: inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "%title"
+msgstr "%title"
+
+#: inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title"
+msgstr "%title"
+
+#. Translators: Separates tags, categories, etc. when displaying a post.
+#: inc/template-tags.php:142
+msgctxt "taxonomy terms separator"
+msgid ", "
+msgstr ", "
+
+#. Translators: Default theme layout option.
+#: inc/theme-layouts.php:363
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Prestabilit"
+
+#: sidebar-front-page.php:3
+msgctxt "Sidebar aria label"
+msgid "Front Page Sidebar"
+msgstr "Sidebarul din Prima Pagină"
+
+#: sidebar-header.php:3
+msgctxt "Sidebar aria label"
+msgid "Header Sidebar"
+msgstr "Sidebarul din Partea de Sus a Paginii"
+
+#: sidebar-primary.php:3
+msgctxt "Sidebar aria label"
+msgid "Primary Sidebar"
+msgstr "Sidebarul Principal"
+
+#: sidebar-subsidiary.php:3
+msgctxt "Sidebar aria label"
+msgid "Subsidiary Sidebar"
+msgstr "Sidebarul Secundar"
