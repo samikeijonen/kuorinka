@@ -25,6 +25,11 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.5
+
+* Add fr_FR and ro_RO translation files.
+* Better handling for box-sizing. See update from [Paul Irish](http://www.paulirish.com/2012/box-sizing-border-box-ftw/). 
+
 ### Version 1.0.4
 
 * Add pt_BR translation files. Credit [Thiago Senna](http://thremes.com.br/portfolio/temas/).
