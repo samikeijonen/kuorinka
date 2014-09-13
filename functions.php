@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.0.5' );
+define( 'KUORINKA_VERSION', '1.0.6' );
 
 /**
  * The suffix to use for scripts.
