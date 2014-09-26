@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.6\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-09-26 11:36:12+00:00\n"
+"POT-Creation-Date: 2014-09-26 12:00:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,52 +110,52 @@ msgstr ""
 msgid "Theme %1$s by %2$s"
 msgstr ""
 
-#: functions.php:60 menu-primary.php:5
+#: functions.php:59 menu-primary.php:5
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:61
+#: functions.php:60
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:65 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:1
 msgid "Portfolio Menu"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:91
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:92
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:93
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 
-#: functions.php:140
+#: functions.php:139
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:149
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:160
+#: functions.php:159
 msgid "A sidebar located in the Front Page Template."
 msgstr ""
 
-#: functions.php:323
+#: functions.php:322
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:514
+#: functions.php:513
 msgid "Visit Project"
 msgstr ""
 
@@ -313,27 +313,27 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:128
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:138
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:148
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:158
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:186
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -341,7 +341,7 @@ msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:192
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.

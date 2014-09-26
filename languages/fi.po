@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-09-26 11:25:33+00:00\n"
-"PO-Revision-Date: 2014-09-26 14:25+0200\n"
+"POT-Creation-Date: 2014-09-26 12:00:06+00:00\n"
+"PO-Revision-Date: 2014-09-26 15:00+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
 "Language: fi\n"
@@ -114,55 +114,55 @@ msgstr "Voimanlähteenä %s"
 msgid "Theme %1$s by %2$s"
 msgstr "Teeman %1$s tekijä %2$s"
 
-#: functions.php:60 menu-primary.php:5
+#: functions.php:59 menu-primary.php:5
 msgid "Primary Menu"
 msgstr "Ensisijainen valikko"
 
-#: functions.php:61
+#: functions.php:60
 msgid "Social Menu"
 msgstr "Somevalikko"
 
-#: functions.php:65 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:1
 msgid "Portfolio Menu"
 msgstr "Portfolio valikko"
 
-#: functions.php:92
+#: functions.php:91
 msgid "1 Column"
 msgstr "1 sarake"
 
-#: functions.php:93
+#: functions.php:92
 msgid "2 Columns: Content / Sidebar"
 msgstr "Kaksi saraketta: sisältö / sivupalkki"
 
-#: functions.php:94
+#: functions.php:93
 msgid "2 Columns: Sidebar / Content"
 msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
-#: functions.php:130
+#: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
-#: functions.php:140
+#: functions.php:139
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
 "yläpuolella."
 
-#: functions.php:150
+#: functions.php:149
 msgid "A sidebar located in the footer of the site."
 msgstr "Sivupalkki sijaitsee alapalkissa."
 
-#: functions.php:160
+#: functions.php:159
 msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:323
+#: functions.php:322
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
-#: functions.php:514
+#: functions.php:513
 msgid "Visit Project"
 msgstr "Näytä sivusto"
 
@@ -324,22 +324,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:129
+#: functions.php:128
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Sivupalkki"
 
-#: functions.php:139
+#: functions.php:138
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläpalkin vimpain"
 
-#: functions.php:149
+#: functions.php:148
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Sivupalkki alhaalla"
 
-#: functions.php:159
+#: functions.php:158
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Etusivu"
@@ -347,7 +347,7 @@ msgstr "Etusivu"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:187
+#: functions.php:186
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
@@ -355,7 +355,7 @@ msgstr ""
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:193
+#: functions.php:192
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
