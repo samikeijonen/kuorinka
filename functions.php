@@ -58,9 +58,12 @@ function kuorinka_setup() {
 	/* This theme uses wp_nav_menu() in three locations. */
 	register_nav_menus( array(
 		'primary'   => __( 'Primary Menu', 'kuorinka' ),
-		'social'    => __( 'Social Menu', 'kuorinka' ),
-		'portfolio' => __( 'Portfolio Menu', 'kuorinka' )
+		'social'    => __( 'Social Menu', 'kuorinka' )
 	) );
+	
+	if ( post_type_exists( 'portfolio_item' ) ) {
+		register_nav_menu( 'portfolio', __( 'Portfolio Menu', 'kuorinka' ) );
+	}
 	
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -105,6 +108,11 @@ function kuorinka_setup() {
 	/* Add editor styles. */
 	add_editor_style( kuorinka_get_editor_styles() );
 	
+	/* Add FluidVid JS when oEmbeds are around. */
+	add_filter( 'wp_video_shortcode', 'kuorinka_fluidvids' );
+	add_filter( 'embed_oembed_html', 'kuorinka_fluidvids' );
+	add_filter( 'video_embed_html', 'kuorinka_fluidvids' );
+	
 }
 endif; // kuorinka_setup
 add_action( 'after_setup_theme', 'kuorinka_setup' );
@@ -116,20 +124,20 @@ add_action( 'after_setup_theme', 'kuorinka_setup' );
  */
 function kuorinka_widgets_init() {
 
-	$sidebar_header_args = array(
-		'id'            => 'header',
-		'name'          => _x( 'Header', 'sidebar', 'kuorinka' ),
-		'description'   => __( 'Header sidebar. It is displayed on top of the page.', 'kuorinka' ),
+	$sidebar_primary_args = array(
+		'id'            => 'primary',
+		'name'          => _x( 'Primary', 'sidebar', 'kuorinka' ),
+		'description'   => __( 'The main sidebar. It is displayed on right side of the page.', 'kuorinka' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>'
 	);
-
-	$sidebar_primary_args = array(
-		'id'            => 'primary',
-		'name'          => _x( 'Primary', 'sidebar', 'kuorinka' ),
-		'description'   => __( 'The main sidebar. It is displayed on right side of the page.', 'kuorinka' ),
+	
+	$sidebar_header_args = array(
+		'id'            => 'header',
+		'name'          => _x( 'Header', 'sidebar', 'kuorinka' ),
+		'description'   => __( 'Header sidebar. It is displayed on top of the page.', 'kuorinka' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -157,8 +165,8 @@ function kuorinka_widgets_init() {
 	) );
 	
 	/* Register sidebars. */
-	register_sidebar( $sidebar_header_args );
 	register_sidebar( $sidebar_primary_args );
+	register_sidebar( $sidebar_header_args );
 	register_sidebar( $sidebar_subsidiary_args );
 	register_sidebar( $sidebar_front_page_args );
 	
@@ -221,17 +229,17 @@ function kuorinka_scripts() {
 		wp_enqueue_style( 'kuorinka-child-style', get_stylesheet_uri(), array(), null );
 	}
 	
-	/* Enqueue Fitvids. */
-	wp_enqueue_script( 'kuorinka-fitvids', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/fitvids' . KUORINKA_SUFFIX . '.js', array( 'jquery' ), KUORINKA_VERSION, true );
+	/* Register Fluidvids. */
+	wp_register_script( 'kuorinka-fluidvids', trailingslashit( get_template_directory_uri() ) . 'js/fluidvids/fluidvids' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
 	
-	/* Fitvids settings. */
-	wp_enqueue_script( 'kuorinka-fitvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fitvids/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-fitvids' ), KUORINKA_VERSION, true );
+	/* Register Fluidvids settings. */
+	wp_register_script( 'kuorinka-fluidvids-settings', trailingslashit( get_template_directory_uri() ) . 'js/fluidvids/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-fluidvids' ), KUORINKA_VERSION, true );
 	
 	/* Enqueue responsive navigation if primary menu is in use. */
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
 	
-		/* Enqueue settings. */
+		/* Enqueue responsive navigation settings. */
 		wp_enqueue_script( 'kuorinka-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-navigation' ), KUORINKA_VERSION, true );
 	}
 	
@@ -439,8 +447,8 @@ function kuorinka_get_editor_styles() {
 	/* Set up an array for the styles. */
 	$editor_styles = array();
 
-	/* Add the theme's editor styles. */
-	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
+	/* Add the theme's editor styles. This also checks child theme's css/editor-style.css file. */
+	$editor_styles[] = 'css/editor-style.css';
 	
 	/* Add genericons styles. */
 	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css';
@@ -448,16 +456,36 @@ function kuorinka_get_editor_styles() {
 	/* Add theme fonts. */
 	$editor_styles[] = kuorinka_fonts_url();
 
-	/* If a child theme, add its editor styles. Note: WP checks whether the file exists before using it. */
-	if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . 'css/editor-style.css' ) ) {
-		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'css/editor-style.css';
-	}
-
 	/* Add the locale stylesheet. */
 	$editor_styles[] = get_locale_stylesheet_uri();
 
 	/* Return the styles. */
 	return $editor_styles;
+}
+
+/**
+ * Add JS when oEmbeds are around to make them responsive.
+ *
+ * @since  1.0.6
+ * @access public
+ * @return void
+ */
+function kuorinka_fluidvids( $html ) {
+		
+	/* Return if empty. */
+	if ( empty( $html ) || ! is_string( $html ) ) {
+		return $html;
+	}
+		
+	/* Enqueue the JS file if Fluidvids plugin isn't doing it. has_action function doesn't seem to work in this case. */
+	if ( ! wp_script_is( 'fluidvids', 'enqueued' ) ) {
+		wp_enqueue_script( 'kuorinka-fluidvids' );
+		wp_enqueue_script( 'kuorinka-fluidvids-settings' );
+	}
+	
+	/* Return html. */
+	return $html;	
+
 }
 
 /**
