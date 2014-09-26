@@ -86,10 +86,10 @@ grunt.initConfig({
 				'js/settings.min.js': ['js/settings.js']
 			}
 		},
-		fitvids: {
+		fluidvids: {
 			files: {
-				'js/fitvids/fitvids.min.js': ['js/fitvids/fitvids.js'],
-				'js/fitvids/settings.min.js': ['js/fitvids/settings.js']
+				'js/fluidvids/fluidvids.min.js': ['js/fluidvids/fluidvids.js'],
+				'js/fluidvids/settings.min.js': ['js/fluidvids/settings.js']
 			}
 		},
 		settigns: {
