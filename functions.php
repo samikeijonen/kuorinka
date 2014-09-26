@@ -56,12 +56,11 @@ function kuorinka_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/* This theme uses wp_nav_menu() in three locations. */
-	register_nav_menus( array(
-		'primary'   => __( 'Primary Menu', 'kuorinka' ),
-		'social'    => __( 'Social Menu', 'kuorinka' )
-	) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'kuorinka' ) );
+	register_nav_menu( 'social', __( 'Social Menu', 'kuorinka' ) );
 	
-	if ( post_type_exists( 'portfolio_item' ) ) {
+	/* Show portfolio menu only if Custom Content Portfolio Plugin is active. */
+	if ( function_exists( 'ccp_register_post_types' ) || post_type_exists( 'portfolio_item' ) ) {
 		register_nav_menu( 'portfolio', __( 'Portfolio Menu', 'kuorinka' ) );
 	}
 	
