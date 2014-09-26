@@ -25,6 +25,14 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.6
+
+* Replace Fitvids with Fluidvids.
+* Add placeholder text color for better accessibility.
+* Add role and aria-label in breadcrumb for better accessibility.
+* Show portfolio menu only if Custom Content Portfolio Plugin is active.
+
+
 ### Version 1.0.5
 
 * Add fr_FR and ro_RO translation files.
