@@ -2129,6 +2129,21 @@ blockquote {
 	color: #555;
 }
 
+::-webkit-input-placeholder {
+	color: #555;
+}
+:-moz-placeholder {
+	color: #555;
+	opacity: 1;
+}
+::-moz-placeholder {
+	color: #555;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	color: #555;
+}
+
 .entry-title,
 .sidebar .genericon,
 .sidebar .genericon::before,
