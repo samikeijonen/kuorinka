@@ -60,7 +60,7 @@ function kuorinka_setup() {
 	register_nav_menu( 'social', __( 'Social Menu', 'kuorinka' ) );
 	
 	/* Show portfolio menu only if Custom Content Portfolio Plugin is active. */
-	if ( function_exists( 'ccp_register_post_types' ) || post_type_exists( 'portfolio_item' ) ) {
+	if ( post_type_exists( 'portfolio_item' ) ) {
 		register_nav_menu( 'portfolio', __( 'Portfolio Menu', 'kuorinka' ) );
 	}
 	
