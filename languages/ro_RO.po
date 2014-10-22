@@ -1,25 +1,27 @@
 # Copyright (C) 2014 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Kuorinka 1.0.4\n"
+"Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-08-31 18:19:29+00:00\n"
+"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
+"PO-Revision-Date: 2014-10-22 18:25+0200\n"
+"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
+"Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/"
+"kuorinka/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-09-10 16:11+0200\n"
-"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team:  <razvan.diaconu@gmail.com>\n"
-"X-Generator: Poedit 1.6.9\n"
+"Language: ro_RO\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
 "2:1));\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
-"Language: ro\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:15
@@ -65,7 +67,6 @@ msgstr "Comentariile sunt închise."
 msgid "Posted in %s"
 msgstr "Postat în %s"
 
-# In Romanian we don’t say “Tagged” but “This article has the following tags” and that’s why I’ve put “:”
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
 #: content-image.php:29 content-link.php:35 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
@@ -115,52 +116,52 @@ msgstr "Susținut cu mândrie de %s"
 msgid "Theme %1$s by %2$s"
 msgstr "Tema %1$s este realizată de %2$s"
 
-#: functions.php:60 menu-primary.php:5
+#: functions.php:59 menu-primary.php:5
 msgid "Primary Menu"
 msgstr "Meniu Principal"
 
-#: functions.php:61
+#: functions.php:60
 msgid "Social Menu"
 msgstr "Meniu Social"
 
-#: functions.php:62 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:1
 msgid "Portfolio Menu"
 msgstr "Meniu Portofoliu"
 
-#: functions.php:89
+#: functions.php:91
 msgid "1 Column"
 msgstr "O Coloană"
 
-#: functions.php:90
+#: functions.php:92
 msgid "2 Columns: Content / Sidebar"
 msgstr "Două Coloane: Conținut / Sidebar"
 
-#: functions.php:91
+#: functions.php:93
 msgid "2 Columns: Sidebar / Content"
 msgstr "Două Coloane: Sidebar / Conținut"
 
-#: functions.php:122
-msgid "Header sidebar. It is displayed on top of the page."
-msgstr "Sidebarul din header. Se afișează în partea de sus a paginii."
-
-#: functions.php:132
+#: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr "Sidebarul principal. Se afișează în partea dreaptă a paginii."
 
-#: functions.php:142
+#: functions.php:139
+msgid "Header sidebar. It is displayed on top of the page."
+msgstr "Sidebarul din header. Se afișează în partea de sus a paginii."
+
+#: functions.php:149
 msgid "A sidebar located in the footer of the site."
 msgstr "Un sidebar aflat în partea de jos a paginii."
 
-#: functions.php:152
+#: functions.php:159
 msgid "A sidebar located in the Front Page Template."
 msgstr "Un sidebar aflat în templateul Prima Pagină."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:315
+#: functions.php:322
 msgid "Read more %s"
 msgstr "Citește mai mult %s"
 
-#: functions.php:486
+#: functions.php:513
 msgid "Visit Project"
 msgstr "Vizitează Proiectul"
 
@@ -279,8 +280,8 @@ msgid "Kuorinka"
 msgstr "Kuorinka"
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/kuorinka"
-msgstr "https://foxnet-themes.fi/downloads/kuorinka"
+msgid "https://foxland.fi/downloads/kuorinka"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
@@ -297,8 +298,8 @@ msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
-msgstr "https://foxnet-themes.fi"
+msgid "https://foxland.fi"
+msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -322,22 +323,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:121
-msgctxt "sidebar"
-msgid "Header"
-msgstr "Antet"
-
-#: functions.php:131
+#: functions.php:128
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:141
+#: functions.php:138
+msgctxt "sidebar"
+msgid "Header"
+msgstr "Antet"
+
+#: functions.php:148
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Secundar"
 
-#: functions.php:151
+#: functions.php:158
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Prima pagină"
@@ -345,7 +346,7 @@ msgstr "Prima pagină"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:179
+#: functions.php:186
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -353,15 +354,20 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:185
+#: functions.php:192
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
 
-#: header.php:74
+#: header.php:76
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
+
+#: inc/breadcrumb-trail.php:130
+msgctxt "Breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
 
 #: inc/breadcrumb-trail.php:716 inc/template-general.php:295
 msgctxt "minute and hour archives time format"

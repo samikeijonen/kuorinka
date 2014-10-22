@@ -1,25 +1,28 @@
 # Copyright (C) 2014 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
+# Translators:
+# Sami Keijonen <sami.keijonen@foxnet.fi>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: Kuorinka 1.0.0\n"
+"Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-09-26 12:00:06+00:00\n"
-"PO-Revision-Date: 2014-09-26 15:00+0200\n"
+"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
+"PO-Revision-Date: 2014-10-22 15:24+0000\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Foxnet Themes <sami.keijonen@foxnet.fi>\n"
-"Language: fi\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: grunt-wp-i18n 0.4.5\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Language: English\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -27,11 +30,9 @@ msgstr "Ups! Tätä sivua ei löydy."
 
 #: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida "
-"alla olevista linkeistä tai etsiä haluamaasi."
+"It looks like nothing was found at this location. Maybe try one of the links"
+" below or a search?"
+msgstr "Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida alla olevista linkeistä tai etsiä haluamaasi."
 
 #: 404.php:27
 msgid "Most Used Categories"
@@ -82,19 +83,14 @@ msgid "Nothing Found"
 msgstr "Mitään ei löytynyt"
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s"
-"\">Aloita tästä</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s\">Aloita tästä</a>."
 
 #: content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
-"Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri "
-"hakusanoilla."
+msgstr "Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri hakusanoilla."
 
 #: content-none.php:28
 msgid ""
@@ -140,14 +136,11 @@ msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
 #: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
-msgstr ""
-"Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
+msgstr "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
 #: functions.php:139
 msgid "Header sidebar. It is displayed on top of the page."
-msgstr ""
-"Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
-"yläpuolella."
+msgstr "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  yläpuolella."
 
 #: functions.php:149
 msgid "A sidebar located in the footer of the site."
@@ -281,27 +274,23 @@ msgid "Kuorinka"
 msgstr "Kuorinka"
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/kuorinka"
-msgstr "https://foxnet-themes.fi/downloads/kuorinka"
+msgid "https://foxland.fi/downloads/kuorinka"
+msgstr "https://foxland.fi/downloads/kuorinka"
 
 #. Description of the plugin/theme
 msgid ""
 "Are you looking for a theme with these features: accessibility-ready, right "
 "to left support, translation-ready, Schema.org support, all the WordPress' "
 "built-in theme features and some more. Well, you got it."
-msgstr ""
-"Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, "
-"right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org tuki, "
-"kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. Etsit "
-"löytämäsi."
+msgstr "Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. Etsit löytämäsi."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
-msgstr "https://foxnet-themes.fi/"
+msgid "https://foxland.fi"
+msgstr "https://foxland.fi"
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -350,7 +339,7 @@ msgstr "Etusivu"
 #: functions.php:186
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
-msgstr ""
+msgstr "on"
 
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
@@ -358,9 +347,9 @@ msgstr ""
 #: functions.php:192
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
-msgstr ""
+msgstr "on"
 
-#: header.php:74
+#: header.php:76
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-08-31 18:19:29+00:00\n"
-"PO-Revision-Date: 2014-09-10 15:54+0200\n"
+"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
+"PO-Revision-Date: 2014-10-22 18:25+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: French (France) (http://www.transifex.com/projects/p/kuorinka/"
 "language/fr_FR/)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -120,53 +120,53 @@ msgstr "Fièrement propulsé par %s"
 msgid "Theme %1$s by %2$s"
 msgstr "Thème %1$s par %2$s"
 
-#: functions.php:60 menu-primary.php:5
+#: functions.php:59 menu-primary.php:5
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:61
+#: functions.php:60
 msgid "Social Menu"
 msgstr "Menu social"
 
-#: functions.php:62 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:1
 msgid "Portfolio Menu"
 msgstr "Menu du portfolio"
 
-#: functions.php:89
+#: functions.php:91
 msgid "1 Column"
 msgstr "1 colonne"
 
-#: functions.php:90
+#: functions.php:92
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 colonnes : contenu / colonne latérale"
 
-#: functions.php:91
+#: functions.php:93
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 colonnes : colonne latérale / contenu"
 
-#: functions.php:122
-msgid "Header sidebar. It is displayed on top of the page."
-msgstr "En-tête de la colonne latérale. Est affiché en haut de la page."
-
-#: functions.php:132
+#: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Colonne latérale principale. Elle est affichée sur la droite de la page."
 
-#: functions.php:142
+#: functions.php:139
+msgid "Header sidebar. It is displayed on top of the page."
+msgstr "En-tête de la colonne latérale. Est affiché en haut de la page."
+
+#: functions.php:149
 msgid "A sidebar located in the footer of the site."
 msgstr "Une colonne latérale placée dans le pied de page de votre site."
 
-#: functions.php:152
+#: functions.php:159
 msgid "A sidebar located in the Front Page Template."
 msgstr "Une barre latérale affichée sur la page d'accueil du thème."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:315
+#: functions.php:322
 msgid "Read more %s"
 msgstr "Lire la suite de %s"
 
-#: functions.php:486
+#: functions.php:513
 msgid "Visit Project"
 msgstr "Voir le projet"
 
@@ -285,8 +285,8 @@ msgid "Kuorinka"
 msgstr "Kuorinka"
 
 #. Theme URI of the plugin/theme
-msgid "https://foxnet-themes.fi/downloads/kuorinka"
-msgstr "https://foxnet-themes.fi/downloads/kuorinka"
+msgid "https://foxland.fi/downloads/kuorinka"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
@@ -304,8 +304,8 @@ msgid "Sami Keijonen"
 msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
-msgid "https://foxnet-themes.fi"
-msgstr "https://foxnet-themes.fi"
+msgid "https://foxland.fi"
+msgstr "https://foxland.fi"
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
@@ -328,22 +328,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:121
-msgctxt "sidebar"
-msgid "Header"
-msgstr "En-tête"
-
-#: functions.php:131
+#: functions.php:128
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:141
+#: functions.php:138
+msgctxt "sidebar"
+msgid "Header"
+msgstr "En-tête"
+
+#: functions.php:148
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Subsidiaire"
 
-#: functions.php:151
+#: functions.php:158
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Page d&rsquo;accueil"
@@ -351,7 +351,7 @@ msgstr "Page d&rsquo;accueil"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:179
+#: functions.php:186
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -359,15 +359,20 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:185
+#: functions.php:192
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
 
-#: header.php:74
+#: header.php:76
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
+
+#: inc/breadcrumb-trail.php:130
+msgctxt "Breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr "Fils d'Ariane"
 
 #: inc/breadcrumb-trail.php:716 inc/template-general.php:295
 msgctxt "minute and hour archives time format"
