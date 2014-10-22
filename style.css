@@ -1,10 +1,10 @@
 /*
 Theme Name: Kuorinka
-Theme URI: https://foxnet-themes.fi/downloads/kuorinka
+Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
-Author URI: https://foxnet-themes.fi
+Author URI: https://foxland.fi
 Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more. Well, you got it.
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
@@ -619,24 +619,25 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 	border: 0;
 	padding: 0;
 }
-input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="email"],
-input[type="url"],
+input[type="month"],
 input[type="password"],
+input[type="reset"],
 input[type="search"],
 input[type="tel"],
-textarea {
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
 	transition: all 0.25s ease-in-out;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-	
-}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -662,7 +663,7 @@ legend {
 	font-weight: bold;
 	margin: 0 0 32px 0;
 	margin: 0 0 2rem 0;
-	padding: 0;
+	padding: 2%;
 	white-space: normal;
 }
 
@@ -2000,7 +2001,7 @@ body .gform_wrapper textarea {
 	padding: 0.75em;
 	font-size: 100%;
 }
-body #gforms_confirmation_message {
+body .gform_confirmation_wrapper {
 	padding: 3%;
 	margin-bottom: 1.5em;
 }
@@ -2091,7 +2092,7 @@ var {
 
 /* === 16.2 Colors === */
 
-/* Her is a list of used colors to help you out.
+/* Here is a list of used colors to help you out.
  *
  * Dark color for text and hover:           #303030
  * Lighter color for text:                  #555
@@ -2117,12 +2118,20 @@ textarea {
 .loop-description,
 .wp-caption-text,
 #colophon .site-info,
-input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="email"],
-input[type="url"],
+input[type="month"],
 input[type="password"],
+input[type="reset"],
 input[type="search"],
 input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 textarea,
 input,
 blockquote {
@@ -2292,7 +2301,7 @@ li.bypostauthor,
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus,
-body #gforms_confirmation_message,
+body .gform_confirmation_wrapper,
 .post-type-archive-portfolio_item .entry-header,
 .tax-portfolio .entry-header,
 .term-post-format-video .entry-header,
@@ -2331,26 +2340,43 @@ td {
 	border-bottom: 1px solid #e6eff7;
 }
 
-input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="email"],
-input[type="url"],
+input[type="month"],
 input[type="password"],
 input[type="search"],
 input[type="tel"],
-textarea {
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select {
 	border: 4px solid #e6eff7;
 }
-input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
 input[type="email"]:focus,
-input[type="url"]:focus,
+input[type="month"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+textarea:focus,
+select:focus {
 	border-color: #1668b5;
 }
 
-fieldset {
+fieldset,
+legend {
 	border: 1px solid #e6eff7;
 }
 
