@@ -136,7 +136,8 @@ grunt.initConfig({
           '!.tx/**',
           '!**/Gruntfile.js',
           '!**/package.json',
-          '!**/*~'
+          '!**/*~',
+		  '!tx.exe'
         ],
         dest: 'build/<%= pkg.name %>/'
       }
