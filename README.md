@@ -17,13 +17,21 @@ The following resources are included within the theme package.
 
 * [Genericons](http://genericons.com/) by Joen Asmussen - Licensed under the [GPL, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 * [Responsive Nav](http://responsive-nav.com/) by Viljami Salminen - Licensed under the [MIT License](http://opensource.org/licenses/MIT).
-* [FitVids](http://fitvidsjs.com/) by Chris Coyier and Paravel - Licensed under the [WTFPL license](http://sam.zoy.org/wtfpl/).
+* [FluidVids](https://github.com/toddmotto/fluidvids) by Todd Motto - Licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
 All other resources and theme elements are licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2014 &copy; [Sami Keijonen](https://foxnet-themes.fi).
+2014 &copy; [Sami Keijonen](https://foxland.fi).
 
 ## Changelog
+
+### Version 1.0.7
+
+* Update Genericons to version 3.2.
+* Style support for HTML5 forms.
+* Add alt text to header image.
+* Add Dutch translation.
+* Add schema.org markup in front page template.
 
 ### Version 1.0.6
 
