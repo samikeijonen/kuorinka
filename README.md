@@ -25,6 +25,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.0.8
+
+* Remove tx.exe file.
+
 ### Version 1.0.7
 
 * Update Genericons to version 3.2.
