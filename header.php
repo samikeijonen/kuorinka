@@ -59,7 +59,7 @@
 			if ( get_header_image() ) : ?>
 				<div id="kuorinka-header-image" class="kuorinka-header-image">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="kuorinka-header-link" rel="home">
-						<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+						<img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 					</a>
 				</div><!-- #kuorinka-header-image -->	
 			<?php endif; // End header image check. ?>
@@ -69,6 +69,8 @@
 		<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
 		
 	</header><!-- #masthead -->
+	
+	<?php do_action( 'kuorinka_after_header' ); // Hook after header. ?>
 	
 	<?php if ( function_exists( 'breadcrumb_trail' ) && current_theme_supports( 'breadcrumb-trail' ) ) :
 		breadcrumb_trail( array( 'container' => 'nav', 'separator' => _x( '&#8764;', 'Separator in breadcrumb trail.', 'mina-olen' ), 'show_on_front' => false, 'show_browse' => false, 'before' => '<div class="wrap">', 'after' => '</div>' ) );
