@@ -66,13 +66,13 @@ get_header(); ?>
 
 					while ( $kuorinka_sticky_query->have_posts() ) : $kuorinka_sticky_query->the_post(); ?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 	
 							<header class="entry-header">
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							</header><!-- .entry-header -->
 
-							<div class="entry-summary">
+							<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
 								<?php if ( has_post_thumbnail() ) the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail' ) ); ?>
 								<?php the_excerpt(); ?>
 							</div><!-- .entry-summary -->
@@ -125,14 +125,14 @@ get_header(); ?>
 
 					while ( $kuorinka_post_query->have_posts() ) : $kuorinka_post_query->the_post(); ?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 	
 							<header class="entry-header">
 								<?php if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) ); ?>
-								<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							</header><!-- .entry-header -->
 
-							<div class="entry-summary">
+							<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
 								<?php the_excerpt(); ?>
 							</div><!-- .entry-summary -->
 
