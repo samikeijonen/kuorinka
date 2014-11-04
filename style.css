@@ -3,7 +3,7 @@ Theme Name: Kuorinka
 Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
-Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more. Well, you got it.
+Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more? Well, you got it.
 Version: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -243,6 +243,10 @@ h6 {
 
 }
 
+
+.site-branding {
+	text-align: center;
+}
 #site-title {
 	margin: 0;
 	padding: 20px 0;
@@ -261,7 +265,11 @@ h6 {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
+
+	.site-branding {
+		text-align: left;
+	}
 
 	#site-title {
 		display: inline-block;
@@ -759,12 +767,12 @@ a.more-link::after {
 
 /* === 5.2.1 Primary menu === */
 
-.nav-collapse ul {
+.main-navigation ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.nav-collapse li a,
+.main-navigation li a,
 button#nav-toggle {
 	text-decoration: none;
 }
@@ -783,12 +791,12 @@ button#nav-toggle {
 
 @media screen and (max-width: 899px) {
 
-	.nav-collapse ul {
+	.main-navigation ul {
 		width: 100%;
 		display: block;
 	}
 
-	.nav-collapse li {
+	.main-navigation li {
 		width: 100%;
 		display: block;
 	}
@@ -801,7 +809,7 @@ button#nav-toggle {
 		z-index: 100;
 	}
 	
-	.nav-collapse li a,
+	.main-navigation li a,
 	button#nav-toggle {
 		display: block;
 		padding: 10px 4%;
@@ -821,7 +829,7 @@ button#nav-toggle {
 		padding-left: 13%;
 	}
 
-	.js .nav-collapse {
+	.js .main-navigation {
 		clip: rect(0 0 0 0);
 		max-height: 0;
 		position: absolute;
@@ -830,7 +838,7 @@ button#nav-toggle {
 		zoom: 1;
 	}
 
-	.nav-collapse.opened {
+	.main-navigation.opened {
 		max-height: 9999px;
 	}
 
@@ -865,10 +873,10 @@ button#nav-toggle {
 
 @media screen and (min-width: 900px) {
 
-	.js .nav-collapse {
+	.js .main-navigation {
 		position: relative;
 	}
-	.js .nav-collapse.closed {
+	.js .main-navigation.closed {
 		max-height: none;
 	}
 	#nav-toggle {
@@ -2203,7 +2211,7 @@ button#nav-toggle.focus,
 
 @media screen and (max-width: 899px) {
 
-	.nav-collapse li a,
+	.main-navigation li a,
 	button#nav-toggle {
 		background: #054e92;
 		background: rgba(11,84,152,0.92);
@@ -2223,6 +2231,7 @@ button#nav-toggle.focus,
 	}
 	.custom-header-image.primary-menu-active #menu-primary .wrap {
 		background-color: rgba(11,84,152,0.92);
+		position: relative;
 	}
 
 	#menu-primary a {
