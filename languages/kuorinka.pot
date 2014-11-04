@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka 1.0.8\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-10-22 17:49:50+00:00\n"
+"POT-Creation-Date: 2014-11-04 16:52:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -60,13 +60,13 @@ msgid "Comments are closed."
 msgstr ""
 
 #: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-image.php:28 content-link.php:40 content-quote.php:28
 #: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr ""
 
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-image.php:29 content-link.php:41 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr ""
@@ -281,7 +281,7 @@ msgstr ""
 msgid ""
 "Are you looking for a theme with these features: accessibility-ready, right "
 "to left support, translation-ready, Schema.org support, all the WordPress' "
-"built-in theme features and some more. Well, you got it."
+"built-in theme features and some more? Well, you got it."
 msgstr ""
 
 #. Author of the plugin/theme
