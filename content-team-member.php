@@ -26,7 +26,7 @@ $role 				= esc_attr( get_post_meta( get_the_ID(), '_byline', true ) );
 		if ( is_singular( get_post_type() ) ) : // If viewing a single post.
 			the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', '</h1>' );
 		else : // If not viewing a single post.
-			the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+			the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		endif; // End single post check.
 			
 		/* Member role. */

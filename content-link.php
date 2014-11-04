@@ -17,9 +17,15 @@
 		endif;
 		?>
 		
-		<h1 class="entry-title" <?php hybrid_get_attr( 'entry-title' ); ?>>
+		<?php if ( is_singular( get_post_type() ) ) : // If viewing a single post.
+			$heading = 'h1';
+		else : // If not viewing a single post.
+			$heading = 'h2';
+		endif; // End single post check. ?>
+		
+		<<?php echo $heading; ?> class="entry-title" <?php hybrid_get_attr( 'entry-title' ); ?>>
 			<a href="<?php echo esc_url( kuorinka_get_link_url() ); ?>"><?php the_title(); ?> <span class="meta-nav"><?php echo esc_attr( $kuorinka_left_or_right ); ?></span></a>
-		</h1>
+		</<?php echo $heading; ?>>
 		
 	</header><!-- .entry-header -->
 	
