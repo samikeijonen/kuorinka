@@ -214,6 +214,12 @@ function kuorinka_fonts_url() {
  * Enqueue scripts and styles.
  */
 function kuorinka_scripts() {
+
+	/* Enqueue fonts, used in the main stylesheet. */
+	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
+	
+	/* Add Genericons font, used in the main stylesheet. */
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.2' );
 	
 	/* Enqueue parent theme styles. */
 	wp_enqueue_style( 'kuorinka-style', trailingslashit( get_template_directory_uri() ) . 'style' . KUORINKA_SUFFIX . '.css', array(), KUORINKA_VERSION );
@@ -244,12 +250,6 @@ function kuorinka_scripts() {
 	
 	/* Enqueue functions. */
 	wp_enqueue_script( 'kuorinka-script', get_template_directory_uri() . '/js/functions' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
-	
-	/* Enqueue fonts. */
-	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
-	
-	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.2' );
 	
 	/* Enqueue comment reply. */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -450,7 +450,7 @@ function kuorinka_get_editor_styles() {
 	$editor_styles[] = 'css/editor-style.css';
 	
 	/* Add genericons styles. */
-	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons.css';
+	$editor_styles[] = 'fonts/genericons/genericons/genericons.css';
 	
 	/* Add theme fonts. */
 	$editor_styles[] = kuorinka_fonts_url();
