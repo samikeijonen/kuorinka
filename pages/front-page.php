@@ -49,9 +49,10 @@ get_header(); ?>
 			$sticky = get_option( 'sticky_posts' );
 		
 			$kuorinka_sticky_args = apply_filters( 'kuorinka_front_page_sticky_arguments', array(
-				'post_type'   => array( 'post' ),
-				'post__in'    => $sticky,
-				'post_status' => 'publish'
+				'post_type'    => array( 'post' ),
+				'post__in'     => $sticky,
+				'post_status'  => 'publish',
+				'no_found_rows' => true // Skip SQL_CALC_FOUND_ROWS for performance (no pagination).
 			) );
 		
 			if ( ! empty( $sticky ) ) :
@@ -94,6 +95,7 @@ get_header(); ?>
 				'post_type'      => array( 'post' ),
 				'post__not_in'   => $sticky,
 				'post_status'    => 'publish',
+				'no_found_rows'  => true, // Skip SQL_CALC_FOUND_ROWS for performance (no pagination).
 				'posts_per_page' => 4,
 				'tax_query'      => array(
 					array(
