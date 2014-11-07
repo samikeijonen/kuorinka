@@ -6,23 +6,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
-"PO-Revision-Date: 2014-10-22 15:24+0000\n"
+"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
+"PO-Revision-Date: 2014-11-07 16:39+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/language/fi/)\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
+"language/fi/)\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: grunt-wp-i18n 0.4.5\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Country: UNITED STATES\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -30,9 +30,11 @@ msgstr "Ups! Tätä sivua ei löydy."
 
 #: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links"
-" below or a search?"
-msgstr "Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida alla olevista linkeistä tai etsiä haluamaasi."
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida "
+"alla olevista linkeistä tai etsiä haluamaasi."
 
 #: 404.php:27
 msgid "Most Used Categories"
@@ -60,13 +62,13 @@ msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
 #: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-image.php:28 content-link.php:40 content-quote.php:28
 #: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "Artikkeli kategoriassa %s"
 
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-image.php:29 content-link.php:41 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "Avainsanat %s"
@@ -83,14 +85,19 @@ msgid "Nothing Found"
 msgstr "Mitään ei löytynyt"
 
 #: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s\">Aloita tästä</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s"
+"\">Aloita tästä</a>."
 
 #: content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr "Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri hakusanoilla."
+msgstr ""
+"Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri "
+"hakusanoilla."
 
 #: content-none.php:28
 msgid ""
@@ -136,11 +143,14 @@ msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
 #: functions.php:129
 msgid "The main sidebar. It is displayed on right side of the page."
-msgstr "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
+msgstr ""
+"Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
 #: functions.php:139
 msgid "Header sidebar. It is displayed on top of the page."
-msgstr "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  yläpuolella."
+msgstr ""
+"Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
+"yläpuolella."
 
 #: functions.php:149
 msgid "A sidebar located in the footer of the site."
@@ -151,11 +161,11 @@ msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:322
+#: functions.php:318
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
-#: functions.php:513
+#: functions.php:509
 msgid "Visit Project"
 msgstr "Näytä sivusto"
 
@@ -279,10 +289,14 @@ msgstr "https://foxland.fi/downloads/kuorinka"
 
 #. Description of the plugin/theme
 msgid ""
-"Are you looking for a theme with these features: accessibility-ready, right "
-"to left support, translation-ready, Schema.org support, all the WordPress' "
-"built-in theme features and some more. Well, you got it."
-msgstr "Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. Etsit löytämäsi."
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
+"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
+"features. It's also child theme friendly."
+msgstr ""
+"Kuorinka on monipuolinen teema, joka on saanut virallisen saavutettavuus "
+"(Accessibility Ready) merkinnän. Teema tukee myös oikealta vasemmalle "
+"kieliä, Schema.org merkkauskieltä ja kaikkia WordPressin sisäänrakennettuja "
+"ominaisuuksia.  Lisäksi alateeman tekeminen on otettu teemassa huomioon."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
@@ -444,3 +458,13 @@ msgstr "Sivupalkki"
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Alapalkin sivupalkki"
+
+#~ msgid ""
+#~ "Are you looking for a theme with these features: accessibility-ready, "
+#~ "right to left support, translation-ready, Schema.org support, all the "
+#~ "WordPress' built-in theme features and some more. Well, you got it."
+#~ msgstr ""
+#~ "Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, "
+#~ "right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org "
+#~ "tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. "
+#~ "Etsit löytämäsi."
