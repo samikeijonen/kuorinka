@@ -223,7 +223,7 @@ function kuorinka_scripts() {
 	
 	/* Enqueue parent theme styles if using child theme. */
 	if ( is_child_theme() ) {
-		wp_enqueue_style( 'kuorinka-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
+		wp_enqueue_style( 'kuorinka-parent-style', trailingslashit( get_template_directory_uri() ) . 'style' . KUORINKA_SUFFIX . '.css', array(), KUORINKA_VERSION );
 	}
 	
 	/* Enqueue active theme styles. */
