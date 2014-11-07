@@ -221,18 +221,14 @@ function kuorinka_scripts() {
 	/* Add Genericons font, used in the main stylesheet. */
 	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.2' );
 	
-	/* Enqueue parent theme styles. */
-	wp_enqueue_style( 'kuorinka-style', trailingslashit( get_template_directory_uri() ) . 'style' . KUORINKA_SUFFIX . '.css', array(), KUORINKA_VERSION );
-
-	/* Enqueue right to left styles. */
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'kuorinka-rtl-style', trailingslashit( get_template_directory_uri() ) . 'style-rtl' . KUORINKA_SUFFIX . '.css', array( 'kuorinka-style' ), KUORINKA_VERSION );
+	/* Enqueue parent theme styles if using child theme. */
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'kuorinka-parent-style', trailingslashit( get_template_directory_uri() ) . 'style.css' );
 	}
 	
-	/* Enqueue child theme styles. */
-	if ( is_child_theme() ) {
-		wp_enqueue_style( 'kuorinka-child-style', get_stylesheet_uri(), array(), null );
-	}
+	/* Enqueue active theme styles. */
+	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri() );
+	
 	
 	/* Register Fluidvids. */
 	wp_register_script( 'kuorinka-fluidvids', trailingslashit( get_template_directory_uri() ) . 'js/fluidvids/fluidvids' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
