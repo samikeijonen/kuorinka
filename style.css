@@ -3,7 +3,7 @@ Theme Name: Kuorinka
 Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
-Description: Are you looking for a theme with these features: accessibility-ready, right to left support, translation-ready, Schema.org support, all the WordPress' built-in theme features and some more? Well, you got it.
+Description: Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly.
 Version: 1.0.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -62,12 +62,13 @@ and Blueprint http://www.blueprintcss.org/
 	15.3 - Webshare CSS
 	15.4 - Custom Content Portfolio and Our Team CSS
 	15.5 - Soliloquy Slider CSS
-16.0 - Child theme friendly zone
-	16.1 - Font Family
-	16.2 - Colors
-	16.3 - Backgrounds
-	16.4 - Borders
-	16.5 - Box Shadows
+16.0 - Right to left support
+17.0 - Child theme friendly zone
+	17.1 - Font Family
+	17.2 - Colors
+	17.3 - Backgrounds
+	17.4 - Borders
+	17.5 - Box Shadows
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2060,7 +2061,201 @@ body #webshare-wrapper {
 
 
 /*--------------------------------------------------------------
-16.0 Child theme friendly zone
+16.0 Right to left support
+--------------------------------------------------------------*/
+
+/*
+ * Add styles for right to left (rtl) languages. Class 'rtl' is added in body tag when right to left language is active.
+ * Note! rtl.css file doesn't auto-load when child theme is active. That's why I'm using this method because there should not be
+ * rtl.css file in child theme just for support right to left styles. That would need @import rule which I'm avoiding.
+ * We could also load right to left styles using is_rtl() conditional check but that might lead loading styles in wrong order in some 
+ * scenarios when child theme is active. 
+ */
+
+body.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.rtl a {
+	display: inline-block;
+}
+
+.rtl ul,
+.rtl ol {
+margin: 0 1.5em 1.5em 0;
+}
+
+.rtl .screen-reader-text:focus {
+	right: 5px;
+	left: auto;
+}
+
+@media screen and (min-width: 900px) {
+
+	.rtl .site-branding {
+		text-align: right;
+	}
+
+	.rtl #site-title {
+		padding-left: 4%;
+		padding-right: 0;
+	}
+
+}
+
+.rtl a[href^="mailto:"]::before,
+.rtl a[href^="tel:"]::before,
+.rtl .entry-date a::before,
+.rtl .byline .entry-author a::before,
+.rtl .comments-link a::before,
+.rtl .entry-terms::before,
+.rtl .nav-links .nav-previous a::before,
+.rtl .nav-links .nav-next a::after {
+	padding-left: 4px;
+	padding-right: 0;
+}
+
+@media screen and (max-width: 899px) {
+
+	.rtl #menu-primary ul ul li a {
+		padding-left: 0;
+		padding-right: 9%;
+	}
+	.rtl #menu-primary ul ul ul li a {
+		padding-left: 0;
+		padding-right: 9%;
+	}
+	.rtl #menu-primary ul ul ul ul li a {
+		padding-left: 0;
+		padding-right: 9%;
+	}
+
+	.rtl button#nav-toggle:before {
+		margin: 0 0 0 6px;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+
+	.rtl #menu-primary ul ul {
+		float: right;
+		margin: 0;
+		right: -999em;
+		left: auto;
+	}
+
+	.rtl #menu-primary ul ul ul {
+		right: -999em;
+		left: auto;
+	}
+
+	.rtl #menu-primary ul li:hover > ul,
+	.rtl #menu-primary ul li.focus > ul {
+		right: auto;
+	}
+
+	.rtl #menu-primary ul ul li:hover > ul,
+	.rtl #menu-primary ul ul li.focus > ul {
+		right: 100%;
+		left: auto;
+	}
+
+	.rtl #menu-primary .menu-item-has-children > a,
+	.rtl #menu-primary .page_item_has_children > a {
+		padding-right: 12px;
+		padding-left: 26px;
+	}
+
+	.rtl #menu-primary .menu-item-has-children > a:after,
+	.rtl #menu-primary .page_item_has_children > a:after {
+		right: auto;
+		left: 12px;
+	}
+
+	.rtl #menu-primary li .menu-item-has-children > a,
+	.rtl #menu-primary li .page_item_has_children > a {
+		padding-right: 12px;
+		padding-left: 20px;
+	}
+
+	.rtl #menu-primary .menu-item-has-children li.menu-item-has-children > a:after,
+	.rtl #menu-primary .menu-item-has-children li.page_item_has_children > a:after,
+	.rtl #menu-primary .page_item_has_children li.menu-item-has-children > a:after,
+	.rtl #menu-primary .page_item_has_children li.page_item_has_children > a:after {
+		content: "\f503";
+		right: auto;
+		left: 8px;
+	}
+
+}
+
+.rtl a.more-link::after {
+	content: '\f430';
+}
+
+.rtl .comment-navigation .nav-previous,
+.rtl .paging-navigation .nav-previous,
+.rtl .post-navigation .nav-previous {
+	float: right;
+}
+
+.rtl .comment-navigation .nav-next,
+.rtl .paging-navigation .nav-next,
+.rtl .post-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+.rtl .nav-links .nav-previous a::before {
+	content: '\f429';
+}
+.rtl .nav-links .nav-next a::after {
+	content: '\f430';
+}
+
+.rtl .entry-date a,
+.rtl .byline .entry-author a,
+.rtl .comments-link a,
+.rtl .entry-permalink a {
+	margin-left: 8px;
+	margin-right: 0;
+}
+
+.rtl .widget ul > li::before {
+	margin-left: 6px;
+	margin-right: 0;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+@media screen and (min-width: 480px) {
+
+	.rtl .page-template-pagesfront-page-php .thumbnail {
+		float: left;
+		margin: 0 1.125em 1em 0;
+	}
+	
+}
+
+.rtl caption,
+.rtl th,
+.rtl td {
+	text-align: right;
+}
+
+.rtl .format-status .avatar {
+	float: right;
+	margin: 0  0 30px 30px;
+}
+
+
+/*--------------------------------------------------------------
+17.0 Child theme friendly zone
 --------------------------------------------------------------*/
 
 /*
@@ -2068,7 +2263,7 @@ body #webshare-wrapper {
  * You can overwrite them in your child theme 'style.css' if you need custom design.
  */
 
-/* === 16.1 Font Family === */
+/* === 17.1 Font Family === */
 
 body,
 button,
@@ -2098,7 +2293,7 @@ var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-/* === 16.2 Colors === */
+/* === 17.2 Colors === */
 
 /* Here is a list of used colors to help you out.
  *
@@ -2249,7 +2444,7 @@ button#nav-toggle.focus,
 
 }
 
-/* === 16.3 Backgrounds === */
+/* === 17.3 Backgrounds === */
 
 pre {
 	background-color: #e6eff7;
@@ -2328,7 +2523,7 @@ body .gform_confirmation_wrapper,
 	background: #fff;
 }
 
-/* === 16.4 Borders === */
+/* === 17.4 Borders === */
 
 abbr,
 acronym {
@@ -2429,7 +2624,7 @@ body #webshare-wrapper {
 	border-bottom-color: #e6eff7;
 }
 
-/* === 16.5 Box Shadows === */
+/* === 17.5 Box Shadows === */
 
 .page-template-pagesfront-page-php .thumbnail {
 	box-shadow: 0 0 0 4px #fff;
