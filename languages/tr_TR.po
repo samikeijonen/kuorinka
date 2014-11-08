@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
-"PO-Revision-Date: 2014-10-22 18:24+0200\n"
+"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
+"PO-Revision-Date: 2014-11-08 10:29+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/projects/p/"
 "kuorinka/language/tr_TR/)\n"
@@ -63,13 +63,13 @@ msgid "Comments are closed."
 msgstr "Yoruma kapalı."
 
 #: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-image.php:28 content-link.php:40 content-quote.php:28
 #: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "%s içine gönderildi"
 
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-image.php:29 content-link.php:41 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "%s olarak etiketlendi"
@@ -161,11 +161,11 @@ msgid "A sidebar located in the Front Page Template."
 msgstr "Ön Sayfa Şablonunda konuçlanmış bir yanbar."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:322
+#: functions.php:318
 msgid "Read more %s"
 msgstr "%s gönderisinin devamı"
 
-#: functions.php:513
+#: functions.php:509
 msgid "Visit Project"
 msgstr "Projeyi Ziyaret Et"
 
@@ -289,13 +289,10 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Are you looking for a theme with these features: accessibility-ready, right "
-"to left support, translation-ready, Schema.org support, all the WordPress' "
-"built-in theme features and some more. Well, you got it."
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
+"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
+"features. It's also child theme friendly."
 msgstr ""
-"Eğer bu özelliklere sahip bir tema arıyorsanız: erişilebilir, sağdan sola "
-"destekli, çevrilmiş, Schema.org desteği olan, WordPress'in tüm yerleşik tema "
-"özellikleri ve daha fazlası. Peki, işte onu buldunuz."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"

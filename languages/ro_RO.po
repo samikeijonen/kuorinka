@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-10-22 15:16:27+00:00\n"
-"PO-Revision-Date: 2014-10-22 18:25+0200\n"
+"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
+"PO-Revision-Date: 2014-11-08 10:28+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/"
 "kuorinka/language/ro_RO/)\n"
@@ -62,13 +62,13 @@ msgid "Comments are closed."
 msgstr "Comentariile sunt închise."
 
 #: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:34 content-quote.php:28
+#: content-image.php:28 content-link.php:40 content-quote.php:28
 #: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "Postat în %s"
 
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:35 content-quote.php:29
+#: content-image.php:29 content-link.php:41 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "Taguri: %s"
@@ -157,11 +157,11 @@ msgid "A sidebar located in the Front Page Template."
 msgstr "Un sidebar aflat în templateul Prima Pagină."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:322
+#: functions.php:318
 msgid "Read more %s"
 msgstr "Citește mai mult %s"
 
-#: functions.php:513
+#: functions.php:509
 msgid "Visit Project"
 msgstr "Vizitează Proiectul"
 
@@ -285,13 +285,10 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Are you looking for a theme with these features: accessibility-ready, right "
-"to left support, translation-ready, Schema.org support, all the WordPress' "
-"built-in theme features and some more. Well, you got it."
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
+"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
+"features. It's also child theme friendly."
 msgstr ""
-"Cauți o temă care să aibă următoarele dotari: accesibilitate, suport pentru "
-"scriere de la dreapta la stânga, traducere, suport Schema.org, toate "
-"opțiunile unei teme WordPress și mult mai multe? Ei bine, ai găsit-o."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
