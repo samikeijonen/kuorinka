@@ -25,6 +25,16 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.1
+
+* Load parent and child theme styles a little bit differently. Note that handle names have changed. 
+* Add no_found_rows in WP_Query arguments for faster loading.
+* Remove style-rtl.css file and add RTL styles directly in style.css file.
+* Use .main-navigation class so that navigation works with JS disabled.
+* Load fonts and genericons before stylesheet.
+* Use H2 in archive views.
+* Language files updated. Italy and Spain are new ones.
+
 ### Version 1.0.8
 
 * Remove tx.exe file.
