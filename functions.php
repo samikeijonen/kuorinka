@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.1' );
+define( 'KUORINKA_VERSION', '1.1.1' );
 
 /**
  * The suffix to use for scripts.
@@ -64,6 +64,11 @@ function kuorinka_setup() {
 		register_nav_menu( 'portfolio', __( 'Portfolio Menu', 'kuorinka' ) );
 	}
 	
+	/* Show team member menu only if Team Member Plugin is active. For some reason post_type_exists check doesn't work. */
+	if ( post_type_exists( 'team-member' ) || class_exists( 'Woothemes_Our_Team' ) ) {
+		register_nav_menu( 'team-member', __( 'Team Member Menu', 'kuorinka' ) );
+	}
+	
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -79,6 +84,9 @@ function kuorinka_setup() {
 	add_theme_support( 'post-formats', array(
 		'audio', 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery'
 	) );
+	
+	/* Add support for WP title. */
+	add_theme_support( 'title-tag' );
 	
 	/* Add custom image sizes. */
 	add_image_size( 'kuorinka-large', 720, 405, true );
