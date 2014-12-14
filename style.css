@@ -4,7 +4,7 @@ Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Description: Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly.
-Version: 1.1
+Version: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
@@ -36,7 +36,7 @@ and Blueprint http://www.blueprintcss.org/
 	5.2 - Menus
 		5.2.1 - Primary menu
 		5.2.2 - Social menu
-		5.2.3 - Portfolio menu
+		5.2.3 - Portfolio and team member menu
 	5.3 - Comment and post navigation
 6.0 - Accessibility
 7.0 - Alignments
@@ -481,7 +481,9 @@ a[href^="tel:"]::before,
 .loop-nav a[rel="prev"]::before,
 .loop-nav a[rel="next"]::after,
 .nav-links .nav-previous a::before,
+.nav-links a.prev::before,
 .nav-links .nav-next a::after,
+.nav-links a.next::after,
 a.more-link::after,
 #menu-social li a::before,
 .widget li::before {
@@ -507,8 +509,10 @@ a[href^="tel:"]::before,
 .comment-reply-link::before,
 .entry-permalink a::before,
 .entry-terms::before, 
-.nav-links .nav-previous a::before, 
-.nav-links .nav-next a::after {	
+.nav-links .nav-previous a::before,
+.nav-links a.prev::before,
+.nav-links .nav-next a::after,
+.nav-links a.next::after {	
 	content: '\f307';
 	padding-right: 4px;
 	position: relative;
@@ -544,11 +548,13 @@ a[href^="tel:"]::before {
 .entry-terms.post_tag::before {
 	content: '\f302';
 }
-.nav-links .nav-previous a::before {
+.nav-links .nav-previous a::before,
+.nav-links a.prev::before {
 	font-size: 20px;
 	content: '\f430';
 } 
-.nav-links .nav-next a::after {
+.nav-links .nav-next a::after,
+.nav-links a.next::after {
 	bottom: 0;
 	font-size: 20px;
 	content: '\f429';
@@ -1122,20 +1128,25 @@ button#nav-toggle {
 	color: #c4302b;
 }
 
-/* === 5.2.3 Portfolio menu === */
+/* === 5.2.3 Portfolio and team member menu === */
 
-#menu-portfolio ul {
+#menu-portfolio ul,
+#menu-team-member ul {
 	list-style: none;
 	padding: 20px 0 0 0;
 	margin: 0 0 3px 0;
 }
 #menu-portfolio ul li,
-.single-portfolio_item .entry-terms.portfolio a {
+.single-portfolio_item .entry-terms.portfolio a,
+#menu-team-member ul li,
+.single-team-member .entry-terms.portfolio a {
 	display: inline-block;
 	margin-bottom: 3px;
 }
 #menu-portfolio ul li a,
-.single-portfolio_item .entry-terms.portfolio a {
+.single-portfolio_item .entry-terms.portfolio a,
+#menu-team-member ul li a,
+.single-team-member .entry-terms.portfolio a {
 	border-radius: 2px;
 	padding: 2px 8px;
 }
@@ -1144,9 +1155,24 @@ button#nav-toggle {
 
 .site-main .comment-navigation,
 .site-main .paging-navigation,
+.site-main .pagination,
 .site-main .post-navigation {
+	clear: both;
 	margin: 0 0 1.5em;
 	overflow: hidden;
+}
+
+.site-main .pagination {
+	text-align: center;
+}
+.site-main .pagination .page-numbers {
+	display: inline-block;
+	padding: 0.5em 0.75em;
+	margin-bottom: 4px;
+}
+.site-main .pagination .prev.page-numbers,
+.site-main .pagination .next.page-numbers {
+	display: block;
 }
 
 .comment-navigation .nav-previous,
@@ -1172,6 +1198,11 @@ button#nav-toggle {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+	
+	.site-main .pagination .prev.page-numbers,
+	.site-main .pagination .next.page-numbers {
+		display: inline-block;
 	}
 
 }
@@ -1251,6 +1282,8 @@ button#nav-toggle {
 #kuorinka-header-image:after,
 #site-navigation .wrap:before,
 #site-navigation .wrap:after,
+.navigation:before,
+.navigation:after,
 #content .wrap:before,
 #content .wrap:after,
 .site-content:before,
@@ -1279,6 +1312,7 @@ button#nav-toggle {
 .site-branding:after,
 #kuorinka-header-image:after,
 #site-navigation .wrap:after,
+.navigation:after,
 #content .wrap:after,
 .site-content:after,
 .entry-summary:after,
@@ -2111,7 +2145,9 @@ margin: 0 1.5em 1.5em 0;
 .rtl .comments-link a::before,
 .rtl .entry-terms::before,
 .rtl .nav-links .nav-previous a::before,
-.rtl .nav-links .nav-next a::after {
+.rtl .nav-links a.prev::before,
+.rtl .nav-links .nav-next a::after,
+.rtl .nav-links a.next::after {
 	padding-left: 4px;
 	padding-right: 0;
 }
@@ -2212,10 +2248,12 @@ margin: 0 1.5em 1.5em 0;
 	text-align: left;
 }
 
-.rtl .nav-links .nav-previous a::before {
+.rtl .nav-links .nav-previous a::before,
+.rtl .nav-links a.prev::before {
 	content: '\f429';
 }
-.rtl .nav-links .nav-next a::after {
+.rtl .nav-links .nav-next a::after,
+.rtl .nav-links a.next::after {
 	content: '\f430';
 }
 
@@ -2500,6 +2538,7 @@ body #infinite-handle span:active {
 hr,
 #sidebar-header,
 #menu-portfolio ul li a,
+#menu-team-member ul li a,
 li.bypostauthor,
 .widget-title,
 .sticky,
@@ -2596,8 +2635,12 @@ legend {
 	
 	.comment-navigation .nav-previous,
 	.paging-navigation .nav-previous,
-	.post-navigation .nav-previous {
+	.post-navigation .nav-previous,
+	.site-main .pagination .prev.page-numbers {
 		border-bottom: 2px solid #e6eff7;
+	}
+	.site-main .pagination .next.page-numbers {
+		border-top: 2px solid #e6eff7;
 	}
 
 }
