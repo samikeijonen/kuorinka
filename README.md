@@ -25,6 +25,12 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.2
+
+* Add our team member menu.
+* Add support for new `the_posts_pagination` function.
+* Support for new WP 4.1 title tag.
+
 ### Version 1.1
 
 * Load parent and child theme styles a little bit differently. Note that handle names have changed. 
