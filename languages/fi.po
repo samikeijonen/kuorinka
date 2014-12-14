@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-13 11:16:28+00:00\n"
-"PO-Revision-Date: 2014-12-13 13:17+0200\n"
+"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
+"PO-Revision-Date: 2014-12-14 15:58+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -253,13 +253,13 @@ msgstr "Viikko %1$s / %2$s"
 msgid "Posts navigation"
 msgstr "Artikkelien selaus"
 
-#: inc/template-tags.php:25 index.php:47
-msgid "Next page"
-msgstr "Seuraava sivu"
-
-#: inc/template-tags.php:29 index.php:46
+#: inc/template-tags.php:25 index.php:46
 msgid "Previous page"
 msgstr "Edellinen sivu"
+
+#: inc/template-tags.php:29 index.php:47
+msgid "Next page"
+msgstr "Seuraava sivu"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
