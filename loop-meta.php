@@ -13,5 +13,9 @@
 	<?php if ( is_post_type_archive( 'portfolio_item' ) || is_tax( 'portfolio' ) ) :
 		get_template_part( 'menu', 'portfolio' ); // Loads the menu-portfolio.php template. ?>
 	<?php endif; // End portfolio check. ?>
+	
+	<?php if ( is_post_type_archive( 'team-member' ) || is_tax( 'team-member-category' ) ) :
+		get_template_part( 'menu', 'team-member' ); // Loads the menu-team-member.php template. ?>
+	<?php endif; // End team-member check. ?>
 
 </div><!-- .loop-meta -->
