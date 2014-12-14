@@ -38,8 +38,18 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
-			<?php kuorinka_paging_nav(); ?>
+			
+			<?php do_action( 'kuorinka_close_loop' ); // Action hook close loop. ?>
+			
+			<?php if( function_exists( 'the_posts_pagination' ) ) :
+				the_posts_pagination( array(
+					'prev_text'          => __( 'Previous page', 'kuorinka' ),
+					'next_text'          => __( 'Next page', 'kuorinka' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'kuorinka' ) . ' </span>',
+				) );
+			else :
+				kuorinka_paging_nav();
+			endif; // Previous/next page navigation check ends. ?>
 
 		<?php else : ?>
 
