@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Kuorinka 1.0.9\n"
+"Project-Id-Version: Kuorinka 1.1.1\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
+"POT-Creation-Date: 2014-12-13 11:16:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -122,44 +122,48 @@ msgstr ""
 msgid "Portfolio Menu"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:69 menu-team-member.php:1
+msgid "Team Member Menu"
+msgstr ""
+
+#: functions.php:99
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:100
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:101
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
-#: functions.php:129
+#: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 
-#: functions.php:139
+#: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 
-#: functions.php:149
+#: functions.php:157
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:159
+#: functions.php:167
 msgid "A sidebar located in the Front Page Template."
 msgstr ""
 
-#: functions.php:318
+#: functions.php:326
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:509
+#: functions.php:517
 msgid "Visit Project"
 msgstr ""
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
@@ -185,7 +189,7 @@ msgstr ""
 msgid "Search results for &#8220;%s&#8221;"
 msgstr ""
 
-#: inc/breadcrumb-trail.php:185 inc/extras.php:63
+#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 #. Translators: %s is the page number.
 msgid "Page %s"
 msgstr ""
@@ -239,12 +243,12 @@ msgstr ""
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:25
-msgid "Older posts"
+#: inc/template-tags.php:25 index.php:47
+msgid "Next page"
 msgstr ""
 
-#: inc/template-tags.php:29
-msgid "Newer posts"
+#: inc/template-tags.php:29 index.php:46
+msgid "Previous page"
 msgstr ""
 
 #: inc/template-tags.php:52
@@ -260,8 +264,13 @@ msgstr ""
 msgid "Global Layout"
 msgstr ""
 
-#: menu-portfolio.php:27
+#: index.php:48
+msgid "Page"
+msgstr ""
+
+#: menu-portfolio.php:27 menu-team-member.php:27
 #. Translators: "All" is a link that points to the portfolio archive.
+#. Translators: "All" is a link that points to the team-member archive.
 msgid "All"
 msgstr ""
 
@@ -313,27 +322,27 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr ""
 
-#: functions.php:128
+#: functions.php:136
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:146
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:156
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:166
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:194
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -341,7 +350,7 @@ msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:200
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -349,7 +358,7 @@ msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:76
+#: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr ""

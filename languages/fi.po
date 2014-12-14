@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
-"PO-Revision-Date: 2014-11-07 16:39+0200\n"
+"POT-Creation-Date: 2014-12-13 11:16:28+00:00\n"
+"PO-Revision-Date: 2014-12-13 13:17+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -129,47 +129,51 @@ msgstr "Somevalikko"
 msgid "Portfolio Menu"
 msgstr "Portfolio valikko"
 
-#: functions.php:91
+#: functions.php:69 menu-team-member.php:1
+msgid "Team Member Menu"
+msgstr "Henkilökunta-valikko"
+
+#: functions.php:99
 msgid "1 Column"
 msgstr "1 sarake"
 
-#: functions.php:92
+#: functions.php:100
 msgid "2 Columns: Content / Sidebar"
 msgstr "Kaksi saraketta: sisältö / sivupalkki"
 
-#: functions.php:93
+#: functions.php:101
 msgid "2 Columns: Sidebar / Content"
 msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
-#: functions.php:129
+#: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
-#: functions.php:139
+#: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
 "yläpuolella."
 
-#: functions.php:149
+#: functions.php:157
 msgid "A sidebar located in the footer of the site."
 msgstr "Sivupalkki sijaitsee alapalkissa."
 
-#: functions.php:159
+#: functions.php:167
 msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:318
+#: functions.php:326
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
-#: functions.php:509
+#: functions.php:517
 msgid "Visit Project"
 msgstr "Näytä sivusto"
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr "Hyppää sisältöön"
 
@@ -196,7 +200,7 @@ msgid "Search results for &#8220;%s&#8221;"
 msgstr "Hakutulokset haulle  &#8220;%s&#8221;"
 
 #. Translators: %s is the page number.
-#: inc/breadcrumb-trail.php:185 inc/extras.php:63
+#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 msgid "Page %s"
 msgstr "Sivu %s"
 
@@ -249,13 +253,13 @@ msgstr "Viikko %1$s / %2$s"
 msgid "Posts navigation"
 msgstr "Artikkelien selaus"
 
-#: inc/template-tags.php:25
-msgid "Older posts"
-msgstr "Vanhemmat artikkelit"
+#: inc/template-tags.php:25 index.php:47
+msgid "Next page"
+msgstr "Seuraava sivu"
 
-#: inc/template-tags.php:29
-msgid "Newer posts"
-msgstr "Uudemmat artikkelit"
+#: inc/template-tags.php:29 index.php:46
+msgid "Previous page"
+msgstr "Edellinen sivu"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
@@ -270,8 +274,13 @@ msgstr "Ulkoasu"
 msgid "Global Layout"
 msgstr "Globaali ulkoasu"
 
+#: index.php:48
+msgid "Page"
+msgstr "Sivu"
+
 #. Translators: "All" is a link that points to the portfolio archive.
-#: menu-portfolio.php:27
+#. Translators: "All" is a link that points to the team-member archive.
+#: menu-portfolio.php:27 menu-team-member.php:27
 msgid "All"
 msgstr "Kaikki"
 
@@ -327,22 +336,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:128
+#: functions.php:136
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Sivupalkki"
 
-#: functions.php:138
+#: functions.php:146
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläpalkin vimpain"
 
-#: functions.php:148
+#: functions.php:156
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Sivupalkki alhaalla"
 
-#: functions.php:158
+#: functions.php:166
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Etusivu"
@@ -350,7 +359,7 @@ msgstr "Etusivu"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:186
+#: functions.php:194
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -358,12 +367,12 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:192
+#: functions.php:200
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
 
-#: header.php:76
+#: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
@@ -458,13 +467,3 @@ msgstr "Sivupalkki"
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Alapalkin sivupalkki"
-
-#~ msgid ""
-#~ "Are you looking for a theme with these features: accessibility-ready, "
-#~ "right to left support, translation-ready, Schema.org support, all the "
-#~ "WordPress' built-in theme features and some more. Well, you got it."
-#~ msgstr ""
-#~ "Etsitkö teemaa monipuolisilla ominaisuuksilla: \"accessibility\"-valmis, "
-#~ "right to left -tuki, käännettävissä mille kielellä tahansa, Schema.org "
-#~ "tuki, kaikki WordPress:in sisäänrakennetut ominaisuudet ja paljon muuta. "
-#~ "Etsit löytämäsi."
