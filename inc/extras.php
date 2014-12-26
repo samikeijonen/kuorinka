@@ -35,7 +35,7 @@ function kuorinka_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'kuorinka_body_classes' );
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
+if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
 	 *
@@ -43,7 +43,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 	 * @param string $sep Optional separator.
 	 * @return string The filtered title.
 	 */
-	function _s_wp_title( $title, $sep ) {
+	function kuorinka_wp_title( $title, $sep ) {
 		if ( is_feed() ) {
 			return $title;
 		}
@@ -57,23 +57,23 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
 		}
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'kuorinka' ), max( $paged, $page ) );
 		}
 		return $title;
 	}
-	add_filter( 'wp_title', '_s_wp_title', 10, 2 );
-endif;
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	add_filter( 'wp_title', 'kuorinka_wp_title', 10, 2 );
 	/**
 	 * Title shim for sites older than WordPress 4.1.
 	 *
 	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function _s_render_title() {
-		echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+	function kuorinka_render_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
 	}
-	add_action( 'wp_head', '_s_render_title' );
+	add_action( 'wp_head', 'kuorinka_render_title' );
 endif;
 
 /**
