@@ -7,20 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
-"PO-Revision-Date: 2014-11-08 10:29+0200\n"
+"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
+"PO-Revision-Date: 2014-12-26 19:13+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Turkish (Turkey) (http://www.transifex.com/projects/p/"
-"kuorinka/language/tr_TR/)\n"
+"Language-Team: Turkish (Turkey) (http://www.transifex.com/projects/p/kuorinka/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr_TR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -30,12 +29,8 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Hay aksi! Sayfa bulunamadı."
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Görünen o ki burada hiç bir şey bulunamadı. Aşağıdaki bağlantılardan birini "
-"denemeye veya bir arama yapmaya ne dersiniz?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Görünen o ki burada hiç bir şey bulunamadı. Aşağıdaki bağlantılardan birini denemeye veya bir arama yapmaya ne dersiniz?"
 
 #: 404.php:27
 msgid "Most Used Categories"
@@ -62,22 +57,18 @@ msgstr "Yeni Yorumlar &rarr;"
 msgid "Comments are closed."
 msgstr "Yoruma kapalı."
 
-#: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:40 content-quote.php:28
-#: content-status.php:26 content-video.php:28 content.php:28
+#: content-aside.php:25 content-audio.php:28 content-gallery.php:28 content-image.php:28 content-link.php:40
+#: content-quote.php:28 content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "%s içine gönderildi"
 
-#: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:41 content-quote.php:29
-#: content-status.php:27 content-video.php:29 content.php:29
+#: content-aside.php:26 content-audio.php:29 content-gallery.php:29 content-image.php:29 content-link.php:41
+#: content-quote.php:29 content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "%s olarak etiketlendi"
 
-#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
-#: content-image.php:21 content-image.php:46 content-page.php:19
-#: content-quote.php:21 content-quote.php:44 content-video.php:21
-#: content.php:21 image.php:37
+#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48 content-image.php:21 content-image.php:46
+#: content-page.php:19 content-quote.php:21 content-quote.php:44 content-video.php:21 content.php:21 image.php:37
 msgid "Pages:"
 msgstr "Sayfalar:"
 
@@ -86,27 +77,16 @@ msgid "Nothing Found"
 msgstr "Hiçbir şey bulunamadı"
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"İlk yazınızı yayımlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</"
-"a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "İlk yazınızı yayımlamaya hazır mısınız? <a href=\"%1$s\">Buradan başlayın</a>."
 
 #: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Üzgünüz ama arama terimlerinizle örtüşen hiçbir şey bulunamadı. Lütfen "
-"farklı anahtar kelimelerle tekrar deneyin."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Üzgünüz ama arama terimlerinizle örtüşen hiçbir şey bulunamadı. Lütfen farklı anahtar kelimelerle tekrar deneyin."
 
 #: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Aradığınız sayfa bulunamadı. Belki arama kutusu aradığınızı bulma konusunda "
-"yardımcı olabilir."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Aradığınız sayfa bulunamadı. Belki arama kutusu aradığınızı bulma konusunda yardımcı olabilir."
 
 #: footer.php:31
 msgid "http://wordpress.org/"
@@ -132,44 +112,48 @@ msgstr "Sosyal Menü"
 msgid "Portfolio Menu"
 msgstr "Portfolyo Menüsü"
 
-#: functions.php:91
+#: functions.php:69 menu-team-member.php:1
+msgid "Team Member Menu"
+msgstr ""
+
+#: functions.php:99
 msgid "1 Column"
 msgstr "1 Sütun"
 
-#: functions.php:92
+#: functions.php:100
 msgid "2 Columns: Content / Sidebar"
 msgstr "2 Sütun: İçerik | Yanbar"
 
-#: functions.php:93
+#: functions.php:101
 msgid "2 Columns: Sidebar / Content"
 msgstr "2 Sütun: Yanbar | İçerik"
 
-#: functions.php:129
+#: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr "Ana yanbar. Sayfanın sağ yanında görüntülenir."
 
-#: functions.php:139
+#: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr "Üst kısım yanbarı. Sayfanın en üstünde görüntülenir."
 
-#: functions.php:149
+#: functions.php:157
 msgid "A sidebar located in the footer of the site."
 msgstr "Sitenin dipnot kısmında konuçlanmış bir yanbar."
 
-#: functions.php:159
+#: functions.php:167
 msgid "A sidebar located in the Front Page Template."
 msgstr "Ön Sayfa Şablonunda konuçlanmış bir yanbar."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:318
+#: functions.php:326
 msgid "Read more %s"
 msgstr "%s gönderisinin devamı"
 
-#: functions.php:509
+#: functions.php:517
 msgid "Visit Project"
 msgstr "Projeyi Ziyaret Et"
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr "İçeriğe geç"
 
@@ -196,7 +180,7 @@ msgid "Search results for &#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221; için arama sonuçları"
 
 #. Translators: %s is the page number.
-#: inc/breadcrumb-trail.php:185 inc/extras.php:63
+#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 msgid "Page %s"
 msgstr "Sayfa %s"
 
@@ -210,8 +194,7 @@ msgstr "Dakika %s"
 msgid "Week %s"
 msgstr "Hafta %s"
 
-#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
-#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
 msgid "Edit"
 msgstr "Düzenle"
 
@@ -231,8 +214,7 @@ msgstr "&#8220;%s&#8221; için gerçekleşen aramanın sonuçlarını görüyors
 msgid "You are browsing the site archives by time."
 msgstr "Zaman bazlı site arşivini görüyorsunuz."
 
-#: inc/template-general.php:135 inc/template-general.php:138
-#: inc/template-general.php:141
+#: inc/template-general.php:135 inc/template-general.php:138 inc/template-general.php:141
 msgid "You are browsing the site archives for %s."
 msgstr "%s için olan site arşivini görüyorsunuz."
 
@@ -249,20 +231,19 @@ msgstr "%2$s yılının %1$s haftası"
 msgid "Posts navigation"
 msgstr "Gönderi erişimi"
 
-#: inc/template-tags.php:25
-msgid "Older posts"
-msgstr "Daha eski gönderiler"
+#: inc/template-tags.php:25 index.php:46
+msgid "Previous page"
+msgstr "Önceki sayfa"
 
-#: inc/template-tags.php:29
-msgid "Newer posts"
-msgstr "Daha yeni gönderiler"
+#: inc/template-tags.php:29 index.php:47
+msgid "Next page"
+msgstr "Sonraki sayfa"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
 msgstr "Gönderi erişimi"
 
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565 inc/theme-layouts.php:650
 msgid "Layout"
 msgstr "Dizilim"
 
@@ -270,8 +251,13 @@ msgstr "Dizilim"
 msgid "Global Layout"
 msgstr "Genel Dizilim"
 
+#: index.php:48
+msgid "Page"
+msgstr "Sayfa"
+
 #. Translators: "All" is a link that points to the portfolio archive.
-#: menu-portfolio.php:27
+#. Translators: "All" is a link that points to the team-member archive.
+#: menu-portfolio.php:27 menu-team-member.php:27
 msgid "All"
 msgstr "Tümü"
 
@@ -289,9 +275,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
-"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
-"features. It's also child theme friendly."
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of "
+"WordPress’ built-in theme features. It's also child theme friendly."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -322,22 +307,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:128
+#: functions.php:136
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Birincil"
 
-#: functions.php:138
+#: functions.php:146
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Üst Kısım"
 
-#: functions.php:148
+#: functions.php:156
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Yardımcı"
 
-#: functions.php:158
+#: functions.php:166
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Ön Sayfa"
@@ -345,7 +330,7 @@ msgstr "Ön Sayfa"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:186
+#: functions.php:194
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "açık"
@@ -353,12 +338,12 @@ msgstr "açık"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:192
+#: functions.php:200
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "açık"
 
-#: header.php:76
+#: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
@@ -383,16 +368,13 @@ msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
-#: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
-#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198
-#: inc/template-general.php:218
+#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795 inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
+#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198 inc/template-general.php:218
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
-#: inc/breadcrumb-trail.php:1040
+#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823 inc/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"

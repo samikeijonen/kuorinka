@@ -5,21 +5,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-11-07 14:30:09+00:00\n"
-"PO-Revision-Date: 2014-11-08 10:28+0200\n"
+"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
+"PO-Revision-Date: 2014-12-26 19:12+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/"
-"kuorinka/language/ro_RO/)\n"
+"Language-Team: Romanian (Romania) (http://www.transifex.com/projects/p/kuorinka/language/ro_RO/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ro_RO\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1));\n"
-"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+"X-Generator: Poedit 1.7.1\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;"
+"_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -29,12 +27,8 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oops! Această pagină nu există."
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Se pare că nu există nimic la această adresă. Dorești să folosești linkurile "
-"de mai jos sau căsuța de search?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Se pare că nu există nimic la această adresă. Dorești să folosești linkurile de mai jos sau căsuța de search?"
 
 #: 404.php:27
 msgid "Most Used Categories"
@@ -61,22 +55,18 @@ msgstr "Comentarii recente &rarr;"
 msgid "Comments are closed."
 msgstr "Comentariile sunt închise."
 
-#: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:40 content-quote.php:28
-#: content-status.php:26 content-video.php:28 content.php:28
+#: content-aside.php:25 content-audio.php:28 content-gallery.php:28 content-image.php:28 content-link.php:40
+#: content-quote.php:28 content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "Postat în %s"
 
-#: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:41 content-quote.php:29
-#: content-status.php:27 content-video.php:29 content.php:29
+#: content-aside.php:26 content-audio.php:29 content-gallery.php:29 content-image.php:29 content-link.php:41
+#: content-quote.php:29 content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "Taguri: %s"
 
-#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
-#: content-image.php:21 content-image.php:46 content-page.php:19
-#: content-quote.php:21 content-quote.php:44 content-video.php:21
-#: content.php:21 image.php:37
+#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48 content-image.php:21 content-image.php:46
+#: content-page.php:19 content-quote.php:21 content-quote.php:44 content-video.php:21 content.php:21 image.php:37
 msgid "Pages:"
 msgstr "Pagini:"
 
@@ -85,23 +75,15 @@ msgid "Nothing Found"
 msgstr "Nu s-a găsit nimic"
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Ești gata să publici primul tău post? <a href=\"%1$s\">Începe aici</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ești gata să publici primul tău post? <a href=\"%1$s\">Începe aici</a>."
 
 #: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Ne pare rău, însă nimic nu se potrivește cu ce ai căutat. Te rugăm să "
-"încerci din nou folosind alte cuvinte cheie."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Ne pare rău, însă nimic nu se potrivește cu ce ai căutat. Te rugăm să încerci din nou folosind alte cuvinte cheie."
 
 #: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Nu există ceea ce cauți. Poate căsuța de căutare te poate ajuta."
 
 #: footer.php:31
@@ -128,44 +110,48 @@ msgstr "Meniu Social"
 msgid "Portfolio Menu"
 msgstr "Meniu Portofoliu"
 
-#: functions.php:91
+#: functions.php:69 menu-team-member.php:1
+msgid "Team Member Menu"
+msgstr ""
+
+#: functions.php:99
 msgid "1 Column"
 msgstr "O Coloană"
 
-#: functions.php:92
+#: functions.php:100
 msgid "2 Columns: Content / Sidebar"
 msgstr "Două Coloane: Conținut / Sidebar"
 
-#: functions.php:93
+#: functions.php:101
 msgid "2 Columns: Sidebar / Content"
 msgstr "Două Coloane: Sidebar / Conținut"
 
-#: functions.php:129
+#: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr "Sidebarul principal. Se afișează în partea dreaptă a paginii."
 
-#: functions.php:139
+#: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr "Sidebarul din header. Se afișează în partea de sus a paginii."
 
-#: functions.php:149
+#: functions.php:157
 msgid "A sidebar located in the footer of the site."
 msgstr "Un sidebar aflat în partea de jos a paginii."
 
-#: functions.php:159
+#: functions.php:167
 msgid "A sidebar located in the Front Page Template."
 msgstr "Un sidebar aflat în templateul Prima Pagină."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:318
+#: functions.php:326
 msgid "Read more %s"
 msgstr "Citește mai mult %s"
 
-#: functions.php:509
+#: functions.php:517
 msgid "Visit Project"
 msgstr "Vizitează Proiectul"
 
-#: header.php:23
+#: header.php:22
 msgid "Skip to content"
 msgstr "Sări la conținut"
 
@@ -192,7 +178,7 @@ msgid "Search results for &#8220;%s&#8221;"
 msgstr "Rezultatele căutării pentru &#8220;%s&#8221;"
 
 #. Translators: %s is the page number.
-#: inc/breadcrumb-trail.php:185 inc/extras.php:63
+#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 msgid "Page %s"
 msgstr "Pagina %s"
 
@@ -206,8 +192,7 @@ msgstr "Minutul %s"
 msgid "Week %s"
 msgstr "Săptămâna %s"
 
-#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
-#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
 msgid "Edit"
 msgstr "Editează"
 
@@ -227,8 +212,7 @@ msgstr "Navighezi rezultatele căutării pentru &#8220;%s&#8221;"
 msgid "You are browsing the site archives by time."
 msgstr "Navighezi arhiva siteului ordonată după timp."
 
-#: inc/template-general.php:135 inc/template-general.php:138
-#: inc/template-general.php:141
+#: inc/template-general.php:135 inc/template-general.php:138 inc/template-general.php:141
 msgid "You are browsing the site archives for %s."
 msgstr "Navighezi arhiva siteului pentru %s."
 
@@ -245,20 +229,19 @@ msgstr "Săptămâna %1$s din %2$s"
 msgid "Posts navigation"
 msgstr "Navigația posturilor"
 
-#: inc/template-tags.php:25
-msgid "Older posts"
-msgstr "Posturi mai vechi"
+#: inc/template-tags.php:25 index.php:46
+msgid "Previous page"
+msgstr "Înapoi"
 
-#: inc/template-tags.php:29
-msgid "Newer posts"
-msgstr "Posturi mai noi"
+#: inc/template-tags.php:29 index.php:47
+msgid "Next page"
+msgstr "Pagina următoare"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
 msgstr "Navigația postului"
 
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565 inc/theme-layouts.php:650
 msgid "Layout"
 msgstr "Aspect"
 
@@ -266,8 +249,13 @@ msgstr "Aspect"
 msgid "Global Layout"
 msgstr "Aspect global"
 
+#: index.php:48
+msgid "Page"
+msgstr "Pagină"
+
 #. Translators: "All" is a link that points to the portfolio archive.
-#: menu-portfolio.php:27
+#. Translators: "All" is a link that points to the team-member archive.
+#: menu-portfolio.php:27 menu-team-member.php:27
 msgid "All"
 msgstr "Tot"
 
@@ -285,9 +273,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
-"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
-"features. It's also child theme friendly."
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all "
+"of WordPress’ built-in theme features. It's also child theme friendly."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -320,22 +307,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:128
+#: functions.php:136
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:138
+#: functions.php:146
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Antet"
 
-#: functions.php:148
+#: functions.php:156
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Secundar"
 
-#: functions.php:158
+#: functions.php:166
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Prima pagină"
@@ -343,7 +330,7 @@ msgstr "Prima pagină"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:186
+#: functions.php:194
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -351,12 +338,12 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:192
+#: functions.php:200
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
 
-#: header.php:76
+#: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
@@ -381,16 +368,13 @@ msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
-#: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
-#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198
-#: inc/template-general.php:218
+#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795 inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
+#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198 inc/template-general.php:218
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
-#: inc/breadcrumb-trail.php:1040
+#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823 inc/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"
