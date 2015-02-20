@@ -29,13 +29,13 @@
 	
 			<div class="site-branding">
 			
-				<h1 id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
+				<div id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
 					<div class="site-title-inner">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</div>
-				</h1>
+				</div>
 				
-				<h2 id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></h2>
+				<div id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></div>
 			
 			</div><!-- .site-branding -->
 			
