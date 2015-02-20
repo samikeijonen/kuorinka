@@ -16,8 +16,9 @@
 	
 	<?php get_sidebar( 'subsidiary' ); // Loads the sidebar-subsidiary.php template. ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo" <?php hybrid_attr( 'footer' ); ?>>
-	
+	<footer id="colophon" class="site-footer" role="contentinfo" aria-labelledby="footer-header" <?php hybrid_attr( 'footer' ); ?>>
+		<h1 class="screen-reader-text" id="footer-header"><?php esc_attr_e( 'Footer Content', 'kuorinka' ); ?></h1>
+		
 		<?php get_template_part( 'menu', 'social' ); // Loads the menu-social.php template. ?>
 		
 		<?php if ( get_theme_mod( 'footer_text') ) : // Check footer text. ?>
