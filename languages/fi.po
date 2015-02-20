@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-02-20 10:31:51+00:00\n"
-"PO-Revision-Date: 2015-02-20 12:32+0200\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-02-20 13:14+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -180,6 +180,10 @@ msgstr "Näytä sivusto"
 #: header.php:22
 msgid "Skip to content"
 msgstr "Hyppää sisältöön"
+
+#: header.php:75
+msgid "Breadcrumbs"
+msgstr "Murupolku"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
