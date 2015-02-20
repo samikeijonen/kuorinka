@@ -72,7 +72,7 @@
 	<?php do_action( 'kuorinka_after_header' ); // Hook after header. ?>
 	
 	<?php if ( function_exists( 'breadcrumb_trail' ) && current_theme_supports( 'breadcrumb-trail' ) ) :
-		breadcrumb_trail( array( 'container' => 'nav', 'separator' => _x( '&#8764;', 'Separator in breadcrumb trail.', 'mina-olen' ), 'show_on_front' => false, 'show_browse' => false, 'before' => '<div class="wrap">', 'after' => '</div>' ) );
+		breadcrumb_trail( array( 'container' => 'nav', 'separator' => _x( '&#8764;', 'Separator in breadcrumb trail.', 'mina-olen' ), 'show_on_front' => false, 'show_browse' => false, 'before' => '<h1 class="screen-reader-text">' . esc_attr__( 'Breadcrumbs', 'kuorinka' ) . '</h1><div class="wrap">', 'after' => '</div>' ) );
 	endif; ?>
 
 	<div id="content" class="site-content">
