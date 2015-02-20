@@ -17,16 +17,16 @@ function kuorinka_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'kuorinka' ); ?></h1>
+	<nav class="navigation paging-navigation" role="navigation" aria-labelledby="paging-navigation-header">
+		<h2 class="screen-reader-text" id="paging-navigation-header"><?php _e( 'Posts navigation', 'kuorinka' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-previous"><?php previous_posts_link( __( 'Previous page', 'kuorinka' ) ); ?></div>
+				<div class="nav-previous"><?php previous_posts_link( __( 'Previous page', 'kuorinka' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-next"><?php next_posts_link( __( 'Next page', 'kuorinka' ) ); ?></div>
+				<div class="nav-next"><?php next_posts_link( __( 'Next page', 'kuorinka' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -48,8 +48,8 @@ function kuorinka_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'kuorinka' ); ?></h1>
+	<nav class="navigation post-navigation" role="navigation" aria-labelledby="post-navigation-header">
+		<h2 class="screen-reader-text" id="post-navigation-header"><?php _e( 'Post navigation', 'kuorinka' ); ?></h2>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '%title', 'Previous post link', 'kuorinka' ) );
@@ -68,7 +68,7 @@ if ( ! function_exists( 'kuorinka_posted_on' ) ) :
 function kuorinka_posted_on() {
 
 	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s"' . hybrid_get_attr( 'entry-published' ) . '>%3$s</time></a></span> <span class="byline"><span class="entry-author" ' . hybrid_get_attr( 'entry-author' ) . '><a class="entry-author-link" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
+	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" ' . hybrid_get_attr( 'entry-published' ) . '>%3$s</time></a></span> <span class="byline"><span class="entry-author" ' . hybrid_get_attr( 'entry-author' ) . '><a class="entry-author-link" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
