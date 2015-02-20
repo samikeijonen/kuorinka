@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-26 17:24:17+00:00\n"
-"PO-Revision-Date: 2014-12-26 19:32+0200\n"
+"POT-Creation-Date: 2015-02-20 10:31:51+00:00\n"
+"PO-Revision-Date: 2015-02-20 12:32+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -105,31 +105,35 @@ msgid ""
 "searching can help."
 msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
 
-#: footer.php:31
+#: footer.php:20
+msgid "Footer Content"
+msgstr "Alapalkin sisältö"
+
+#: footer.php:32
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:31
+#: footer.php:32
 msgid "Proudly powered by %s"
 msgstr "Voimanlähteenä %s"
 
-#: footer.php:33
+#: footer.php:34
 msgid "Theme %1$s by %2$s"
 msgstr "Teeman %1$s tekijä %2$s"
 
-#: functions.php:59 menu-primary.php:5
+#: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
 msgstr "Ensisijainen valikko"
 
-#: functions.php:60
+#: functions.php:60 menu-social.php:4
 msgid "Social Menu"
 msgstr "Somevalikko"
 
-#: functions.php:64 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
 msgstr "Portfolio valikko"
 
-#: functions.php:69 menu-team-member.php:1
+#: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
 msgstr "Henkilökunta-valikko"
 
@@ -280,13 +284,21 @@ msgstr "Sivu"
 
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
-#: menu-portfolio.php:27 menu-team-member.php:27
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
 msgstr "Kaikki"
 
 #: menu-primary.php:3
 msgid "Menu"
 msgstr "Valikko"
+
+#: pages/front-page.php:68
+msgid "Sticky posts"
+msgstr "Kiinnitetyt artikkelit"
+
+#: pages/front-page.php:131
+msgid "Posts"
+msgstr "Artikkelit"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -331,7 +343,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Yksi kommentti &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s kommenttia &ldquo;%2$s&rdquo;"
 
-#: footer.php:32
+#: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
@@ -448,22 +460,22 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "Oletus"
 
-#: sidebar-front-page.php:3
+#: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
 msgstr "Etusivun sivupalkki"
 
-#: sidebar-header.php:3
+#: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
 msgstr "Yläpalkin vimpain"
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
 msgstr "Sivupalkki"
 
-#: sidebar-subsidiary.php:3
+#: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Alapalkin sivupalkki"
