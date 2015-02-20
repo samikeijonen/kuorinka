@@ -1,5 +1,6 @@
-<nav id="menu-portfolio" class="menu menu-portfolio" role="navigation" aria-label="<?php esc_attr_e( 'Portfolio Menu', 'kuorinka' ); ?>" <?php hybrid_attr( 'menu', 'portfolio' ); ?>>
-
+<nav id="menu-portfolio" class="menu menu-portfolio" role="navigation" aria-labelledby="menu-portfolio-header" <?php hybrid_attr( 'menu', 'portfolio' ); ?>>
+	<h2 class="screen-reader-text" id="menu-portfolio-header"><?php esc_attr_e( 'Portfolio Menu', 'kuorinka' ); ?></h2>
+	
 	<?php if ( has_nav_menu( 'portfolio' ) ) : // Check if there's a menu assigned to the 'portfolio' location. ?>
 		
 		<?php wp_nav_menu(

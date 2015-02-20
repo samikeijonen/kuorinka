@@ -1,5 +1,6 @@
-<nav id="menu-team-member" class="menu menu-team-member" role="navigation" aria-label="<?php esc_attr_e( 'Team Member Menu', 'kuorinka' ); ?>" <?php hybrid_attr( 'menu', 'team-member' ); ?>>
-
+<nav id="menu-team-member" class="menu menu-team-member" role="navigation" aria-labelledby="menu-team-member-header" <?php hybrid_attr( 'menu', 'team-member' ); ?>>
+	<h2 class="screen-reader-text" id="menu-team-member-header"><?php esc_attr_e( 'Team Member Menu', 'kuorinka' ); ?></h2>
+	
 	<?php if ( has_nav_menu( 'team-member' ) ) : // Check if there's a menu assigned to the 'team-member' location. ?>
 		
 		<?php wp_nav_menu(
