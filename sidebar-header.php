@@ -1,6 +1,7 @@
 <?php if ( is_active_sidebar( 'header' ) ) : ?>
 
-	<aside id="sidebar-header" class="sidebar" role="complementary" aria-label="<?php echo esc_attr_x( 'Header Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>" <?php hybrid_attr( 'sidebar', 'header' ); ?>>
+	<aside id="sidebar-header" class="sidebar" role="complementary" aria-labelledby="sidebar-header-header" <?php hybrid_attr( 'sidebar', 'header' ); ?>>
+		<h1 class="screen-reader-text" id="sidebar-header-header"><?php echo esc_attr_x( 'Header Sidebar', 'Sidebar aria label', 'kuorinka' ); ?></h1>
 		
 		<div class="wrap">
 			<div class="wrap-inside">

@@ -1,6 +1,7 @@
 <?php if ( is_active_sidebar( 'subsidiary' ) ) : ?>
 
-	<aside id="sidebar-subsidiary" class="sidebar" role="complementary" aria-label="<?php echo esc_attr_x( 'Subsidiary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?>" <?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
+	<aside id="sidebar-subsidiary" class="sidebar" role="complementary" aria-labelledby="sidebar-subsidiary-header" <?php hybrid_attr( 'sidebar', 'subsidiary' ); ?>>
+		<h1 class="screen-reader-text" id="sidebar-subsidiary-header"><?php echo esc_attr_x( 'Subsidiary Sidebar', 'Sidebar aria label', 'kuorinka' ); ?></h1>
 		
 		<div class="wrap">
 			<div class="wrap-inside">

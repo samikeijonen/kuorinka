@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.2.0' );
+define( 'KUORINKA_VERSION', '1.3.0' );
 
 /**
  * The suffix to use for scripts.
@@ -60,7 +60,7 @@ function kuorinka_setup() {
 	register_nav_menu( 'social', __( 'Social Menu', 'kuorinka' ) );
 	
 	/* Show portfolio menu only if Custom Content Portfolio Plugin is active. */
-	if ( post_type_exists( 'portfolio_item' ) ) {
+	if ( post_type_exists( 'portfolio_item' ) || class_exists( 'Custom_Content_Portfolio' ) ) {
 		register_nav_menu( 'portfolio', __( 'Portfolio Menu', 'kuorinka' ) );
 	}
 	
@@ -137,8 +137,8 @@ function kuorinka_widgets_init() {
 		'description'   => __( 'The main sidebar. It is displayed on right side of the page.', 'kuorinka' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>'
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
 	);
 	
 	$sidebar_header_args = array(
@@ -147,8 +147,8 @@ function kuorinka_widgets_init() {
 		'description'   => __( 'Header sidebar. It is displayed on top of the page.', 'kuorinka' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>'
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
 	);
 	
 	$sidebar_subsidiary_args = array(
@@ -157,8 +157,8 @@ function kuorinka_widgets_init() {
 		'description'   => __( 'A sidebar located in the footer of the site.', 'kuorinka' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>'
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
 	);
 	
 	$sidebar_front_page_args = apply_filters( 'kuorinka_sidebar_front_page_args', array(
@@ -167,8 +167,8 @@ function kuorinka_widgets_init() {
 		'description'   => __( 'A sidebar located in the Front Page Template.', 'kuorinka' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>'
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
 	) );
 	
 	/* Register sidebars. */
