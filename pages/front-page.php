@@ -63,14 +63,17 @@ get_header(); ?>
 					set_transient( 'kuorinka_sticky_query', $kuorinka_sticky_query, 60*60*24 );
 				}
 			
-				if ( $kuorinka_sticky_query->have_posts() ) :
-
+				if ( $kuorinka_sticky_query->have_posts() ) : ?>
+				
+					<h1 class="screen-reader-text"><?php esc_attr_e( 'Sticky posts', 'kuorinka' ); ?></h1>
+					
+					<?php
 					while ( $kuorinka_sticky_query->have_posts() ) : $kuorinka_sticky_query->the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 	
 							<header class="entry-header">
-								<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							</header><!-- .entry-header -->
 
 							<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
@@ -123,15 +126,18 @@ get_header(); ?>
 					set_transient( 'kuorinka_post_query', $kuorinka_post_query, 60*60*24 );
 				}
 			
-				if ( $kuorinka_post_query->have_posts() ) :
-
+				if ( $kuorinka_post_query->have_posts() ) : ?>
+				
+					<h1 class="screen-reader-text"><?php esc_attr_e( 'Posts', 'kuorinka' ); ?></h1>
+					
+					<?php
 					while ( $kuorinka_post_query->have_posts() ) : $kuorinka_post_query->the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 	
 							<header class="entry-header">
 								<?php if ( has_post_thumbnail() ) the_post_thumbnail( 'kuorinka-large', array( 'class' => 'thumbnail-large' ) ); ?>
-								<?php the_title( sprintf( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+								<?php the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 							</header><!-- .entry-header -->
 
 							<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
