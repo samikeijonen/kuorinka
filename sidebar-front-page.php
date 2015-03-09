@@ -1,7 +1,7 @@
 <?php if ( is_active_sidebar( 'front-page' ) ) : ?>
 
 	<aside id="sidebar-front-page" class="sidebar" role="complementary" aria-labelledby="sidebar-front-page-header" <?php hybrid_attr( 'sidebar', 'front-page' ); ?>>
-		<h1 class="screen-reader-text" id="sidebar-front-page-header"><?php echo esc_attr_x( 'Front Page Sidebar', 'Sidebar aria label', 'kuorinka' ); ?></h1>
+		<h2 class="screen-reader-text" id="sidebar-front-page-header"><?php echo esc_attr_x( 'Front Page Sidebar', 'Sidebar aria label', 'kuorinka' ); ?></h2>
 		
 		<div class="wrap">
 			<div class="wrap-inside">

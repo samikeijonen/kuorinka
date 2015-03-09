@@ -3,7 +3,8 @@
 	<button id="nav-toggle"><?php _e( 'Menu', 'kuorinka' ); ?></button>
 	
 	<nav id="menu-primary" class="menu main-navigation" role="navigation" aria-labelledby="menu-primary-header" <?php hybrid_attr( 'menu', 'primary' ); ?>>	
-		<h1 class="screen-reader-text" id="menu-primary-header"><?php esc_attr_e( 'Primary Menu', 'kuorinka' ); ?></h1>
+		<h2 class="screen-reader-text" id="menu-primary-header"><?php esc_attr_e( 'Primary Menu', 'kuorinka' ); ?></h2>
+		
 		<div class="wrap">
 			
 			<?php
@@ -21,6 +22,7 @@
 			?>
 		
 		</div><!-- .wrap -->
+		
 	</nav><!-- #menu-primary -->
 
 <?php endif; ?>
