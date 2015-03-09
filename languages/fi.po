@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 # Translators:
 # Sami Keijonen <sami.keijonen@foxnet.fi>, 2014
@@ -7,19 +7,17 @@ msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
 "POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
-"PO-Revision-Date: 2015-02-20 13:14+0200\n"
+"PO-Revision-Date: 2015-03-09 13:48+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
-"language/fi/)\n"
-"Language: fi\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -29,12 +27,8 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr "Ups! Tätä sivua ei löydy."
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida "
-"alla olevista linkeistä tai etsiä haluamaasi."
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Näyttää siltä, että mitään ei löytynyt tästä osoitteesta. Koita navigoida alla olevista linkeistä tai etsiä haluamaasi."
 
 #: 404.php:27
 msgid "Most Used Categories"
@@ -61,22 +55,15 @@ msgstr "Uudemmat kommentit &rarr;"
 msgid "Comments are closed."
 msgstr "Kommentointi on suljettu."
 
-#: content-aside.php:25 content-audio.php:28 content-gallery.php:28
-#: content-image.php:28 content-link.php:40 content-quote.php:28
-#: content-status.php:26 content-video.php:28 content.php:28
+#: content-aside.php:25 content-audio.php:28 content-gallery.php:28 content-image.php:28 content-link.php:40 content-quote.php:28 content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
 msgstr "Artikkeli kategoriassa %s"
 
-#: content-aside.php:26 content-audio.php:29 content-gallery.php:29
-#: content-image.php:29 content-link.php:41 content-quote.php:29
-#: content-status.php:27 content-video.php:29 content.php:29
+#: content-aside.php:26 content-audio.php:29 content-gallery.php:29 content-image.php:29 content-link.php:41 content-quote.php:29 content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
 msgstr "Avainsanat %s"
 
-#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
-#: content-image.php:21 content-image.php:46 content-page.php:19
-#: content-quote.php:21 content-quote.php:44 content-video.php:21
-#: content.php:21 image.php:37
+#: content-audio.php:21 content-gallery.php:21 content-gallery.php:48 content-image.php:21 content-image.php:46 content-page.php:19 content-quote.php:21 content-quote.php:44 content-video.php:21 content.php:21 image.php:37
 msgid "Pages:"
 msgstr "Sivut:"
 
@@ -85,24 +72,15 @@ msgid "Nothing Found"
 msgstr "Mitään ei löytynyt"
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s"
-"\">Aloita tästä</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Oletko valmis julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s\">Aloita tästä</a>."
 
 #: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri "
-"hakusanoilla."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Hakusi ei valitettavasti tuottanut yhtään tulosta. Yritä uudelleen eri hakusanoilla."
 
 #: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Emme valitettavasti löytäneet etsimääsi. Ehkä hakutoiminnosta on apua."
 
 #: footer.php:20
@@ -151,14 +129,11 @@ msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
 #: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
-msgstr ""
-"Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
+msgstr "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
 #: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
-msgstr ""
-"Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
-"yläpuolella."
+msgstr "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  yläpuolella."
 
 #: functions.php:157
 msgid "A sidebar located in the footer of the site."
@@ -222,8 +197,7 @@ msgstr "Minuutti %s"
 msgid "Week %s"
 msgstr "Viikko %s"
 
-#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
-#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
+#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
 msgid "Edit"
 msgstr "Muokkaa"
 
@@ -243,8 +217,7 @@ msgstr "Selaat hakutuloksia haulle &#8220;%s&#8221;"
 msgid "You are browsing the site archives by time."
 msgstr "Selailet sivun arkistoja päivämäärän mukaan."
 
-#: inc/template-general.php:135 inc/template-general.php:138
-#: inc/template-general.php:141
+#: inc/template-general.php:135 inc/template-general.php:138 inc/template-general.php:141
 msgid "You are browsing the site archives for %s."
 msgstr "Selailet sivun arkistoja: %s."
 
@@ -273,8 +246,7 @@ msgstr "Seuraava sivu"
 msgid "Post navigation"
 msgstr "Artikkelien selaus"
 
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
+#: inc/theme-layouts.php:458 inc/theme-layouts.php:565 inc/theme-layouts.php:650
 msgid "Layout"
 msgstr "Ulkoasu"
 
@@ -313,15 +285,8 @@ msgid "https://foxland.fi/downloads/kuorinka"
 msgstr "https://foxland.fi/downloads/kuorinka"
 
 #. Description of the plugin/theme
-msgid ""
-"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
-"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
-"features. It's also child theme friendly."
-msgstr ""
-"Kuorinka on monipuolinen teema, joka on saanut virallisen saavutettavuus "
-"(Accessibility Ready) merkinnän. Teema tukee myös oikealta vasemmalle "
-"kieliä, Schema.org merkkauskieltä ja kaikkia WordPressin sisäänrakennettuja "
-"ominaisuuksia.  Lisäksi alateeman tekeminen on otettu teemassa huomioon."
+msgid "Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly."
+msgstr "Kuorinka on monipuolinen teema, joka on saanut virallisen saavutettavuus (Accessibility Ready) merkinnän. Teema tukee myös oikealta vasemmalle kieliä, Schema.org merkkauskieltä ja kaikkia WordPressin sisäänrakennettuja ominaisuuksia.  Lisäksi alateeman tekeminen on otettu teemassa huomioon."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
@@ -413,16 +378,12 @@ msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
-#: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
-#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198
-#: inc/template-general.php:218
+#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795 inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849 inc/breadcrumb-trail.php:1036 inc/template-general.php:198 inc/template-general.php:218
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
-#: inc/breadcrumb-trail.php:1040
+#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823 inc/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"

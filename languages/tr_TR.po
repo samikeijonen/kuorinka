@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 # Translators:
 # Abdullah Pazarbasi <mail@abdullahpazarbasi.com>, 2014
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
-"PO-Revision-Date: 2014-12-26 19:13+0200\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-03-09 13:49+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Turkish (Turkey) (http://www.transifex.com/projects/p/kuorinka/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr_TR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
 "_nx_noop:4c,1,2\n"
@@ -88,31 +88,35 @@ msgstr "Üzgünüz ama arama terimlerinizle örtüşen hiçbir şey bulunamadı.
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Aradığınız sayfa bulunamadı. Belki arama kutusu aradığınızı bulma konusunda yardımcı olabilir."
 
-#: footer.php:31
+#: footer.php:20
+msgid "Footer Content"
+msgstr ""
+
+#: footer.php:32
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:31
+#: footer.php:32
 msgid "Proudly powered by %s"
 msgstr "%s gururla sunar"
 
-#: footer.php:33
+#: footer.php:34
 msgid "Theme %1$s by %2$s"
 msgstr "%2$s tarafından %1$s görünümü"
 
-#: functions.php:59 menu-primary.php:5
+#: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
 msgstr "Birincil Menü"
 
-#: functions.php:60
+#: functions.php:60 menu-social.php:4
 msgid "Social Menu"
 msgstr "Sosyal Menü"
 
-#: functions.php:64 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
 msgstr "Portfolyo Menüsü"
 
-#: functions.php:69 menu-team-member.php:1
+#: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
 msgstr ""
 
@@ -156,6 +160,10 @@ msgstr "Projeyi Ziyaret Et"
 #: header.php:22
 msgid "Skip to content"
 msgstr "İçeriğe geç"
+
+#: header.php:75
+msgid "Breadcrumbs"
+msgstr "Breadcrumb'lar"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
@@ -257,13 +265,21 @@ msgstr "Sayfa"
 
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
-#: menu-portfolio.php:27 menu-team-member.php:27
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
 msgstr "Tümü"
 
 #: menu-primary.php:3
 msgid "Menu"
 msgstr "Menü"
+
+#: pages/front-page.php:68
+msgid "Sticky posts"
+msgstr ""
+
+#: pages/front-page.php:131
+msgid "Posts"
+msgstr "Gönderiler"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -302,7 +318,7 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "&ldquo;%2$s&rdquo; üzerine %1$s görüş"
 
-#: footer.php:32
+#: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
@@ -416,22 +432,22 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "Varsayılan"
 
-#: sidebar-front-page.php:3
+#: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
 msgstr "Ön Sayfa Yanbarı"
 
-#: sidebar-header.php:3
+#: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
 msgstr "Üst Kısım Yanbarı"
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
 msgstr "Birincil Yanbar"
 
-#: sidebar-subsidiary.php:3
+#: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Yardımcı Yanbar"

@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 # Translators:
 # Alessandro Curci <hantarex@gmail.com>, 2014
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
-"PO-Revision-Date: 2014-12-26 19:12+0200\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-03-09 13:48+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Italian (Italy) (http://www.transifex.com/projects/p/kuorinka/language/it_IT/)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -84,31 +84,35 @@ msgstr "Spiacente, nessuna corrispondenza con i termini di ricerca che haiindica
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Sembra impossibile trovare quello che stavi cercando. Forse una ricerca specifica potrebbe aiutarti."
 
-#: footer.php:31
+#: footer.php:20
+msgid "Footer Content"
+msgstr ""
+
+#: footer.php:32
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:31
+#: footer.php:32
 msgid "Proudly powered by %s"
 msgstr "Utilizza %s"
 
-#: footer.php:33
+#: footer.php:34
 msgid "Theme %1$s by %2$s"
 msgstr "Tema %1$s di %2$s"
 
-#: functions.php:59 menu-primary.php:5
+#: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
 msgstr "Menu principale"
 
-#: functions.php:60
+#: functions.php:60 menu-social.php:4
 msgid "Social Menu"
 msgstr "Menu sociale"
 
-#: functions.php:64 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
 msgstr "Menu Portfolio"
 
-#: functions.php:69 menu-team-member.php:1
+#: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
 msgstr "Menu Team Member"
 
@@ -152,6 +156,10 @@ msgstr "Visita il Progetto"
 #: header.php:22
 msgid "Skip to content"
 msgstr "Vai al contenuto"
+
+#: header.php:75
+msgid "Breadcrumbs"
+msgstr "Breadcrumbs"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
@@ -253,13 +261,21 @@ msgstr "Pagina"
 
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
-#: menu-portfolio.php:27 menu-team-member.php:27
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
 msgstr "Tutti"
 
 #: menu-primary.php:3
 msgid "Menu"
 msgstr "Menu"
+
+#: pages/front-page.php:68
+msgid "Sticky posts"
+msgstr ""
+
+#: pages/front-page.php:131
+msgid "Posts"
+msgstr "Articoli"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -297,7 +313,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Un pensiero su &ldquo;%2$s&rdquo;"
 msgstr[1] "%1$s pensieri su &ldquo;%2$s&rdquo;"
 
-#: footer.php:32
+#: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
@@ -410,22 +426,22 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "Predefinito"
 
-#: sidebar-front-page.php:3
+#: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
 msgstr "Sidebar della Pagina Iniziale"
 
-#: sidebar-header.php:3
+#: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
 msgstr "Sidebar della Testata"
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
 msgstr "Sidebar primaria"
 
-#: sidebar-subsidiary.php:3
+#: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Sidebar sussidiaria"

@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 # Translators:
 # Alex Goodwin <goodwinpress@ya.ru>, 2014
@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
-"PO-Revision-Date: 2014-12-26 19:13+0200\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-03-09 13:49+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Russian (Russia) (http://www.transifex.com/projects/p/kuorinka/language/ru_RU/)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -85,31 +85,35 @@ msgstr "Ничего не найдено по вашему запросу. По�
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Ничего не найдено, попробуйте воспользоваться поиском."
 
-#: footer.php:31
+#: footer.php:20
+msgid "Footer Content"
+msgstr ""
+
+#: footer.php:32
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:31
+#: footer.php:32
 msgid "Proudly powered by %s"
 msgstr "Работает на %s"
 
-#: footer.php:33
+#: footer.php:34
 msgid "Theme %1$s by %2$s"
 msgstr "Тема %1$s от %2$s"
 
-#: functions.php:59 menu-primary.php:5
+#: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
 msgstr "Основное меню"
 
-#: functions.php:60
+#: functions.php:60 menu-social.php:4
 msgid "Social Menu"
 msgstr "Меню социальных сетей"
 
-#: functions.php:64 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
 msgstr "Портфолио меню"
 
-#: functions.php:69 menu-team-member.php:1
+#: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
 msgstr ""
 
@@ -153,6 +157,10 @@ msgstr "Вебсайт"
 #: header.php:22
 msgid "Skip to content"
 msgstr "Перейти к содержимому"
+
+#: header.php:75
+msgid "Breadcrumbs"
+msgstr "Хлебные крошки"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
@@ -254,13 +262,21 @@ msgstr "Страница"
 
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
-#: menu-portfolio.php:27 menu-team-member.php:27
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
 msgstr "Все"
 
 #: menu-primary.php:3
 msgid "Menu"
 msgstr "Меню"
+
+#: pages/front-page.php:68
+msgid "Sticky posts"
+msgstr ""
+
+#: pages/front-page.php:131
+msgid "Posts"
+msgstr "Записи"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -299,7 +315,7 @@ msgstr[0] "Одно сообщение на &ldquo;%2$s&rdquo;"
 msgstr[1] "Сообщения на &ldquo;%2$s&rdquo;"
 msgstr[2] "%1$s сообщений на &ldquo;%2$s&rdquo;"
 
-#: footer.php:32
+#: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
@@ -412,22 +428,22 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "По умолчанию"
 
-#: sidebar-front-page.php:3
+#: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
 msgstr "Панель главной страницы"
 
-#: sidebar-header.php:3
+#: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
 msgstr "Панель верхнего колонтитула"
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
 msgstr "Основная панель"
 
-#: sidebar-subsidiary.php:3
+#: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Дополнительная панель"

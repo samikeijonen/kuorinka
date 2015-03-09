@@ -1,14 +1,15 @@
-# Copyright (C) 2014 Sami Keijonen
+# Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 # Translators:
+# Franck, 2015
 # FxB <fxb@wp-translations.org>, 2014
 # Sébastien Grillot <sebastien@insidedaweb.fr>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2014-12-14 13:57:45+00:00\n"
-"PO-Revision-Date: 2014-12-26 19:11+0200\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-03-09 13:48+0200\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: French (France) (http://www.transifex.com/projects/p/kuorinka/language/fr_FR/)\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -84,31 +85,35 @@ msgstr "Désolé, mais rien ne correspond à vos critères de recherche. Veuille
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
 
-#: footer.php:31
+#: footer.php:20
+msgid "Footer Content"
+msgstr "Contenu du pied de page"
+
+#: footer.php:32
 msgid "http://wordpress.org/"
 msgstr "http://wordpress.org/"
 
-#: footer.php:31
+#: footer.php:32
 msgid "Proudly powered by %s"
 msgstr "Fièrement propulsé par %s"
 
-#: footer.php:33
+#: footer.php:34
 msgid "Theme %1$s by %2$s"
 msgstr "Thème %1$s par %2$s"
 
-#: functions.php:59 menu-primary.php:5
+#: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
 msgstr "Menu principal"
 
-#: functions.php:60
+#: functions.php:60 menu-social.php:4
 msgid "Social Menu"
 msgstr "Menu social"
 
-#: functions.php:64 menu-portfolio.php:1
+#: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
 msgstr "Menu du portfolio"
 
-#: functions.php:69 menu-team-member.php:1
+#: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
 msgstr "Menu des membres de l'équipe"
 
@@ -152,6 +157,10 @@ msgstr "Voir le projet"
 #: header.php:22
 msgid "Skip to content"
 msgstr "Aller au contenu principal"
+
+#: header.php:75
+msgid "Breadcrumbs"
+msgstr "Fil d'Ariane"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
@@ -253,13 +262,21 @@ msgstr "Page"
 
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
-#: menu-portfolio.php:27 menu-team-member.php:27
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
 msgstr "Toutes"
 
 #: menu-primary.php:3
 msgid "Menu"
 msgstr "Menu"
+
+#: pages/front-page.php:68
+msgid "Sticky posts"
+msgstr "Articles mis en avant"
+
+#: pages/front-page.php:131
+msgid "Posts"
+msgstr "Articles"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
@@ -297,7 +314,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
 msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
 
-#: footer.php:32
+#: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
@@ -346,7 +363,7 @@ msgstr "&#8764;"
 #: inc/breadcrumb-trail.php:130
 msgctxt "Breadcrumbs aria label"
 msgid "Breadcrumbs"
-msgstr "Fils d'Ariane"
+msgstr "Fil d'Ariane"
 
 #: inc/breadcrumb-trail.php:716 inc/template-general.php:295
 msgctxt "minute and hour archives time format"
@@ -410,22 +427,22 @@ msgctxt "theme layout"
 msgid "Default"
 msgstr "Valeur par défaut"
 
-#: sidebar-front-page.php:3
+#: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
 msgstr "Colonne latérale de la page d'accueil"
 
-#: sidebar-header.php:3
+#: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
 msgstr "En-tête de la colonne principale"
 
-#: sidebar-primary.php:3
+#: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
 msgstr "Colonne latérale principale"
 
-#: sidebar-subsidiary.php:3
+#: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Colonne latérale subsidiaire"

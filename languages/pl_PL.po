@@ -1,102 +1,102 @@
 # Copyright (C) 2015 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
+# Translators:
+# Waldemar Razik <w.razik@simplito.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Kuorinka 1.3.0\n"
+"Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-03-09 11:50:20+00:00\n"
+"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
+"PO-Revision-Date: 2015-03-09 09:13+0000\n"
+"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
+"Language-Team: Polish (Poland) (http://www.transifex.com/projects/p/kuorinka/language/pl_PL/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
-"Language-Team: WP-Translations "
-"(http://www.transifex.com/projects/p/wp-translations/)\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: grunt-wp-i18n 0.4.5\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-Language: English\n"
 "X-Poedit-Country: UNITED STATES\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Language: English\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-KeywordsList: "
-"__;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_"
-"x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-SourceCharset: utf-8\n"
 "X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Ups! Strona o podanym adresie nie została odnaleziona."
 
 #: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the "
-"links below or a search?"
-msgstr ""
+"It looks like nothing was found at this location. Maybe try one of the links"
+" below or a search?"
+msgstr "Wygląda na to, że pod tym adresem niczego nie znaleziono. Może spróbuj skorzystać z odnośników poniżej lub nowego wyszukiwania?"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Najczęściej wykorzystywane kategorie"
 
-#: 404.php:44
 #. translators: %1$s: smiley
+#: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Spróbuj przeszukać miesięczne archiwa. %1$s"
 
 #: comments.php:35 comments.php:54
 msgid "Comment navigation"
-msgstr ""
+msgstr "Nawigacja w komentarzach"
 
 #: comments.php:36 comments.php:55
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Starsze Komentarze"
 
 #: comments.php:37 comments.php:56
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Nowsze Komentarze &rarr;"
 
 #: comments.php:66
 msgid "Comments are closed."
-msgstr ""
+msgstr "Komentowanie jest wyłączone."
 
 #: content-aside.php:25 content-audio.php:28 content-gallery.php:28
 #: content-image.php:28 content-link.php:40 content-quote.php:28
 #: content-status.php:26 content-video.php:28 content.php:28
 msgid "Posted in %s"
-msgstr ""
+msgstr "Opublikowane w %s"
 
 #: content-aside.php:26 content-audio.php:29 content-gallery.php:29
 #: content-image.php:29 content-link.php:41 content-quote.php:29
 #: content-status.php:27 content-video.php:29 content.php:29
 msgid "Tagged %s"
-msgstr ""
+msgstr "Otagowane %s"
 
 #: content-audio.php:21 content-gallery.php:21 content-gallery.php:48
 #: content-image.php:21 content-image.php:46 content-page.php:19
 #: content-quote.php:21 content-quote.php:44 content-video.php:21
 #: content.php:21 image.php:37
 msgid "Pages:"
-msgstr ""
+msgstr "Strony:"
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nic nie znaleziono"
 
 #: content-none.php:19
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgstr "Czy już chcesz opublikować swój pierwszy wpis? <a href=\"%1$s\">Zacznij tutaj</a>."
 
 #: content-none.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
-msgstr ""
+msgstr "Przepraszamy, ale nie znaleziono wpisów pasujących do Twoich kryteriów wyszukiwania. Proszę spróbować ponownie, korzystając z innych słów kluczowych."
 
 #: content-none.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "Wygląda na to, że nie możemy znaleźć tego, czego szukasz. Istnieje jednak szansa, że dalsze wyszukiwanie pomoże."
 
 #: footer.php:20
 msgid "Footer Content"
@@ -104,187 +104,187 @@ msgstr ""
 
 #: footer.php:32
 msgid "http://wordpress.org/"
-msgstr ""
+msgstr "http://pl.wordpress.org/"
 
 #: footer.php:32
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Strona wspierana przez %s"
 
 #: footer.php:34
 msgid "Theme %1$s by %2$s"
-msgstr ""
+msgstr "Motyw %1$s autorstwa %2$s"
 
 #: functions.php:59 menu-primary.php:6
 msgid "Primary Menu"
-msgstr ""
+msgstr "Menu główne"
 
 #: functions.php:60 menu-social.php:4
 msgid "Social Menu"
-msgstr ""
+msgstr "Menu sieci społecznościowych"
 
 #: functions.php:64 menu-portfolio.php:2
 msgid "Portfolio Menu"
-msgstr ""
+msgstr "Menu dla Portfolio"
 
 #: functions.php:69 menu-team-member.php:2
 msgid "Team Member Menu"
-msgstr ""
+msgstr "Menu dla członków zespołu"
 
 #: functions.php:99
 msgid "1 Column"
-msgstr ""
+msgstr "1 kolumna"
 
 #: functions.php:100
 msgid "2 Columns: Content / Sidebar"
-msgstr ""
+msgstr "2 kolumny: Treść / Panel boczny"
 
 #: functions.php:101
 msgid "2 Columns: Sidebar / Content"
-msgstr ""
+msgstr "2 Kolumny: Panel boczny / Treść"
 
 #: functions.php:137
 msgid "The main sidebar. It is displayed on right side of the page."
-msgstr ""
+msgstr "Panel główny. Jest wyświetlany obok treści podstawowej."
 
 #: functions.php:147
 msgid "Header sidebar. It is displayed on top of the page."
-msgstr ""
+msgstr "Panel nagłówkowy. Jest wyświetlany na górze strony."
 
 #: functions.php:157
 msgid "A sidebar located in the footer of the site."
-msgstr ""
+msgstr "Panel umieszczony w stopce strony."
 
 #: functions.php:167
 msgid "A sidebar located in the Front Page Template."
-msgstr ""
+msgstr "Panel umieszczony w szablonie strony głównej."
 
-#: functions.php:326
 #. Translators: The %s is the post title shown to screen readers.
+#: functions.php:326
 msgid "Read more %s"
-msgstr ""
+msgstr "Czytaj dalej %s"
 
 #: functions.php:517
 msgid "Visit Project"
-msgstr ""
+msgstr "Przejdź do witryny"
 
 #: header.php:22
 msgid "Skip to content"
-msgstr ""
+msgstr "Skocz do"
 
 #: header.php:75
 msgid "Breadcrumbs"
-msgstr ""
+msgstr "Historia odwiedzanych stron"
 
 #: inc/breadcrumb-trail.php:178
 msgid "Browse:"
-msgstr ""
+msgstr "Przeglądaj"
 
 #: inc/breadcrumb-trail.php:179
 msgid "Home"
-msgstr ""
+msgstr "Strona główna"
 
 #: inc/breadcrumb-trail.php:180 inc/template-general.php:334
 msgid "404 Not Found"
-msgstr ""
+msgstr "404 - nie znaleziono"
 
 #: inc/breadcrumb-trail.php:181 inc/template-general.php:160
 msgid "Archives"
-msgstr ""
+msgstr "Archiwa"
 
-#: inc/breadcrumb-trail.php:183 inc/template-general.php:315
 #. Translators: %s is the search query. The HTML entities are opening and
 #. closing curly quotes.
+#: inc/breadcrumb-trail.php:183 inc/template-general.php:315
 msgid "Search results for &#8220;%s&#8221;"
-msgstr ""
+msgstr "Wyniki wyszukiwania dla zapytania &#8222;%s&#8221;"
 
-#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 #. Translators: %s is the page number.
+#: inc/breadcrumb-trail.php:185 inc/extras.php:60
 msgid "Page %s"
-msgstr ""
+msgstr "Strona %s"
 
-#: inc/breadcrumb-trail.php:187 inc/template-general.php:276
 #. Translators: Minute archive title. %s is the minute time format.
+#: inc/breadcrumb-trail.php:187 inc/template-general.php:276
 msgid "Minute %s"
-msgstr ""
+msgstr "Minuta %s"
 
-#: inc/breadcrumb-trail.php:189
 #. Translators: Weekly archive title. %s is the week date format.
+#: inc/breadcrumb-trail.php:189
 msgid "Week %s"
-msgstr ""
+msgstr "Tydzień %s"
 
 #: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
 #: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 #: inc/breadcrumb-trail.php:1163
 msgid "Split"
-msgstr ""
+msgstr "Podziel"
 
 #: inc/breadcrumb-trail.php:1167
 msgid "Merge"
-msgstr ""
+msgstr "Połącz"
 
 #: inc/template-general.php:126
 msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr ""
+msgstr "Przeglądasz wyniki wyszukiwania dla zapytania &#8220;%s&#8221;"
 
 #: inc/template-general.php:132
 msgid "You are browsing the site archives by time."
-msgstr ""
+msgstr "Przeglądasz archiwa według czasu publikacji."
 
 #: inc/template-general.php:135 inc/template-general.php:138
 #: inc/template-general.php:141
 msgid "You are browsing the site archives for %s."
-msgstr ""
+msgstr "Przeglądasz archiwa w ramach kategorii %s."
 
 #: inc/template-general.php:144
 msgid "You are browsing the site archives."
-msgstr ""
+msgstr "Przeglądasz archiwa publikacji."
 
-#: inc/template-general.php:218
 #. Translators: 1 is the week number and 2 is the year.
+#: inc/template-general.php:218
 msgid "Week %1$s of %2$s"
-msgstr ""
+msgstr "Tydzień %1$s z %2$s"
 
 #: inc/template-tags.php:21
 msgid "Posts navigation"
-msgstr ""
+msgstr "Nawigacja po wpisach"
 
 #: inc/template-tags.php:25 index.php:46
 msgid "Previous page"
-msgstr ""
+msgstr "Poprzednia strona"
 
 #: inc/template-tags.php:29 index.php:47
 msgid "Next page"
-msgstr ""
+msgstr "Następna strona"
 
 #: inc/template-tags.php:52
 msgid "Post navigation"
-msgstr ""
+msgstr "Nawigacja po wpisach"
 
 #: inc/theme-layouts.php:458 inc/theme-layouts.php:565
 #: inc/theme-layouts.php:650
 msgid "Layout"
-msgstr ""
+msgstr "Układ"
 
 #: inc/theme-layouts.php:683
 msgid "Global Layout"
-msgstr ""
+msgstr "Układ ogólny"
 
 #: index.php:48
 msgid "Page"
-msgstr ""
+msgstr "Strona"
 
-#: menu-portfolio.php:28 menu-team-member.php:28
 #. Translators: "All" is a link that points to the portfolio archive.
 #. Translators: "All" is a link that points to the team-member archive.
+#: menu-portfolio.php:28 menu-team-member.php:28
 msgid "All"
-msgstr ""
+msgstr "Wszystkie"
 
 #: menu-primary.php:3
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: pages/front-page.php:68
 msgid "Sticky posts"
@@ -292,112 +292,113 @@ msgstr ""
 
 #: pages/front-page.php:131
 msgid "Posts"
-msgstr ""
+msgstr "Wpisy"
 
 #. Theme Name of the plugin/theme
 msgid "Kuorinka"
-msgstr ""
+msgstr "Kuorinka"
 
 #. Theme URI of the plugin/theme
 msgid "https://foxland.fi/downloads/kuorinka"
-msgstr ""
+msgstr "https://foxland.fi/downloads/kuorinka"
 
 #. Description of the plugin/theme
 msgid ""
-"Kuorinka is an accessible, translation-ready theme. It supports "
-"right-to-left languages, Schema.org microdata, and all of WordPress’ "
-"built-in theme features. It's also child theme friendly."
-msgstr ""
+"Kuorinka is an accessible, translation-ready theme. It supports right-to-"
+"left languages, Schema.org microdata, and all of WordPress’ built-in theme "
+"features. It's also child theme friendly."
+msgstr "Kuorinka to motyw dostosowany do potrzeb niepełnosprawnych, gotowy do tłumaczenia. Wspiera języki pisane od prawej do lewej, mikrodane Schema.org oraz wszystkie wbudowane cechy motywów Wordpress'a. Jest przystosowany do tworzenia motywów pochodnych."
 
 #. Author of the plugin/theme
 msgid "Sami Keijonen"
-msgstr ""
+msgstr "Sami Keijonen"
 
 #. Author URI of the plugin/theme
 msgid "https://foxland.fi"
-msgstr ""
+msgstr "https://foxland.fi"
 
 #. Template Name of the plugin/theme
 msgid "Front Page"
-msgstr ""
+msgstr "Strona główna"
 
 #: comment.php:7
 msgctxt "%1%s is for comment date"
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
 #: comments.php:28
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pewna myśl na temat &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s przemyśleń na temat &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s przemyśleń na temat &ldquo;%2$s&rdquo;"
 
 #: footer.php:33
 msgctxt "Separator in site info."
 msgid "&middot;"
-msgstr ""
+msgstr "&middot;"
 
 #: functions.php:136
 msgctxt "sidebar"
 msgid "Primary"
-msgstr ""
+msgstr "Panel główny"
 
 #: functions.php:146
 msgctxt "sidebar"
 msgid "Header"
-msgstr ""
+msgstr "Nagłówek"
 
 #: functions.php:156
 msgctxt "sidebar"
 msgid "Subsidiary"
-msgstr ""
+msgstr "Stopka"
 
 #: functions.php:166
 msgctxt "sidebar"
 msgid "Front Page"
-msgstr ""
+msgstr "Strona główna"
 
-#: functions.php:194
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
+#: functions.php:194
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
-msgstr ""
+msgstr "włącz"
 
-#: functions.php:200
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
+#: functions.php:200
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
-msgstr ""
+msgstr "włącz"
 
 #: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
-msgstr ""
+msgstr "&#8764;"
 
 #: inc/breadcrumb-trail.php:130
 msgctxt "Breadcrumbs aria label"
 msgid "Breadcrumbs"
-msgstr ""
+msgstr "Historia odwiedzanych stron"
 
 #: inc/breadcrumb-trail.php:716 inc/template-general.php:295
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
-msgstr ""
+msgstr "H:i"
 
 #: inc/breadcrumb-trail.php:733 inc/template-general.php:276
 msgctxt "minute archives time format"
 msgid "i"
-msgstr ""
+msgstr "i"
 
 #: inc/breadcrumb-trail.php:750 inc/template-general.php:256
 msgctxt "hour archives time format"
 msgid "g a"
-msgstr ""
+msgstr "g a"
 
 #: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
 #: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
@@ -405,67 +406,67 @@ msgstr ""
 #: inc/template-general.php:218
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
 #: inc/breadcrumb-trail.php:1040
 msgctxt "monthly archives date format"
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: inc/breadcrumb-trail.php:768 inc/breadcrumb-trail.php:1044
 msgctxt "daily archives date format"
 msgid "j"
-msgstr ""
+msgstr "j"
 
 #: inc/template-general.php:237
 msgctxt "daily archives date format"
 msgid "F j, Y"
-msgstr ""
+msgstr "j F Y"
 
 #: inc/breadcrumb-trail.php:796 inc/template-general.php:218
 msgctxt "weekly archives date format"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: inc/template-tags.php:55
 msgctxt "Previous post link"
 msgid "%title"
-msgstr ""
+msgstr "%title"
 
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title"
-msgstr ""
+msgstr "%title"
 
-#: inc/template-tags.php:142
 #. Translators: Separates tags, categories, etc. when displaying a post.
+#: inc/template-tags.php:142
 msgctxt "taxonomy terms separator"
 msgid ", "
-msgstr ""
+msgstr ", "
 
-#: inc/theme-layouts.php:363
 #. Translators: Default theme layout option.
+#: inc/theme-layouts.php:363
 msgctxt "theme layout"
 msgid "Default"
-msgstr ""
+msgstr "Domyślny"
 
 #: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
 msgid "Front Page Sidebar"
-msgstr ""
+msgstr "Panel boczny na stronie głównej"
 
 #: sidebar-header.php:4
 msgctxt "Sidebar aria label"
 msgid "Header Sidebar"
-msgstr ""
+msgstr "Panel nagłówkowy"
 
 #: sidebar-primary.php:4
 msgctxt "Sidebar aria label"
 msgid "Primary Sidebar"
-msgstr ""
+msgstr "Główny panel boczny"
 
 #: sidebar-subsidiary.php:4
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
-msgstr ""
+msgstr "Uzupełniający panel boczny"
