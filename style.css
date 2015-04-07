@@ -1521,7 +1521,7 @@ button#nav-toggle {
 		padding-left: 5%;
 		width: 50%;
 	}
-	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .entry:nth-child(2n+3) {
+	.page-template-pagesfront-page-php #kuorinka-front-page-posts > .entry:nth-of-type(2n+3) {
 		clear: left;
 	}
 
