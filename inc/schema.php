@@ -91,7 +91,7 @@ function hybrid_get_attr( $slug, $context = '' ) {
 /* === Structural === */
 
 /**
- * <body> element attributes.
+ * 'body'-element attributes.
  *
  * @since  2.0.0
  * @access public
@@ -102,6 +102,14 @@ function hybrid_attr_body( $attr ) {
 
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/WebPage';
+	
+	if ( is_singular( 'post' ) || is_home() || is_time() || is_author() || is_category() || is_tag() ) {
+		$attr['itemscope'] = '';
+		$attr['itemtype']  = 'http://schema.org/Blog';
+	}
+	if ( is_search() ) {
+		$attr['itemtype']  = 'http://schema.org/SearchResultsPage';
+	}
 
 	return $attr;
 }
@@ -148,16 +156,8 @@ function hybrid_attr_footer( $attr ) {
  */
 function hybrid_attr_content( $attr ) {
 
-	$attr['itemprop'] = 'mainContentOfPage';
-
-	if ( is_singular( 'post' ) || is_home() || is_archive() ) {
-		$attr['itemscope'] = '';
-		$attr['itemtype']  = 'http://schema.org/Blog';
-	}
-
-	elseif ( is_search() ) {
-		$attr['itemscope'] = 'itemscope';
-		$attr['itemtype']  = 'http://schema.org/SearchResultsPage';
+	if ( ! ( is_home() || is_time() || is_author() || is_category() || is_tag() ) ) {
+		$attr['itemprop'] = 'mainContentOfPage';
 	}
 
 	return $attr;
@@ -208,8 +208,6 @@ function hybrid_attr_menu( $attr, $context ) {
  * @return array
  */
 function hybrid_attr_branding( $attr ) {
-
-	$attr['id'] = 'branding';
 
 	return $attr;
 }
@@ -319,7 +317,12 @@ function hybrid_attr_post( $attr ) {
 		if ( 'post' === get_post_type() ) {
 
 			$attr['itemtype']  = 'http://schema.org/BlogPosting';
-			$attr['itemprop']  = 'blogPost';
+
+			// Add itemprop if within the main query
+			if ( is_main_query() && ! is_search() ) {
+				$attr['itemprop'] = 'blogPost';
+			}
+			
 		}
 
 		elseif ( 'attachment' === get_post_type() && wp_attachment_is_image() ) {
