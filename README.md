@@ -25,6 +25,25 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.3.1
+
+* Fix some Schema.org markup issues.
+* Use screen-reader-text before post date and author for better accessibility.
+* Use section, not aside in sidebars.
+* Use default comments_pop_up arguments because they will have lot's accessibility love in WP 4.2.
+* Add aria-expanded, aria-pressed and aria-controls to menu button for better accessibility.
+* Use H2 heading, not H1 in comment navigation.
+* Add "Your comment is awaiting moderation" text in comments.
+* Responsive Nav updated to version 1.0.38.
+* Update languages files.
+
+### Version 1.3
+
+* Update language files.
+* Add screen-reader-text headings for menus, sidebars and breadcrumbs for better title hierarchy.
+* Remove h1 and h2 headings from site title and description for better accessibility.
+* Add child menu tap support for touch devices.
+
 ### Version 1.2
 
 * Add our team member menu.
