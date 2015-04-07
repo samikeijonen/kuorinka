@@ -135,8 +135,8 @@ function kuorinka_widgets_init() {
 		'id'            => 'primary',
 		'name'          => _x( 'Primary', 'sidebar', 'kuorinka' ),
 		'description'   => __( 'The main sidebar. It is displayed on right side of the page.', 'kuorinka' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	);
@@ -145,8 +145,8 @@ function kuorinka_widgets_init() {
 		'id'            => 'header',
 		'name'          => _x( 'Header', 'sidebar', 'kuorinka' ),
 		'description'   => __( 'Header sidebar. It is displayed on top of the page.', 'kuorinka' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	);
