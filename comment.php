@@ -9,12 +9,18 @@
 		</header><!-- .comment-meta -->
 
 		<div class="comment-content" <?php hybrid_attr( 'comment-content' ); ?>>
+		
+				<?php if ( '0' == $comment->comment_approved ) : ?>
+					<p>	
+						<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'kuorinka' ); ?></em>
+					</p>
+				<?php endif; ?>
+				
 			<?php comment_text(); ?>
+			
 		</div><!-- .comment-content -->
 
-		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-		</div><!-- .reply -->
+		<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'], 'before' => '<div class="reply">', 'after' => '</div><!-- .reply -->' ) ) ); ?>
 		
 	</article><!-- .comment-body -->
 
