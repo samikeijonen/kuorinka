@@ -67,11 +67,17 @@ if ( ! function_exists( 'kuorinka_posted_on' ) ) :
  */
 function kuorinka_posted_on() {
 
-	// Set up and print post meta information.
-	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" ' . hybrid_get_attr( 'entry-published' ) . '>%3$s</time></a></span> <span class="byline"><span class="entry-author" ' . hybrid_get_attr( 'entry-author' ) . '><a class="entry-author-link" href="%4$s" rel="author" itemprop="url"><span itemprop="name">%5$s</span></a></span></span>',
+	/* Set up entry date. */
+	printf( '<span class="entry-date"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s"' . hybrid_get_attr( 'entry-published' ) . '>%4$s</time></a></span>',
+		_x( 'Posted on', 'Used before publish date.', 'kuorinka' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date() )
+	);
+	
+	/* Set up byline. */
+	printf( '<span class="byline"><span class="entry-author" ' . hybrid_get_attr( 'entry-author' ) . '><span class="screen-reader-text">%1$s </span><a class="entry-author-link" href="%2$s" rel="author" itemprop="url"><span itemprop="name">%3$s</span></a></span></span>',
+		_x( 'Author', 'Used before post author name.', 'kuorinka' ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		get_the_author()
 	);
