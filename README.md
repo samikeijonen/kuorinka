@@ -25,6 +25,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.3.2 - May 6, 2015
+
+* Remove example.html file from Genericons for security (DOM-based XSS) reasons.
+
 ### Version 1.3.1
 
 * Fix some Schema.org markup issues.
