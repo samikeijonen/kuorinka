@@ -1,8 +1,8 @@
 <div class="loop-meta" <?php hybrid_attr( 'loop-meta' ); ?>>
 
-	<h1 class="loop-title" <?php hybrid_attr( 'loop-title' ); ?>><?php hybrid_loop_title(); ?></h1>
+	<h1 class="loop-title" <?php hybrid_attr( 'loop-title' ); ?>><?php the_archive_title(); ?></h1>
 
-	<?php if ( !is_paged() && $desc = hybrid_get_loop_description() ) : // Check if we're on page/1. ?>
+	<?php if ( !is_paged() && $desc = get_the_archive_description() ) : // Check if we're on page/1. ?>
 
 		<div class="loop-description" <?php hybrid_attr( 'loop-description' ); ?>>
 			<?php echo $desc; ?>
