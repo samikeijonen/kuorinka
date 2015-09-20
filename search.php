@@ -28,7 +28,13 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php kuorinka_paging_nav(); ?>
+			<?php
+				the_posts_pagination( array(
+					'prev_text'          => esc_html__( 'Previous page', 'kuorinka' ),
+					'next_text'          => esc_html__( 'Next page', 'kuorinka' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'kuorinka' ) . ' </span>',
+				) );
+			?>
 
 		<?php else : ?>
 
