@@ -471,7 +471,7 @@ function hybrid_attr_comment( $attr ) {
 
 		$attr['itemprop']  = 'comment';
 		$attr['itemscope'] = 'itemscope';
-		$attr['itemtype']  = 'http://schema.org/UserComments';
+		$attr['itemtype']  = 'http://schema.org/Comment';
 	}
 
 	return $attr;
@@ -487,7 +487,7 @@ function hybrid_attr_comment( $attr ) {
  */
 function hybrid_attr_comment_author( $attr ) {
 
-	$attr['itemprop']  = 'creator';
+	$attr['itemprop']  = 'author';
 	$attr['itemscope'] = 'itemscope';
 	$attr['itemtype']  = 'http://schema.org/Person';
 
@@ -504,7 +504,7 @@ function hybrid_attr_comment_author( $attr ) {
  */
 function hybrid_attr_comment_published( $attr ) {
 
-	$attr['itemprop'] = 'commentTime';
+	$attr['itemprop'] = 'datePublished';
 
 	return $attr;
 }
@@ -534,7 +534,7 @@ function hybrid_attr_comment_permalink( $attr ) {
  */
 function hybrid_attr_comment_content( $attr ) {
 
-	$attr['itemprop'] = 'commentText';
+	$attr['itemprop'] = 'text';
 
 	return $attr;
 }
