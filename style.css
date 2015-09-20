@@ -4,7 +4,7 @@ Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Description: Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly.
-Version: 1.3.2
+Version: 1.4.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
@@ -37,6 +37,7 @@ and Blueprint http://www.blueprintcss.org/
 		5.2.1 - Primary menu
 		5.2.2 - Social menu
 		5.2.3 - Portfolio and team member menu
+		5.2.4 - Breadcrumbs
 	5.3 - Comment and post navigation
 6.0 - Accessibility
 7.0 - Alignments
@@ -1155,6 +1156,31 @@ button#nav-toggle {
 	padding: 2px 8px;
 }
 
+/* === 5.2.4 Breadcrumbs === */
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-indent: 0;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.trail-items li::after {
+	content: "\223C";
+	font-size: 85%;
+	padding: 0 0.4em;
+}
+
+.trail-items li:last-of-type::after {
+	display: none;
+}
+
 /* === Comment and post navigation === */
 
 .site-main .comment-navigation,
@@ -1225,8 +1251,6 @@ button#nav-toggle {
 	overflow: hidden;
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
 .screen-reader-text:focus {
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -2408,8 +2432,6 @@ blockquote {
 .sidebar .genericon::before,
 .kuorinka-front-page-content .genericon,
 .kuorinka-front-page-content .genericon::before,
-.screen-reader-text:hover,
-.screen-reader-text:active,
 .screen-reader-text:focus {
 	color: #054e92;
 }
@@ -2550,8 +2572,6 @@ li.bypostauthor,
 .sticky.entry,
 .page-links a,
 .single-portfolio_item .entry-terms.portfolio a,
-.screen-reader-text:hover,
-.screen-reader-text:active,
 .screen-reader-text:focus,
 body .gform_confirmation_wrapper,
 .post-type-archive-portfolio_item .entry-header,
