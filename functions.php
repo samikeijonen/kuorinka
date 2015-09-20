@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.3.2' );
+define( 'KUORINKA_VERSION', '1.4.0' );
 
 /**
  * The suffix to use for scripts.
@@ -212,10 +212,10 @@ function kuorinka_fonts_url() {
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
 
-	return $fonts_url;
+	return esc_url_raw( $fonts_url );
 }
 
 /**
@@ -227,7 +227,7 @@ function kuorinka_scripts() {
 	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
 	
 	/* Add Genericons font, used in the main stylesheet. */
-	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.2' );
+	wp_enqueue_style( 'genericons', trailingslashit( get_template_directory_uri() ) . 'fonts/genericons/genericons' . KUORINKA_SUFFIX . '.css', array(), '3.4' );
 	
 	/* Enqueue parent theme styles if using child theme. */
 	if ( is_child_theme() ) {
@@ -603,6 +603,6 @@ require_once( get_template_directory() . '/inc/breadcrumb-trail.php' );
 require_once( get_template_directory() . '/inc/schema.php' );
 
 /**
- * Load template general file.
+ * Load archive filters file.
  */
-require_once( get_template_directory() . '/inc/template-general.php' );
+require_once( get_template_directory() . '/inc/archive-filters.php' );

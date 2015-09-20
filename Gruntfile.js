@@ -107,8 +107,8 @@ grunt.initConfig({
 			dest: 'style.min.css'
 		},
 		genericons: {
-			src: 'fonts/genericons/genericons/genericons.css',
-			dest: 'fonts/genericons/genericons/genericons.min.css'
+			src: 'fonts/genericons/genericons.css',
+			dest: 'fonts/genericons/genericons.min.css'
 		}
 	},
 
