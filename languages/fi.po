@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-04-07 15:14:55+00:00\n"
-"PO-Revision-Date: 2015-04-07 18:15+0200\n"
+"POT-Creation-Date: 2015-09-20 12:49+0300\n"
+"PO-Revision-Date: 2015-09-20 12:49+0300\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -189,91 +189,44 @@ msgstr "Hyppää sisältöön"
 msgid "Breadcrumbs"
 msgstr "Murupolku"
 
-#: inc/breadcrumb-trail.php:178
-msgid "Browse:"
-msgstr "Navigointi:"
-
-#: inc/breadcrumb-trail.php:179
-msgid "Home"
-msgstr "Etusivu"
-
-#: inc/breadcrumb-trail.php:180 inc/template-general.php:334
-msgid "404 Not Found"
-msgstr "404 Sivua ei löytynyt"
-
-#: inc/breadcrumb-trail.php:181 inc/template-general.php:160
-msgid "Archives"
-msgstr "Arkistot"
-
 #. Translators: %s is the search query. The HTML entities are opening and
 #. closing curly quotes.
-#: inc/breadcrumb-trail.php:183 inc/template-general.php:315
+#: inc/archive-filters.php:40 inc/breadcrumb-trail.php:250
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Hakutulokset haulle  &#8220;%s&#8221;"
 
+#: inc/breadcrumb-trail.php:244
+msgid "Browse:"
+msgstr "Navigointi:"
+
+#: inc/breadcrumb-trail.php:246
+msgid "Home"
+msgstr "Etusivu"
+
+#: inc/breadcrumb-trail.php:247
+msgid "404 Not Found"
+msgstr "404 Sivua ei löytynyt"
+
+#: inc/breadcrumb-trail.php:248
+msgid "Archives"
+msgstr "Arkistot"
+
 #. Translators: %s is the page number.
-#: inc/breadcrumb-trail.php:185 inc/extras.php:60
+#: inc/breadcrumb-trail.php:252 inc/extras.php:60
 msgid "Page %s"
 msgstr "Sivu %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
-#: inc/breadcrumb-trail.php:187 inc/template-general.php:276
+#: inc/breadcrumb-trail.php:254
 msgid "Minute %s"
 msgstr "Minuutti %s"
 
 #. Translators: Weekly archive title. %s is the week date format.
-#: inc/breadcrumb-trail.php:189
+#: inc/breadcrumb-trail.php:256
 msgid "Week %s"
 msgstr "Viikko %s"
 
-#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171
-#: inc/breadcrumb-trail.php:1188 inc/breadcrumb-trail.php:1219
-msgid "Edit"
-msgstr "Muokkaa"
-
-#: inc/breadcrumb-trail.php:1163
-msgid "Split"
-msgstr "Jaa"
-
-#: inc/breadcrumb-trail.php:1167
-msgid "Merge"
-msgstr "Yhdistä"
-
-#: inc/template-general.php:126
-msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr "Selaat hakutuloksia haulle &#8220;%s&#8221;"
-
-#: inc/template-general.php:132
-msgid "You are browsing the site archives by time."
-msgstr "Selailet sivun arkistoja päivämäärän mukaan."
-
-#: inc/template-general.php:135 inc/template-general.php:138
-#: inc/template-general.php:141
-msgid "You are browsing the site archives for %s."
-msgstr "Selailet sivun arkistoja: %s."
-
-#: inc/template-general.php:144
-msgid "You are browsing the site archives."
-msgstr "Selailet sivun arkistoja."
-
-#. Translators: 1 is the week number and 2 is the year.
-#: inc/template-general.php:218
-msgid "Week %1$s of %2$s"
-msgstr "Viikko %1$s / %2$s"
-
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr "Artikkelien selaus"
-
-#: inc/template-tags.php:25 index.php:46
-msgid "Previous page"
-msgstr "Edellinen sivu"
-
-#: inc/template-tags.php:29 index.php:47
-msgid "Next page"
-msgstr "Seuraava sivu"
-
-#: inc/template-tags.php:52
+#: inc/template-tags.php:24
 msgid "Post navigation"
 msgstr "Artikkelien selaus"
 
@@ -286,7 +239,15 @@ msgstr "Ulkoasu"
 msgid "Global Layout"
 msgstr "Globaali ulkoasu"
 
-#: index.php:48
+#: index.php:46 search.php:33
+msgid "Previous page"
+msgstr "Edellinen sivu"
+
+#: index.php:47 search.php:34
+msgid "Next page"
+msgstr "Seuraava sivu"
+
+#: index.php:48 search.php:35
 msgid "Page"
 msgstr "Sivu"
 
@@ -397,77 +358,71 @@ msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
 
-#: inc/breadcrumb-trail.php:130
-msgctxt "Breadcrumbs aria label"
+#: inc/breadcrumb-trail.php:245
+msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
 msgstr "Murupolku"
 
-#: inc/breadcrumb-trail.php:716 inc/template-general.php:295
+#: inc/breadcrumb-trail.php:708
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr "g:i"
 
-#: inc/breadcrumb-trail.php:733 inc/template-general.php:276
+#: inc/breadcrumb-trail.php:725
 msgctxt "minute archives time format"
 msgid "i"
 msgstr "i"
 
-#: inc/breadcrumb-trail.php:750 inc/template-general.php:256
+#: inc/breadcrumb-trail.php:742
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795
-#: inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
-#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198
-#: inc/template-general.php:218
+#: inc/breadcrumb-trail.php:758 inc/breadcrumb-trail.php:787
+#: inc/breadcrumb-trail.php:814 inc/breadcrumb-trail.php:841
+#: inc/breadcrumb-trail.php:1176
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823
-#: inc/breadcrumb-trail.php:1040
+#: inc/breadcrumb-trail.php:759 inc/breadcrumb-trail.php:815
+#: inc/breadcrumb-trail.php:1180
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"
 
-#: inc/breadcrumb-trail.php:768 inc/breadcrumb-trail.php:1044
+#: inc/breadcrumb-trail.php:760 inc/breadcrumb-trail.php:1184
 msgctxt "daily archives date format"
 msgid "j"
 msgstr "j"
 
-#: inc/template-general.php:237
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "j.n.Y"
-
-#: inc/breadcrumb-trail.php:796 inc/template-general.php:218
+#: inc/breadcrumb-trail.php:788
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr "W"
 
-#: inc/template-tags.php:55
+#: inc/template-tags.php:27
 msgctxt "Previous post link"
 msgid "%title"
 msgstr "%title"
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:28
 msgctxt "Next post link"
 msgid "%title"
 msgstr "%title"
 
-#: inc/template-tags.php:72
+#: inc/template-tags.php:44
 msgctxt "Used before publish date."
 msgid "Posted on"
 msgstr "Kirjoitettu"
 
-#: inc/template-tags.php:80
+#: inc/template-tags.php:52
 msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Kirjoittaja"
 
 #. Translators: Separates tags, categories, etc. when displaying a post.
-#: inc/template-tags.php:148
+#: inc/template-tags.php:120
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ", "
@@ -497,3 +452,38 @@ msgstr "Sivupalkki"
 msgctxt "Sidebar aria label"
 msgid "Subsidiary Sidebar"
 msgstr "Alapalkin sivupalkki"
+
+#~ msgid "Edit"
+#~ msgstr "Muokkaa"
+
+#~ msgid "Split"
+#~ msgstr "Jaa"
+
+#~ msgid "Merge"
+#~ msgstr "Yhdistä"
+
+#~ msgid "You are browsing the search results for &#8220;%s&#8221;"
+#~ msgstr "Selaat hakutuloksia haulle &#8220;%s&#8221;"
+
+#~ msgid "You are browsing the site archives by time."
+#~ msgstr "Selailet sivun arkistoja päivämäärän mukaan."
+
+#~ msgid "You are browsing the site archives for %s."
+#~ msgstr "Selailet sivun arkistoja: %s."
+
+#~ msgid "You are browsing the site archives."
+#~ msgstr "Selailet sivun arkistoja."
+
+#~ msgid "Week %1$s of %2$s"
+#~ msgstr "Viikko %1$s / %2$s"
+
+#~ msgid "Posts navigation"
+#~ msgstr "Artikkelien selaus"
+
+#~ msgctxt "Breadcrumbs aria label"
+#~ msgid "Breadcrumbs"
+#~ msgstr "Murupolku"
+
+#~ msgctxt "daily archives date format"
+#~ msgid "F j, Y"
+#~ msgstr "j.n.Y"
