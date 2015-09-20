@@ -7,34 +7,6 @@
  * @package Kuorinka
  */
 
-if ( ! function_exists( 'kuorinka_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- */
-function kuorinka_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-	?>
-	<nav class="navigation paging-navigation" role="navigation" aria-labelledby="paging-navigation-header">
-		<h2 class="screen-reader-text" id="paging-navigation-header"><?php _e( 'Posts navigation', 'kuorinka' ); ?></h2>
-		<div class="nav-links">
-
-			<?php if ( get_previous_posts_link() ) : ?>
-				<div class="nav-previous"><?php previous_posts_link( __( 'Previous page', 'kuorinka' ) ); ?></div>
-			<?php endif; ?>
-
-			<?php if ( get_next_posts_link() ) : ?>
-				<div class="nav-next"><?php next_posts_link( __( 'Next page', 'kuorinka' ) ); ?></div>
-			<?php endif; ?>
-
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
 if ( ! function_exists( 'kuorinka_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.

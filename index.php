@@ -41,15 +41,13 @@ get_header(); ?>
 			
 			<?php do_action( 'kuorinka_close_loop' ); // Action hook close loop. ?>
 			
-			<?php if( function_exists( 'the_posts_pagination' ) ) :
+			<?php
 				the_posts_pagination( array(
-					'prev_text'          => __( 'Previous page', 'kuorinka' ),
-					'next_text'          => __( 'Next page', 'kuorinka' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'kuorinka' ) . ' </span>',
+					'prev_text'          => esc_html__( 'Previous page', 'kuorinka' ),
+					'next_text'          => esc_html__( 'Next page', 'kuorinka' ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'kuorinka' ) . ' </span>',
 				) );
-			else :
-				kuorinka_paging_nav();
-			endif; // Previous/next page navigation check ends. ?>
+			?>
 
 		<?php else : ?>
 
