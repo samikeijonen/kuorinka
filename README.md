@@ -25,6 +25,18 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.4.0 - September 21, 2015
+
+* Update theme layout to Hybrid Core version 3.0.0. Basically everything have changed.
+* Update Breadcrumb Trail to version 1.0.1.
+* Update Genericons to version 3.4.
+* Update archive title and description using Core functions the_archive_title() the_archive_description().
+* Update Media Grabber.
+* Update Schema.org file for comments.
+* Update Responsive Nav to version 1.0.39.
+* Remove kuorinka_paging_nav() function. Use Core the_posts_pagination() function.
+* Remove admin header styles and files. These are all in the Customizer.
+
 ### Version 1.3.2 - May 6, 2015
 
 * Remove example.html file from Genericons for security (DOM-based XSS) reasons.
