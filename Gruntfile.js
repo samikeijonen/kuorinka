@@ -83,6 +83,7 @@ grunt.initConfig({
 		responsivenav: {
 			files: {
 				'js/responsive-nav.min.js': ['js/responsive-nav.js'],
+				'js/multilevel-responsive-nav.min.js': ['js/multilevel-responsive-nav.js'],
 				'js/settings.min.js': ['js/settings.js']
 			}
 		},

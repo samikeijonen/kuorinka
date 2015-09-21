@@ -249,10 +249,24 @@ function kuorinka_scripts() {
 	
 	/* Enqueue responsive navigation if primary menu is in use. */
 	if ( has_nav_menu( 'primary' ) ) {
-		wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
-	
+		
+		/* Load multi-level script if it's enabled. */
+		if ( get_theme_mod( 'enable_dropdown' ) ) {
+			wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/multilevel-responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
+		} else {
+			wp_enqueue_script( 'kuorinka-navigation', get_template_directory_uri() . '/js/responsive-nav' . KUORINKA_SUFFIX . '.js', array(), KUORINKA_VERSION, true );
+		}
+		
 		/* Enqueue responsive navigation settings. */
 		wp_enqueue_script( 'kuorinka-settings', trailingslashit( get_template_directory_uri() ) . 'js/settings' . KUORINKA_SUFFIX . '.js', array( 'kuorinka-navigation' ), KUORINKA_VERSION, true );
+		
+		/* Load settings for multilevel dropdown if we use it. We need to load this anyway so we can check to settings from navSettings. */
+		wp_localize_script( 'kuorinka-settings', 'navSettings', array(
+			'expand'   => '<span class="screen-reader-text">' . __( 'Expand child menu', 'kuorinka' ) . '</span>',
+			'collapse' => '<span class="screen-reader-text">' . __( 'Collapse child menu', 'kuorinka' ) . '</span>',
+			'dropdown' => get_theme_mod( 'enable_dropdown' ) ? true : false,
+		) );
+		
 	}
 	
 	/* Enqueue functions. */

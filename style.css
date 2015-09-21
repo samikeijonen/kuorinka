@@ -491,7 +491,8 @@ a[href^="tel:"]::before,
 .nav-links a.next::after,
 a.more-link::after,
 #menu-social li a::before,
-.widget li::before {
+.widget li::before,
+.dropdown-toggle:after {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -811,6 +812,7 @@ button#nav-toggle {
 	.main-navigation li {
 		width: 100%;
 		display: block;
+		position: relative;
 	}
 	
 	button#nav-toggle {
@@ -854,10 +856,6 @@ button#nav-toggle {
 		max-height: 9999px;
 	}
 
-	.disable-pointer-events {
-		pointer-events: none !important;
-	}
-
 	#nav-toggle {
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 		-webkit-touch-callout: none;
@@ -880,6 +878,55 @@ button#nav-toggle {
 	button#nav-toggle.active:before {
 		content: "\f405";
 	}
+	
+	/* Style for multilevel dropdown. */
+	
+	.main-navigation.multiple-level-nav .sub-menu {
+		clip: rect(0 0 0 0);
+		max-height: 0;
+		position: absolute;
+		display: block;
+		overflow: hidden;
+		zoom: 1;
+	}
+
+	.main-navigation.multiple-level-nav .sub-menu.toggled {
+		max-height: 9999px;
+		position: relative;
+	}
+	
+	.main-navigation.multiple-level-nav .sub-menu.toggled {
+		max-height: 9999px;
+	}
+	
+	/* Enable active class to let the navigation expand over the calculated max height. */
+	.main-navigation.opened.dropdown-active {
+		max-height: 9999px !important;
+	}
+	
+	.dropdown-toggle {
+		content: "";
+		height: auto;
+		padding: 0;
+		position: absolute;
+		margin: 0;
+		text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+		top: 2px;
+		right: 4%;
+	}
+
+	.dropdown-toggle:after {
+		content: "\f431";
+		font-size: 24px;
+		padding: 11px;
+		position: relative;
+		top: 0;
+		left: 1px;
+	}
+
+	.dropdown-toggle.toggled:after {
+		content: "\f432";
+	}
 
 }
 
@@ -891,7 +938,8 @@ button#nav-toggle {
 	.js .main-navigation.closed {
 		max-height: none;
 	}
-	#nav-toggle {
+	#nav-toggle,
+	.dropdown-toggle {
 		display: none;
 	}
 	
