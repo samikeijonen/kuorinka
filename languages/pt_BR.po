@@ -5,16 +5,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-02-20 11:13:43+00:00\n"
-"PO-Revision-Date: 2015-03-09 13:49+0200\n"
+"POT-Creation-Date: 2015-09-21 07:30:18+00:00\n"
+"PO-Revision-Date: 2015-09-21 10:36+0300\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/kuorinka/language/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/wp-translations/kuorinka/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;"
 "_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -38,6 +38,10 @@ msgstr "Categorias Mais Usadas"
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Tente dar uma olhada em nossos arquivos. %1$s"
+
+#: comment.php:15
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando moderação."
 
 #: comments.php:35 comments.php:54
 msgid "Comment navigation"
@@ -118,147 +122,117 @@ msgstr "Menu Portfólio"
 msgid "Team Member Menu"
 msgstr ""
 
-#: functions.php:99
-msgid "1 Column"
-msgstr "1 Coluna"
-
-#: functions.php:100
-msgid "2 Columns: Content / Sidebar"
-msgstr "2 Colunas: Conteúdo / Barra Lateral"
-
-#: functions.php:101
-msgid "2 Columns: Sidebar / Content"
-msgstr "2 Colunas: Barra Lateral / Conteúdo"
-
-#: functions.php:137
+#: functions.php:140
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr "Barra lateral principal. É exibida do lado direto da página."
 
-#: functions.php:147
+#: functions.php:150
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr "Barra Lateral do Cabeçalho. É exibida no topo da página."
 
-#: functions.php:157
+#: functions.php:160
 msgid "A sidebar located in the footer of the site."
 msgstr "Barra localizada no rodapé do site."
 
-#: functions.php:167
+#: functions.php:170
 msgid "A sidebar located in the Front Page Template."
 msgstr "Barra localizada no Front Page Template."
 
+#: functions.php:265
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:266
+msgid "Collapse child menu"
+msgstr ""
+
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:326
+#: functions.php:318
 msgid "Read more %s"
 msgstr "Leia mais %s"
 
-#: functions.php:517
+#: functions.php:514
 msgid "Visit Project"
 msgstr "Visite o Projeto"
+
+#: functions.php:546
+msgid "1 Column"
+msgstr "1 Coluna"
+
+#: functions.php:547
+msgid "2 Columns: Content / Sidebar"
+msgstr "2 Colunas: Conteúdo / Barra Lateral"
+
+#: functions.php:548
+msgid "2 Columns: Sidebar / Content"
+msgstr "2 Colunas: Barra Lateral / Conteúdo"
 
 #: header.php:22
 msgid "Skip to content"
 msgstr "Pular conteúdo"
 
-#: header.php:75
+#: header.php:76
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/breadcrumb-trail.php:178
-msgid "Browse:"
-msgstr "Navegar:"
-
-#: inc/breadcrumb-trail.php:179
-msgid "Home"
-msgstr "Home"
-
-#: inc/breadcrumb-trail.php:180 inc/template-general.php:334
-msgid "404 Not Found"
-msgstr "404 Não Encontrado"
-
-#: inc/breadcrumb-trail.php:181 inc/template-general.php:160
-msgid "Archives"
-msgstr "Arquivos"
-
 #. Translators: %s is the search query. The HTML entities are opening and
 #. closing curly quotes.
-#: inc/breadcrumb-trail.php:183 inc/template-general.php:315
+#: inc/archive-filters.php:40 inc/breadcrumb-trail.php:250
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Resultados da busca para &#8220;%s&#8221;"
 
+#: inc/breadcrumb-trail.php:244
+msgid "Browse:"
+msgstr "Navegar:"
+
+#: inc/breadcrumb-trail.php:246
+msgid "Home"
+msgstr "Home"
+
+#: inc/breadcrumb-trail.php:247
+msgid "404 Not Found"
+msgstr "404 Não Encontrado"
+
+#: inc/breadcrumb-trail.php:248
+msgid "Archives"
+msgstr "Arquivos"
+
 #. Translators: %s is the page number.
-#: inc/breadcrumb-trail.php:185 inc/extras.php:60
+#: inc/breadcrumb-trail.php:252 inc/extras.php:60
 msgid "Page %s"
 msgstr "Página %s"
 
 #. Translators: Minute archive title. %s is the minute time format.
-#: inc/breadcrumb-trail.php:187 inc/template-general.php:276
+#: inc/breadcrumb-trail.php:254
 msgid "Minute %s"
 msgstr "Minuto %s"
 
 #. Translators: Weekly archive title. %s is the week date format.
-#: inc/breadcrumb-trail.php:189
+#: inc/breadcrumb-trail.php:256
 msgid "Week %s"
 msgstr "Semana %s"
 
-#: inc/breadcrumb-trail.php:1135 inc/breadcrumb-trail.php:1171 inc/breadcrumb-trail.php:1188
-#: inc/breadcrumb-trail.php:1219
-msgid "Edit"
-msgstr "Edição"
-
-#: inc/breadcrumb-trail.php:1163
-msgid "Split"
-msgstr "Divisão"
-
-#: inc/breadcrumb-trail.php:1167
-msgid "Merge"
-msgstr "Fundir"
-
-#: inc/template-general.php:126
-msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr "Você está visualizando os resultados da busca para &#8220;%s&#8221;"
-
-#: inc/template-general.php:132
-msgid "You are browsing the site archives by time."
-msgstr "Você está visualizando os arquivos do site por hora."
-
-#: inc/template-general.php:135 inc/template-general.php:138 inc/template-general.php:141
-msgid "You are browsing the site archives for %s."
-msgstr "Você está visualizando os arquivos do site por %s."
-
-#: inc/template-general.php:144
-msgid "You are browsing the site archives."
-msgstr "Você está visualizando os arquivos do site."
-
-#. Translators: 1 is the week number and 2 is the year.
-#: inc/template-general.php:218
-msgid "Week %1$s of %2$s"
-msgstr "Semana %1$s de %2$s"
-
-#: inc/template-tags.php:21
-msgid "Posts navigation"
-msgstr "Navegação por posts"
-
-#: inc/template-tags.php:25 index.php:46
-msgid "Previous page"
-msgstr "Página anterior"
-
-#: inc/template-tags.php:29 index.php:47
-msgid "Next page"
-msgstr "Próxima página"
-
-#: inc/template-tags.php:52
-msgid "Post navigation"
-msgstr "Navegação por post"
-
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565 inc/theme-layouts.php:650
+#: inc/layouts/functions-customize.php:59 inc/layouts/meta-box-post-layout.php:35
 msgid "Layout"
 msgstr "Layout"
 
-#: inc/theme-layouts.php:683
+#: inc/layouts/functions-customize.php:82
 msgid "Global Layout"
 msgstr "Layout Global"
 
-#: index.php:48
+#: inc/template-tags.php:24
+msgid "Post navigation"
+msgstr "Navegação por post"
+
+#: index.php:46 search.php:33
+msgid "Previous page"
+msgstr "Página anterior"
+
+#: index.php:47 search.php:34
+msgid "Next page"
+msgstr "Próxima página"
+
+#: index.php:48 search.php:35
 msgid "Page"
 msgstr "Página"
 
@@ -323,22 +297,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:136
+#: functions.php:139
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Primário"
 
-#: functions.php:146
+#: functions.php:149
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Cabeçalho"
 
-#: functions.php:156
+#: functions.php:159
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Subsidiário"
 
-#: functions.php:166
+#: functions.php:169
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Página de Frente"
@@ -346,7 +320,7 @@ msgstr "Página de Frente"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:194
+#: functions.php:197
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -354,83 +328,88 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:200
+#: functions.php:203
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
 
-#: header.php:75
+#: header.php:76
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr "&#8764;"
 
-#: inc/breadcrumb-trail.php:130
-msgctxt "Breadcrumbs aria label"
+#: inc/breadcrumb-trail.php:245
+msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/breadcrumb-trail.php:716 inc/template-general.php:295
+#: inc/breadcrumb-trail.php:708
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr "g:i a"
 
-#: inc/breadcrumb-trail.php:733 inc/template-general.php:276
+#: inc/breadcrumb-trail.php:725
 msgctxt "minute archives time format"
 msgid "i"
 msgstr "i"
 
-#: inc/breadcrumb-trail.php:750 inc/template-general.php:256
+#: inc/breadcrumb-trail.php:742
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr "g a"
 
-#: inc/breadcrumb-trail.php:766 inc/breadcrumb-trail.php:795 inc/breadcrumb-trail.php:822 inc/breadcrumb-trail.php:849
-#: inc/breadcrumb-trail.php:1036 inc/template-general.php:198 inc/template-general.php:218
+#: inc/breadcrumb-trail.php:758 inc/breadcrumb-trail.php:787 inc/breadcrumb-trail.php:814 inc/breadcrumb-trail.php:841
+#: inc/breadcrumb-trail.php:1176
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: inc/breadcrumb-trail.php:767 inc/breadcrumb-trail.php:823 inc/breadcrumb-trail.php:1040
+#: inc/breadcrumb-trail.php:759 inc/breadcrumb-trail.php:815 inc/breadcrumb-trail.php:1180
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr "F"
 
-#: inc/breadcrumb-trail.php:768 inc/breadcrumb-trail.php:1044
+#: inc/breadcrumb-trail.php:760 inc/breadcrumb-trail.php:1184
 msgctxt "daily archives date format"
 msgid "j"
 msgstr "j"
 
-#: inc/template-general.php:237
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr "F j, Y"
-
-#: inc/breadcrumb-trail.php:796 inc/template-general.php:218
+#: inc/breadcrumb-trail.php:788
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr "W"
 
-#: inc/template-tags.php:55
+#. Translators: Default theme layout option.
+#: inc/layouts/functions-layouts.php:51
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Padrão"
+
+#: inc/template-tags.php:27
 msgctxt "Previous post link"
 msgid "%title"
 msgstr "%title"
 
-#: inc/template-tags.php:56
+#: inc/template-tags.php:28
 msgctxt "Next post link"
 msgid "%title"
 msgstr "%title"
 
+#: inc/template-tags.php:44
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr "Publicado em"
+
+#: inc/template-tags.php:52
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr "Autor"
+
 #. Translators: Separates tags, categories, etc. when displaying a post.
-#: inc/template-tags.php:142
+#: inc/template-tags.php:120
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ", "
-
-#. Translators: Default theme layout option.
-#: inc/theme-layouts.php:363
-msgctxt "theme layout"
-msgid "Default"
-msgstr "Padrão"
 
 #: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
