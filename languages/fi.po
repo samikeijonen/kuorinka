@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kuorinka\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-09-20 12:49+0300\n"
-"PO-Revision-Date: 2015-09-20 12:49+0300\n"
+"POT-Creation-Date: 2015-09-20 21:57+0300\n"
+"PO-Revision-Date: 2015-09-20 21:58+0300\n"
 "Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/projects/p/kuorinka/"
 "language/fi/)\n"
@@ -141,45 +141,45 @@ msgstr "Portfolio valikko"
 msgid "Team Member Menu"
 msgstr "Henkilökunta-valikko"
 
-#: functions.php:99
-msgid "1 Column"
-msgstr "1 sarake"
-
-#: functions.php:100
-msgid "2 Columns: Content / Sidebar"
-msgstr "Kaksi saraketta: sisältö / sivupalkki"
-
-#: functions.php:101
-msgid "2 Columns: Sidebar / Content"
-msgstr "Kaksi saraketta: sivupalkki / sisältö"
-
-#: functions.php:137
+#: functions.php:140
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 "Päävimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön oikealla puolella."
 
-#: functions.php:147
+#: functions.php:150
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 "Yläpalkin vimpainalue. Tähän liitetyt vimpaimet näkyvät sisällön  "
 "yläpuolella."
 
-#: functions.php:157
+#: functions.php:160
 msgid "A sidebar located in the footer of the site."
 msgstr "Sivupalkki sijaitsee alapalkissa."
 
-#: functions.php:167
+#: functions.php:170
 msgid "A sidebar located in the Front Page Template."
 msgstr "Tähän liitetyt vimpaimet näkyvät Etusivu-sivupohjassa."
 
 #. Translators: The %s is the post title shown to screen readers.
-#: functions.php:326
+#: functions.php:304
 msgid "Read more %s"
 msgstr "Lue lisää %s"
 
-#: functions.php:517
+#: functions.php:500
 msgid "Visit Project"
 msgstr "Näytä sivusto"
+
+#: functions.php:532
+msgid "1 Column"
+msgstr "1 sarake"
+
+#: functions.php:533
+msgid "2 Columns: Content / Sidebar"
+msgstr "Kaksi saraketta: sisältö / sivupalkki"
+
+#: functions.php:534
+msgid "2 Columns: Sidebar / Content"
+msgstr "Kaksi saraketta: sivupalkki / sisältö"
 
 #: header.php:22
 msgid "Skip to content"
@@ -226,18 +226,19 @@ msgstr "Minuutti %s"
 msgid "Week %s"
 msgstr "Viikko %s"
 
-#: inc/template-tags.php:24
-msgid "Post navigation"
-msgstr "Artikkelien selaus"
-
-#: inc/theme-layouts.php:458 inc/theme-layouts.php:565
-#: inc/theme-layouts.php:650
+#: inc/layouts/functions-customize.php:59
+#: inc/layouts/meta-box-post-layout.php:35 inc/theme-layouts.php:458
+#: inc/theme-layouts.php:565 inc/theme-layouts.php:650
 msgid "Layout"
 msgstr "Ulkoasu"
 
-#: inc/theme-layouts.php:683
+#: inc/layouts/functions-customize.php:82 inc/theme-layouts.php:683
 msgid "Global Layout"
 msgstr "Globaali ulkoasu"
+
+#: inc/template-tags.php:24
+msgid "Post navigation"
+msgstr "Artikkelien selaus"
 
 #: index.php:46 search.php:33
 msgid "Previous page"
@@ -317,22 +318,22 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr "&middot;"
 
-#: functions.php:136
+#: functions.php:139
 msgctxt "sidebar"
 msgid "Primary"
 msgstr "Sivupalkki"
 
-#: functions.php:146
+#: functions.php:149
 msgctxt "sidebar"
 msgid "Header"
 msgstr "Yläpalkin vimpain"
 
-#: functions.php:156
+#: functions.php:159
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr "Sivupalkki alhaalla"
 
-#: functions.php:166
+#: functions.php:169
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr "Etusivu"
@@ -340,7 +341,7 @@ msgstr "Etusivu"
 #. Translators: If there are characters in your language that are not
 #. * supported by Source Sans Pro, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:194
+#: functions.php:197
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -348,7 +349,7 @@ msgstr "on"
 #. Translators: If there are characters in your language that are not
 #. * supported by Roboto Condensed, translate this to 'off'. Do not translate
 #. * into your own language.
-#: functions.php:200
+#: functions.php:203
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr "on"
@@ -401,6 +402,12 @@ msgctxt "weekly archives date format"
 msgid "W"
 msgstr "W"
 
+#. Translators: Default theme layout option.
+#: inc/layouts/functions-layouts.php:51 inc/theme-layouts.php:363
+msgctxt "theme layout"
+msgid "Default"
+msgstr "Oletus"
+
 #: inc/template-tags.php:27
 msgctxt "Previous post link"
 msgid "%title"
@@ -426,12 +433,6 @@ msgstr "Kirjoittaja"
 msgctxt "taxonomy terms separator"
 msgid ", "
 msgstr ", "
-
-#. Translators: Default theme layout option.
-#: inc/theme-layouts.php:363
-msgctxt "theme layout"
-msgid "Default"
-msgstr "Oletus"
 
 #: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
