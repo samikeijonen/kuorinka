@@ -93,15 +93,18 @@ function kuorinka_setup() {
 	add_image_size( 'kuorinka-thumbnail', 250, 250, true );
 	
 	/* Enable theme layouts. */
-	add_theme_support( 
-		'theme-layouts', 
-		array( 
-			'1c'   => __( '1 Column', 'kuorinka' ),
-			'2c-l' => __( '2 Columns: Content / Sidebar', 'kuorinka' ),
-			'2c-r' => __( '2 Columns: Sidebar / Content', 'kuorinka' )
-		), 
-		array( 'default' => is_rtl() ? '2c-r' : '2c-l' ) 
-	);
+	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
+	
+	/* Add theme layouts support to core and custom post types. */
+	add_post_type_support( 'post',              'theme-layouts' );
+	add_post_type_support( 'page',              'theme-layouts' );
+	add_post_type_support( 'attachment',        'theme-layouts' );
+	add_post_type_support( 'forum',             'theme-layouts' );
+	add_post_type_support( 'literature',        'theme-layouts' );
+	add_post_type_support( 'portfolio_item',    'theme-layouts' );
+	add_post_type_support( 'portfolio_project', 'theme-layouts' );
+	add_post_type_support( 'product',           'theme-layouts' );
+	add_post_type_support( 'restaurant_item',   'theme-layouts' );
 	
 	/* Add theme support for breadcrumb trail. */
 	add_theme_support( 'breadcrumb-trail' );
@@ -263,31 +266,6 @@ function kuorinka_scripts() {
 add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
 
 /**
- * Enqueue theme fonts in admin header page.
- *
- * @since 1.0.0
- * @return void
- */
-function kuorinka_custom_header_styles() {
-
-	/* Load fonts. */
-	wp_enqueue_style( 'kuorinka-fonts', kuorinka_fonts_url(), array(), null );
-	
-	/* Load css/admin-custom-header.css file. */
-	wp_enqueue_style( 'kuorinka-admin-custom-header', trailingslashit( get_template_directory_uri() ) . 'css/admin-custom-header.css' );
-	
-	/* Load css/admin-custom-header.css file from child theme if it exists. */
-	if ( is_child_theme() ) {
-		$dir = trailingslashit( get_stylesheet_directory() );
-		$uri = trailingslashit( get_stylesheet_directory_uri() );
-
-		if ( file_exists( $dir . 'css/admin-custom-header.css' ) )
-			wp_enqueue_style( get_stylesheet() . '-admin-custom-header', "{$uri}css/admin-custom-header.css" );
-	}
-}
-add_action( 'admin_print_styles-appearance_page_custom-header', 'kuorinka_custom_header_styles' );
-
-/**
  * Function for deciding which pages should have a one-column layout.
  *
  * @since  1.0.0
@@ -297,7 +275,7 @@ function kuorinka_one_column() {
 	if ( is_page_template( 'pages/front-page.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
-	elseif ( is_attachment() && wp_attachment_is_image() && '1c' != get_post_layout( get_queried_object_id() ) ) {
+	elseif ( is_attachment() && wp_attachment_is_image() ) {
 		add_filter( 'theme_mod_theme_layout', 'kuorinka_theme_layout_one_column' );
 	}
 	
@@ -413,6 +391,11 @@ function kuorinka_extra_layout_classes( $classes ) {
 	/* Add the '.primary-menu-active' class if the user is using a primary menu. */
 	if ( has_nav_menu( 'primary' ) ) {
 		$classes[] = 'primary-menu-active';
+	}
+	
+	/* Theme layouts. */
+	if ( current_theme_supports( 'theme-layouts' ) ) {
+		$classes[] = sanitize_html_class( 'layout-' . hybrid_get_theme_layout() );
 	}
     
     return $classes;
@@ -540,6 +523,20 @@ function kuorinka_get_link_url() {
 }
 
 /**
+ * Register layouts. This is the new way to do it in Hybrid Core version 3.0.0.
+ *
+ * @since 1.4.0
+ */
+function mina_olen_register_layouts() {
+	
+	hybrid_register_layout( '1c',   array( 'label' => esc_html__( '1 Column',                     'kuorinka' ), 'image' => '%s/images/layouts/1c.png'   ) );
+	hybrid_register_layout( '2c-l', array( 'label' => esc_html__( '2 Columns: Content / Sidebar', 'kuorinka' ), 'image' => '%s/images/layouts/2c-l.png' ) );
+	hybrid_register_layout( '2c-r', array( 'label' => esc_html__( '2 Columns: Sidebar / Content', 'kuorinka' ), 'image' => '%s/images/layouts/2c-r.png' ) );
+
+}
+add_action( 'hybrid_register_layouts', 'mina_olen_register_layouts' );
+
+/**
  * Use a template for individual comment output.
  *
  * @param object $comment Comment to display.
@@ -585,7 +582,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Load theme layouts.
  */
-require_once( get_template_directory() . '/inc/theme-layouts.php' );
+require_once( get_template_directory() . '/inc/layouts.php' );
 
 /**
  * Load media grabber.
@@ -593,9 +590,11 @@ require_once( get_template_directory() . '/inc/theme-layouts.php' );
 require_once( get_template_directory() . '/inc/media-grabber.php' );
 
 /**
- * Load breadcrumb trail.
+ * Load breadcrumb trail. Check that there is no Plugin version around.
  */
-require_once( get_template_directory() . '/inc/breadcrumb-trail.php' );
+if( ! function_exists( 'breadcrumb_trail' ) ) {
+	require_once( get_template_directory() . '/inc/breadcrumb-trail.php' );
+}
 
 /**
  * Load Schema.org file.
