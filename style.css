@@ -4,7 +4,7 @@ Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Description: Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly.
-Version: 1.4.0
+Version: 1.4.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
@@ -885,12 +885,13 @@ button#nav-toggle {
 		clip: rect(0 0 0 0);
 		max-height: 0;
 		position: absolute;
-		display: block;
+		display: none;
 		overflow: hidden;
 		zoom: 1;
 	}
 
 	.main-navigation.multiple-level-nav .sub-menu.toggled {
+		display: block;
 		max-height: 9999px;
 		position: relative;
 	}
@@ -906,19 +907,20 @@ button#nav-toggle {
 	
 	.dropdown-toggle {
 		content: "";
-		height: auto;
 		padding: 0;
 		position: absolute;
 		margin: 0;
 		text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
-		top: 2px;
+		top: 6px;
 		right: 4%;
+		width: 36px;
+		height: 36px;
 	}
 
 	.dropdown-toggle:after {
 		content: "\f431";
 		font-size: 24px;
-		padding: 11px;
+		padding: 0;
 		position: relative;
 		top: 0;
 		left: 1px;
@@ -928,6 +930,14 @@ button#nav-toggle {
 		content: "\f432";
 	}
 
+}
+
+@media screen and (max-width: 599px) {
+	
+	.dropdown-toggle {
+		top: 4px;
+	}
+	
 }
 
 @media screen and (min-width: 900px) {

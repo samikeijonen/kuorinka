@@ -25,6 +25,10 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.4.1 - September 21, 2015
+
+* Fix styling issues in dropdown menu.
+
 ### Version 1.4.0 - September 21, 2015
 
 * Update theme layout to Hybrid Core version 3.0.0. Basically everything have changed.
