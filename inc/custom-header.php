@@ -33,22 +33,23 @@ if ( ! function_exists( 'kuorinka_header_style' ) ) :
  */
 function kuorinka_header_style() {
 	
-	/* Get out if we don't use header text. */
-	if ( !display_header_text() ) {
-		return;
-	}
-
+	// Header text color.
 	$header_color = get_header_textcolor();
+
+	// Start header styles.
+	$style = '';
 	
-	/* Get out if we don't have header text text color. */
-	if ( empty( $header_color ) ) {
-		return;
+	// Site title styles.
+	if ( display_header_text() ) {
+		$style .= ".site-title a, .site-title a:visited { color: #{$header_color} }";
+	}
+	
+	if ( ! display_header_text() ) {
+		$style .= ".site-title-inner { clip: rect(1px, 1px, 1px, 1px); position: absolute; }";	
 	}
 
-	$style = '';
-
-	$style .= "#site-title, #site-title a { color: #{$header_color} }";
-
-	echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+	if ( ! empty( $style ) ) {
+		echo "\n" . '<style type="text/css" id="custom-header-css">' . trim( $style ) . '</style>' . "\n";
+	}
 }
 endif; // kuorinka_header_style
