@@ -8,7 +8,7 @@
 /**
  * The current version of the theme.
  */
-define( 'KUORINKA_VERSION', '1.4.1' );
+define( 'KUORINKA_VERSION', '1.5.0' );
 
 /**
  * The suffix to use for scripts.
@@ -91,6 +91,17 @@ function kuorinka_setup() {
 	/* Add custom image sizes. */
 	add_image_size( 'kuorinka-large', 720, 405, true );
 	add_image_size( 'kuorinka-thumbnail', 250, 250, true );
+	
+	/* Add theme support for refresh widgets. */
+	add_theme_support( 'customize-selective-refresh-widgets' );
+	
+	/* Add theme support for site logo. */
+	add_theme_support( 'custom-logo', apply_filters( 'kuorinka_custom_logo_arguments', array(
+		'height'      => 50,
+		'width'       => 50,
+		'flex-width'  => true,
+		'flex-heught' => true,
+	) ) );
 	
 	/* Enable theme layouts. */
 	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
@@ -238,7 +249,7 @@ function kuorinka_scripts() {
 	}
 	
 	/* Enqueue active theme styles. */
-	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kuorinka-style', get_stylesheet_uri(), array(), kuorinka_theme_version() );
 	
 	
 	/* Register Fluidvids. */
@@ -278,6 +289,17 @@ function kuorinka_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kuorinka_scripts' );
+
+/**
+ * Get theme version number, works also for child themes.
+ *
+ * @since  1.5.0
+ * @return string $theme_version
+ */
+function kuorinka_theme_version() {
+	$theme = is_child_theme() ? wp_get_theme( get_stylesheet() ) : wp_get_theme( get_template() );
+	return $theme_version = $theme->get( 'Version' );
+}
 
 /**
  * Function for deciding which pages should have a one-column layout.
