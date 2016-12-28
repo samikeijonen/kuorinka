@@ -25,6 +25,15 @@ All other resources and theme elements are licensed under the [GNU GPL](http://w
 
 ## Changelog
 
+### Version 1.5.0 - December 29, 2016
+
+* Add WordPress Custom Logo feature.
+* Update media grapper script.
+* Fix skip to content script.
+* Remove rel="designer" from the footer.
+* Add theme support for refresh widgets.
+* Update screen-reader-text class by adding word-wrap: normal.
+
 ### Version 1.4.1 - September 21, 2015
 
 * Fix styling issues in dropdown menu.
