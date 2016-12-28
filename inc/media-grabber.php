@@ -9,7 +9,7 @@
  * and display it on archive pages alongside the post excerpt or pull it out of the content to display
  * it above the post on single post views.
  *
- * @package    Hybrid
+ * @package    Kuorinka
  * @subpackage Includes
  * @author     Justin Tadlock <justin@justintadlock.com>
  * @copyright  Copyright (c) 2008 - 2015, Justin Tadlock
@@ -425,7 +425,12 @@ class Hybrid_Media_Grabber {
 	 */
 	public function split_media( $content ) {
 
-		return get_the_ID() === $this->args['post_id'] ? str_replace( $this->original_media, '', $content ) : $content;
+		if ( get_the_ID() === (int) $this->args['post_id'] ) {
+			$content = str_replace( $this->original_media, '', $content );
+			$content = wp_kses_post( $content );
+		}
+
+		return $content;
 	}
 
 	/**
