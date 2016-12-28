@@ -24,23 +24,22 @@
 	<?php do_action( 'kuorinka_before_header' ); // Hook before header. ?>
 	
 	<header id="masthead" class="site-header" role="banner" aria-labelledby="site-title" <?php hybrid_attr( 'header' ); ?>>
-		
-		<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 	
-			<div class="site-branding">
+		<div class="site-branding">
 			
-				<div id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
-					<div class="site-title-inner">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</div>
+			<div id="site-title" class="site-title" <?php hybrid_attr( 'site-title' ); ?>>
+				<?php if ( function_exists( 'the_custom_logo' ) ) the_custom_logo(); ?>
+				<div class="site-title-inner">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div>
-				
-				<div id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php bloginfo( 'description' ); ?></div>
-			
-			</div><!-- .site-branding -->
-			
-		<?php endif; // End check for header text. ?>
-		
+			</div>
+			<?php
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<div id="site-description" class="site-description" <?php hybrid_attr( 'site-description' ); ?>><?php echo $description; /* WPCS: xss ok. */ ?></div>
+			<?php endif; ?>
+		</div><!-- .site-branding -->
+
 		<?php get_sidebar( 'header' ); // Loads the sidebar-header.php template. ?>
 		
 		<?php
