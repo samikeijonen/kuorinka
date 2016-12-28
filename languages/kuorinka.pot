@@ -1,18 +1,18 @@
-# Copyright (C) 2015 Sami Keijonen
+# Copyright (C) 2016 Sami Keijonen
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Kuorinka 1.4.1\n"
+"Project-Id-Version: Kuorinka 1.5.0\n"
 "Report-Msgid-Bugs-To: https://foxnet-themes.fi/contact/\n"
-"POT-Creation-Date: 2015-09-21 08:56:57+00:00\n"
+"POT-Creation-Date: 2016-12-28 20:53:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: WP-Translations (http://wp-translations.org/)\n"
 "Language-Team: WP-Translations "
 "(http://www.transifex.com/projects/p/wp-translations/)\n"
-"X-Generator: grunt-wp-i18n 0.5.0\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Language: English\n"
@@ -134,48 +134,48 @@ msgstr ""
 msgid "Team Member Menu"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:151
 msgid "The main sidebar. It is displayed on right side of the page."
 msgstr ""
 
-#: functions.php:150
+#: functions.php:161
 msgid "Header sidebar. It is displayed on top of the page."
 msgstr ""
 
-#: functions.php:160
+#: functions.php:171
 msgid "A sidebar located in the footer of the site."
 msgstr ""
 
-#: functions.php:170
+#: functions.php:181
 msgid "A sidebar located in the Front Page Template."
 msgstr ""
 
-#: functions.php:265
+#: functions.php:276
 msgid "Expand child menu"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:277
 msgid "Collapse child menu"
 msgstr ""
 
-#: functions.php:318
+#: functions.php:340
 #. Translators: The %s is the post title shown to screen readers.
 msgid "Read more %s"
 msgstr ""
 
-#: functions.php:514
+#: functions.php:536
 msgid "Visit Project"
 msgstr ""
 
-#: functions.php:546
+#: functions.php:568
 msgid "1 Column"
 msgstr ""
 
-#: functions.php:547
+#: functions.php:569
 msgid "2 Columns: Content / Sidebar"
 msgstr ""
 
-#: functions.php:548
+#: functions.php:570
 msgid "2 Columns: Sidebar / Content"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:76
+#: header.php:75
 msgid "Breadcrumbs"
 msgstr ""
 
@@ -311,43 +311,43 @@ msgctxt "Separator in site info."
 msgid "&middot;"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:150
 msgctxt "sidebar"
 msgid "Primary"
 msgstr ""
 
-#: functions.php:149
+#: functions.php:160
 msgctxt "sidebar"
 msgid "Header"
 msgstr ""
 
-#: functions.php:159
+#: functions.php:170
 msgctxt "sidebar"
 msgid "Subsidiary"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:180
 msgctxt "sidebar"
 msgid "Front Page"
 msgstr ""
 
-#: functions.php:197
-#. Translators: If there are characters in your language that are not
-#. * supported by Source Sans Pro, translate this to 'off'. Do not translate
-#. * into your own language.
+#: functions.php:208
+#. Translators: If there are characters in your language that are not supported
+#. by Source Sans Pro, translate this to 'off'. Do not translate into your own
+#. language.
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:203
-#. Translators: If there are characters in your language that are not
-#. * supported by Roboto Condensed, translate this to 'off'. Do not translate
-#. * into your own language.
+#: functions.php:214
+#. Translators: If there are characters in your language that are not supported
+#. by Roboto Condensed, translate this to 'off'. Do not translate into your own
+#. language.
 msgctxt "Roboto Condensed font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:76
+#: header.php:75
 msgctxt "Separator in breadcrumb trail."
 msgid "&#8764;"
 msgstr ""
