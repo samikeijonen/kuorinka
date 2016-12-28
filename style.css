@@ -4,12 +4,12 @@ Theme URI: https://foxland.fi/downloads/kuorinka
 Author: Sami Keijonen
 Author URI: https://foxland.fi
 Description: Kuorinka is an accessible, translation-ready theme. It supports right-to-left languages, Schema.org microdata, and all of WordPress’ built-in theme features. It's also child theme friendly.
-Version: 1.4.1
+Version: 1.5.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kuorinka
 Domain Path: /languages/
-Tags: blue, white, light, one-column, two-columns, left-sidebar, right-sidebar, fluid-layout, responsive-layout, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -253,6 +253,11 @@ h6 {
 .site-branding {
 	text-align: center;
 }
+.custom-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 #site-title {
 	margin: 0;
 	padding: 20px 0;
@@ -275,6 +280,11 @@ h6 {
 
 	.site-branding {
 		text-align: left;
+	}
+	
+	.custom-logo {
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	#site-title {
@@ -1307,6 +1317,7 @@ button#nav-toggle {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
