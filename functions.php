@@ -100,7 +100,7 @@ function kuorinka_setup() {
 		'height'      => 50,
 		'width'       => 50,
 		'flex-width'  => true,
-		'flex-heught' => true,
+		'flex-height' => true,
 	) ) );
 	
 	/* Enable theme layouts. */
