@@ -406,7 +406,7 @@ msgstr "Auteur"
 #: inc/template-tags.php:120
 msgctxt "taxonomy terms separator"
 msgid ", "
-msgstr ",&larr"
+msgstr ", "
 
 #: sidebar-front-page.php:4
 msgctxt "Sidebar aria label"
